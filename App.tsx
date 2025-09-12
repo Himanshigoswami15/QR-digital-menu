@@ -1,10 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { AppProvider, useAppContext } from './context/AppContext';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import CartView from './components/CartView';
 import OrderStatusView from './components/OrderStatusView';
+import KitchenDashboard from './components/KitchenDashboard';
 import { InformationCircleIcon, XIcon } from './components/icons/Icons';
 
 const Notification: React.FC = () => {
@@ -49,7 +49,7 @@ const Notification: React.FC = () => {
 
 const AppContainer: React.FC = () => {
     const { state, dispatch } = useAppContext();
-    const [view, setView] = useState<'menu' | 'cart' | 'status'>('menu');
+    const [view, setView] = useState<'menu' | 'cart' | 'status' | 'kitchen'>('menu');
 
     useEffect(() => {
         // Set a default table number since QR code scanning is removed.
@@ -58,10 +58,11 @@ const AppContainer: React.FC = () => {
     }, [dispatch]);
 
     useEffect(() => {
-        if (state.order) {
+        if (state.currentOrderId && view !== 'kitchen') {
             setView('status');
         }
-    }, [state.order]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [state.currentOrderId]);
     
     useEffect(() => {
         if (state.notification) {
@@ -80,14 +81,26 @@ const AppContainer: React.FC = () => {
         );
     }
 
+    const renderContent = () => {
+        switch(view) {
+            case 'menu': return <Menu />;
+            case 'cart': return <CartView onBackToMenu={() => setView('menu')} />;
+            case 'status': return <OrderStatusView />;
+            case 'kitchen': return <KitchenDashboard />;
+            default: return <Menu />;
+        }
+    }
+
     return (
         <div className="min-h-screen bg-base-100 font-sans">
             <Notification />
-            <Header onCartClick={() => setView('cart')} onMenuClick={() => setView('menu')} />
-            <main className="p-4 pt-20 max-w-4xl mx-auto">
-                {view === 'menu' && <Menu />}
-                {view === 'cart' && <CartView onBackToMenu={() => setView('menu')} />}
-                {view === 'status' && <OrderStatusView />}
+            <Header 
+              onCartClick={() => setView('cart')} 
+              onMenuClick={() => setView('menu')}
+              onKitchenClick={() => setView('kitchen')}
+            />
+            <main className="p-4 pt-20 max-w-7xl mx-auto">
+                {renderContent()}
             </main>
         </div>
     );

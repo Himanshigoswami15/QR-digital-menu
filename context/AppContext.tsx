@@ -1,4 +1,3 @@
-
 import React, { createContext, useReducer, useContext, ReactNode } from 'react';
 import type { CartItem, Order } from '../types';
 import { OrderStatus } from '../types';
@@ -6,7 +5,8 @@ import { OrderStatus } from '../types';
 interface AppState {
     tableNumber: number | null;
     cart: CartItem[];
-    order: Order | null;
+    orders: Order[];
+    currentOrderId: string | null;
     notification: string | null;
 }
 
@@ -17,14 +17,15 @@ type Action =
     | { type: 'REMOVE_FROM_CART'; payload: number }
     | { type: 'CLEAR_CART' }
     | { type: 'PLACE_ORDER'; payload: Omit<Order, 'id' | 'status' | 'timestamp'> }
-    | { type: 'UPDATE_ORDER_STATUS'; payload: OrderStatus }
+    | { type: 'UPDATE_ORDER_STATUS_BY_ID'; payload: { orderId: string, status: OrderStatus } }
     | { type: 'SHOW_NOTIFICATION', payload: string }
     | { type: 'HIDE_NOTIFICATION' };
 
 const initialState: AppState = {
     tableNumber: null,
     cart: [],
-    order: null,
+    orders: [],
+    currentOrderId: null,
     notification: null,
 };
 
@@ -57,20 +58,28 @@ const appReducer = (state: AppState, action: Action): AppState => {
             return { ...state, cart: [] };
         case 'PLACE_ORDER':
             if (state.tableNumber === null) return state; // Should not happen
+            const newOrder: Order = {
+                ...action.payload,
+                id: `ORD-${Date.now()}`,
+                status: OrderStatus.Pending,
+                timestamp: new Date(),
+                tableNumber: state.tableNumber,
+            };
             return {
                 ...state,
                 cart: [],
-                order: {
-                    ...action.payload,
-                    id: `ORD-${Date.now()}`,
-                    status: OrderStatus.Pending,
-                    timestamp: new Date(),
-                    tableNumber: state.tableNumber,
-                },
+                orders: [...state.orders, newOrder],
+                currentOrderId: newOrder.id,
             };
-        case 'UPDATE_ORDER_STATUS':
-            if (!state.order) return state;
-            return { ...state, order: { ...state.order, status: action.payload } };
+        case 'UPDATE_ORDER_STATUS_BY_ID':
+            return { 
+                ...state, 
+                orders: state.orders.map(order => 
+                    order.id === action.payload.orderId 
+                        ? { ...order, status: action.payload.status } 
+                        : order
+                )
+            };
         case 'SHOW_NOTIFICATION':
             return { ...state, notification: action.payload };
         case 'HIDE_NOTIFICATION':

@@ -1,39 +1,20 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAppContext } from '../context/AppContext';
 import { OrderStatus } from '../types';
-import { CheckCircleIcon, CreditCardIcon, ClockIcon } from './icons/Icons';
+import { CheckCircleIcon, CreditCardIcon, ClockIcon, KitchenDisplayIcon } from './icons/Icons';
 
 const statusMap = {
-    [OrderStatus.Pending]: { text: 'Order Sent', description: 'Your order has been sent to the kitchen.', index: 0 },
+    [OrderStatus.Pending]: { text: 'Order Sent', description: 'Your order is now live on the kitchen dashboard.', index: 0 },
     [OrderStatus.Preparing]: { text: 'Preparing', description: 'The kitchen is preparing your delicious meal.', index: 1 },
     [OrderStatus.Ready]: { text: 'Ready', description: 'Your order is ready and on its way!', index: 2 },
     [OrderStatus.Served]: { text: 'Served', description: 'Enjoy your meal!', index: 3 },
 };
 
 const OrderStatusView: React.FC = () => {
-    const { state, dispatch } = useAppContext();
+    const { state } = useAppContext();
     const [paymentMethod, setPaymentMethod] = useState<'later' | 'online' | null>(null);
-    const order = state.order;
-
-    useEffect(() => {
-        if (order && order.status !== OrderStatus.Served) {
-            const statuses = [OrderStatus.Preparing, OrderStatus.Ready, OrderStatus.Served];
-            let currentIndex = statuses.indexOf(order.status);
-            
-            const interval = setInterval(() => {
-                currentIndex++;
-                if (currentIndex < statuses.length) {
-                    dispatch({ type: 'UPDATE_ORDER_STATUS', payload: statuses[currentIndex] });
-                } else {
-                    clearInterval(interval);
-                }
-            }, 7000); // 7 seconds per status change for simulation
-
-            return () => clearInterval(interval);
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [order?.status, dispatch]);
+    
+    const order = state.orders.find(o => o.id === state.currentOrderId);
 
     if (!order) {
         return <div className="text-center text-gray-400">No active order found.</div>;
@@ -43,7 +24,7 @@ const OrderStatusView: React.FC = () => {
     const isOrderComplete = order.status === OrderStatus.Served;
 
     return (
-        <div className="bg-base-200 p-6 rounded-xl shadow-2xl">
+        <div className="bg-base-200 p-6 rounded-xl shadow-2xl max-w-4xl mx-auto">
             <h2 className="text-3xl font-extrabold text-white text-center mb-2">Your Order Status</h2>
             <p className="text-center text-gray-400 mb-8">Order ID: {order.id}</p>
 
@@ -70,6 +51,12 @@ const OrderStatusView: React.FC = () => {
             <div className="bg-base-300 p-6 rounded-lg text-center mb-8">
                 <h3 className="text-2xl font-bold text-primary">{statusMap[order.status].text}</h3>
                 <p className="text-gray-300 mt-1">{statusMap[order.status].description}</p>
+                 {order.status === OrderStatus.Pending && (
+                    <div className="mt-4 flex items-center justify-center gap-3 bg-base-100/50 p-3 rounded-lg border border-accent/50">
+                        <KitchenDisplayIcon className="w-8 h-8 text-accent flex-shrink-0" />
+                        <span className="font-semibold text-white">Confirmed on Kitchen Display</span>
+                    </div>
+                )}
             </div>
             
             {isOrderComplete && (

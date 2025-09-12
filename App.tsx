@@ -50,20 +50,11 @@ const Notification: React.FC = () => {
 const AppContainer: React.FC = () => {
     const { state, dispatch } = useAppContext();
     const [view, setView] = useState<'menu' | 'cart' | 'status'>('menu');
-    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        try {
-            const params = new URLSearchParams(window.location.search);
-            const tableId = params.get('table');
-            if (tableId && !isNaN(parseInt(tableId))) {
-                dispatch({ type: 'SET_TABLE', payload: parseInt(tableId) });
-            } else {
-                setError('Invalid or missing table number. Please scan a valid QR code from your table.');
-            }
-        } catch (e) {
-            setError('Could not read table information. Please ensure you are using a valid link.');
-        }
+        // Set a default table number since QR code scanning is removed.
+        // This allows the app to load without needing a URL parameter.
+        dispatch({ type: 'SET_TABLE', payload: 12 });
     }, [dispatch]);
 
     useEffect(() => {
@@ -80,22 +71,11 @@ const AppContainer: React.FC = () => {
             return () => clearTimeout(timer);
         }
     }, [state.notification, dispatch]);
-
-    if (error) {
-        return (
-            <div className="min-h-screen bg-base-100 flex items-center justify-center p-4">
-                <div className="bg-base-200 p-8 rounded-lg shadow-2xl max-w-md text-center">
-                    <h1 className="text-2xl font-bold text-error mb-4">Oops!</h1>
-                    <p className="text-lg text-gray-300">{error}</p>
-                </div>
-            </div>
-        );
-    }
     
     if (state.tableNumber === null) {
         return (
              <div className="min-h-screen bg-base-100 flex items-center justify-center p-4">
-                 <div className="text-white text-xl">Loading table information...</div>
+                 <div className="text-white text-xl">Loading...</div>
              </div>
         );
     }

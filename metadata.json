@@ -1,0 +1,5 @@
+{
+  "name": "Copy of QR Dine-In Ordering",
+  "description": "A digital QR menu application that allows restaurant customers to scan a QR code at their table, browse the menu, place an order directly, track its status in real-time, and handle payment.",
+  "requestFramePermissions": []
+}

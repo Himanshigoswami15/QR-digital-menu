@@ -16,7 +16,7 @@ const Notification: React.FC = () => {
     }
 
     return (
-        <div className="fixed top-56 right-4 w-full max-w-sm z-[100]">
+        <div className="fixed top-8 right-4 w-full max-w-sm z-[100]">
             <div className="bg-secondary text-white p-4 rounded-sm border border-white/10 shadow-2xl flex items-start gap-3 animate-fade-in-down">
                 <InformationCircleIcon className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <p className="flex-grow text-xs font-medium tracking-wide leading-relaxed">{state.notification}</p>
@@ -52,10 +52,11 @@ const FloatingNav: React.FC<{ setView: (v: any) => void, currentView: string }> 
     const cartItemCount = state.cart.reduce((total, item) => total + item.quantity, 0);
 
     return (
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] flex items-center bg-base-100/80 backdrop-blur-xl border border-white/10 px-2 py-2 rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.5)] scale-110 md:scale-125">
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] flex items-center bg-base-100/80 backdrop-blur-xl border border-white/10 px-2 py-2 rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.5)] scale-110 md:scale-125 transition-transform duration-500 hover:scale-[1.15] md:hover:scale-[1.3]">
             <button 
-                onClick={() => setView('menu')}
-                className={`p-3 rounded-full transition-all ${currentView === 'menu' ? 'bg-white text-base-100' : 'text-white/50 hover:text-white'}`}
+                onClick={() => { setView('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                className={`p-3 rounded-full transition-all ${currentView === 'menu' ? 'bg-white text-base-100 shadow-xl' : 'text-white/50 hover:text-white'}`}
+                title="View Menu"
             >
                 <UtensilsIcon className="w-5 h-5" />
             </button>
@@ -64,7 +65,8 @@ const FloatingNav: React.FC<{ setView: (v: any) => void, currentView: string }> 
 
             <button 
                 onClick={() => setView('cart')}
-                className={`p-3 rounded-full transition-all relative ${currentView === 'cart' ? 'bg-white text-base-100' : 'text-white/50 hover:text-white'}`}
+                className={`p-3 rounded-full transition-all relative ${currentView === 'cart' ? 'bg-white text-base-100 shadow-xl' : 'text-white/50 hover:text-white'}`}
+                title="Review Cart"
             >
                 <ShoppingCartIcon className="w-5 h-5" />
                 {cartItemCount > 0 && (
@@ -78,7 +80,8 @@ const FloatingNav: React.FC<{ setView: (v: any) => void, currentView: string }> 
 
             <button 
                 onClick={() => setView('kitchen')}
-                className={`p-3 rounded-full transition-all ${currentView === 'kitchen' ? 'bg-white text-base-100' : 'text-white/50 hover:text-white'}`}
+                className={`p-3 rounded-full transition-all ${currentView === 'kitchen' ? 'bg-white text-base-100 shadow-xl' : 'text-white/50 hover:text-white'}`}
+                title="Kitchen View"
             >
                 <ChefHatIcon className="w-5 h-5" />
             </button>
@@ -112,7 +115,7 @@ const AppContainer: React.FC = () => {
     if (state.tableNumber === null) {
         return (
              <div className="min-h-screen bg-base-100 flex items-center justify-center p-4">
-                 <div className="text-white text-[10px] tracking-[0.5em] uppercase font-light animate-pulse">Initializing...</div>
+                 <div className="text-white text-[10px] tracking-[0.5em] uppercase font-light animate-pulse">Initializing Excellence...</div>
              </div>
         );
     }
@@ -133,8 +136,8 @@ const AppContainer: React.FC = () => {
             <Header />
             <FloatingNav setView={setView} currentView={view} />
             
-            {/* Massive padding top for the massive logo header */}
-            <main className="p-4 pt-60 md:pt-80 max-w-7xl mx-auto transition-all duration-700 ease-in-out">
+            {/* Minimal padding since the header is no longer fixed */}
+            <main className="p-4 pt-12 max-w-7xl mx-auto transition-all duration-700 ease-in-out">
                 {renderContent()}
             </main>
         </div>

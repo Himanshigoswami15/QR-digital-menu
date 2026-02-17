@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { AppProvider, useAppContext } from './context/AppContext';
 import Header from './components/Header';
@@ -15,10 +16,10 @@ const Notification: React.FC = () => {
     }
 
     return (
-        <div className="fixed top-20 right-4 w-full max-w-sm z-[100]">
-            <div className="bg-secondary text-white p-4 rounded-lg shadow-2xl flex items-start gap-3 animate-fade-in-down">
+        <div className="fixed top-24 right-4 w-full max-w-sm z-[100]">
+            <div className="bg-secondary text-white p-4 rounded-sm border border-white/10 shadow-2xl flex items-start gap-3 animate-fade-in-down">
                 <InformationCircleIcon className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                <p className="flex-grow">{state.notification}</p>
+                <p className="flex-grow text-xs font-medium tracking-wide leading-relaxed">{state.notification}</p>
                 <button
                     onClick={() => dispatch({ type: 'HIDE_NOTIFICATION' })}
                     className="p-1 rounded-full hover:bg-white/20 transition-colors"
@@ -52,13 +53,11 @@ const AppContainer: React.FC = () => {
     const [view, setView] = useState<'menu' | 'cart' | 'status' | 'kitchen'>('menu');
 
     useEffect(() => {
-        // Set a default table number since QR code scanning is removed.
-        // This allows the app to load without needing a URL parameter.
         dispatch({ type: 'SET_TABLE', payload: 12 });
     }, [dispatch]);
 
     useEffect(() => {
-        if (state.currentOrderId && view !== 'kitchen') {
+        if (state.currentOrderId && view !== 'kitchen' && view !== 'cart') {
             setView('status');
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -68,7 +67,7 @@ const AppContainer: React.FC = () => {
         if (state.notification) {
             const timer = setTimeout(() => {
                 dispatch({ type: 'HIDE_NOTIFICATION' });
-            }, 5000); // Auto-hide after 5 seconds
+            }, 5000); 
             return () => clearTimeout(timer);
         }
     }, [state.notification, dispatch]);
@@ -76,7 +75,7 @@ const AppContainer: React.FC = () => {
     if (state.tableNumber === null) {
         return (
              <div className="min-h-screen bg-base-100 flex items-center justify-center p-4">
-                 <div className="text-white text-xl">Loading...</div>
+                 <div className="text-white text-[10px] tracking-[0.5em] uppercase font-light animate-pulse">Initializing Kitchen...</div>
              </div>
         );
     }
@@ -92,14 +91,15 @@ const AppContainer: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen bg-base-100 font-sans">
+        <div className="min-h-screen bg-base-100 font-sans selection:bg-white selection:text-emerald-900">
             <Notification />
             <Header 
               onCartClick={() => setView('cart')} 
               onMenuClick={() => setView('menu')}
               onKitchenClick={() => setView('kitchen')}
             />
-            <main className="p-4 pt-20 max-w-7xl mx-auto">
+            {/* Added extra padding-top to account for the larger branding header */}
+            <main className="p-4 pt-28 md:pt-36 max-w-7xl mx-auto">
                 {renderContent()}
             </main>
         </div>

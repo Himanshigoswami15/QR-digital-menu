@@ -43,7 +43,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                     <div className="flex-grow">
                         <div className="flex justify-between items-start mb-2">
                             <h3 className="text-lg font-semibold tracking-wide text-white uppercase">{dish.name}</h3>
-                            <span className="text-sm font-light tracking-widest text-white/70">${dish.price.toFixed(2)}</span>
+                            <span className="text-sm font-light tracking-widest text-white/70">₹{dish.price}</span>
                         </div>
                         <p className="text-white/50 text-xs leading-relaxed font-light line-clamp-2 italic">{dish.description}</p>
                     </div>
@@ -90,7 +90,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                         onClick={handleAddToCart}
                         className="w-full bg-white text-base-100 py-4 rounded-sm font-bold text-xs tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
                     >
-                        Confirm — ${(dish.price * quantity).toFixed(2)}
+                        Confirm — ₹{dish.price * quantity}
                     </button>
                 </div>
             </Modal>

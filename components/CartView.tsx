@@ -65,7 +65,7 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                                    </div>
                                     <div>
                                         <h3 className="font-bold text-sm tracking-widest uppercase text-white">{item.dish.name}</h3>
-                                        <p className="text-[10px] text-white/40 tracking-widest uppercase">${item.dish.price.toFixed(2)} each</p>
+                                        <p className="text-[10px] text-white/40 tracking-widest uppercase">₹{item.dish.price} each</p>
                                         {item.instructions && <p className="text-[10px] text-white/70 mt-1 italic font-light italic opacity-60">Note: {item.instructions}</p>}
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                                         <span className="px-3 text-xs font-bold">{item.quantity}</span>
                                         <button onClick={() => handleQuantityChange(item.dish.id, item.quantity + 1)} className="w-8 h-8 text-xs hover:bg-white/10">+</button>
                                     </div>
-                                    <span className="font-bold text-sm tracking-widest w-16 text-right">${(item.dish.price * item.quantity).toFixed(2)}</span>
+                                    <span className="font-bold text-sm tracking-widest w-16 text-right">₹{item.dish.price * item.quantity}</span>
                                     <button onClick={() => handleRemove(item.dish.id)} className="text-white/30 hover:text-white transition-colors">
                                         <TrashIcon className="w-4 h-4"/>
                                     </button>
@@ -87,11 +87,11 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                     <div className="pt-8 space-y-4">
                         <div className="flex justify-between items-center text-sm font-bold tracking-[0.2em] uppercase">
                             <span className="text-white/50">Subtotal</span>
-                            <span className="text-white text-xl">${subtotal.toFixed(2)}</span>
+                            <span className="text-white text-xl">₹{subtotal}</span>
                         </div>
                         <div className="p-4 bg-white/5 rounded-sm border border-white/5">
                             <p className="text-[10px] tracking-widest uppercase text-white/40 leading-relaxed">
-                                Prices exclude local taxes. Your final bill will be presented upon completion of your visit.
+                                Prices exclude GST. Some orders may require more than 20 minutes preparation.
                             </p>
                         </div>
                         <button

@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     const logoUrl = "https://ik.imagekit.io/j1fgksdwx/ChatGPT%20Image%20Feb%2016,%202026,%2006_12_08%20PM.png?updatedAt=1771245805784";
 
     return (
-        <header className="relative w-full bg-base-100 h-[65vh] md:h-[80vh] flex flex-col items-center justify-center overflow-hidden border-b border-white/5 transition-all duration-1000 ease-out">
+        <header className="relative w-full bg-base-100 h-[60vh] md:h-[75vh] flex flex-col items-center justify-center overflow-hidden border-b border-white/5 transition-all duration-1000 ease-out">
             {/* Dynamic Background Elements */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-white/[0.03] to-transparent opacity-50 blur-3xl"></div>
@@ -27,16 +27,8 @@ const Header: React.FC = () => {
                     />
                 </div>
 
-                {/* Brand Tagline */}
-                <div className="flex flex-col items-center gap-4 text-center px-6">
-                    <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-                    <p className="text-[10px] md:text-xs tracking-[0.6em] uppercase text-white/60 font-light italic leading-relaxed">
-                        Refined flavors, Unforgettable moments
-                    </p>
-                </div>
-
                 <div className="flex flex-col items-center gap-4 mt-8 animate-bounce opacity-40">
-                    <p className="text-[10px] tracking-[0.8em] uppercase font-light text-white">Scroll to Explore</p>
+                    <p className="text-[10px] tracking-[0.8em] uppercase font-light text-white">Explore Menu</p>
                     <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
                 </div>
             </div>

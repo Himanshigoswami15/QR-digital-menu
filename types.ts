@@ -4,7 +4,7 @@ export interface Dish {
     name: string;
     description: string;
     price: number;
-    category: 'Appetizer' | 'Main Course' | 'Dessert' | 'Beverage';
+    category: 'On The Run' | 'Chaat House' | 'Tandoori Starters' | 'Chinese' | 'Shahi Vegetable' | 'Veg Main Course' | 'Dal & Rice' | 'Indian Bread' | 'Salad & Raita';
     imageUrl: string;
 }
 

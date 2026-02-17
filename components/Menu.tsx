@@ -39,12 +39,6 @@ const Menu: React.FC = () => {
             </nav>
 
             <div className="space-y-24 pb-20">
-                {/* Elegant spacing element */}
-                <div className="flex flex-col items-center mb-12">
-                    <div className="w-12 h-[1px] bg-white/20 mb-4"></div>
-                    <p className="text-[10px] tracking-[0.6em] uppercase text-white/40 font-light italic">Refined flavors, Unforgettable moments</p>
-                </div>
-
                 {categories.map(category => {
                     const items = MENU_ITEMS.filter(item => item.category === category);
                     if (items.length === 0) return null;

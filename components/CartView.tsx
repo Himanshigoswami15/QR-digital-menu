@@ -34,71 +34,86 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
         });
         dispatch({
             type: 'SHOW_NOTIFICATION',
-            payload: `Order received. Our kitchen is preparing your selection.`
+            payload: `Your order has been received. Thank you!`
         });
+        onBackToMenu();
     };
 
     const subtotal = state.cart.reduce((sum, item) => sum + item.dish.price * item.quantity, 0);
 
     return (
-        <div className="max-w-2xl mx-auto py-8">
-            <div className="flex items-center mb-10">
-                 <button onClick={onBackToMenu} className="mr-6 p-2 rounded-full border border-white/10 hover:bg-white/10 transition-colors">
-                    <ArrowLeftIcon className="w-5 h-5 text-white"/>
+        <div className="max-w-3xl mx-auto py-8 px-4">
+            <div className="flex flex-col items-center mb-16 text-center">
+                 <button 
+                    onClick={onBackToMenu} 
+                    className="mb-8 flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-white/40 hover:text-white transition-all group"
+                 >
+                    <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform"/>
+                    Back to Menu
                 </button>
-                <h2 className="text-2xl font-light tracking-[0.3em] uppercase text-white">Review Order</h2>
+                <h2 className="text-5xl font-serif italic text-white mb-4">Your Selection</h2>
+                <div className="w-12 h-[1px] bg-white/20"></div>
             </div>
             
             {state.cart.length === 0 ? (
-                <div className="text-center py-20 border border-white/5 bg-white/5 rounded-sm">
-                    <p className="text-white/30 uppercase tracking-widest text-sm">Your selection is empty.</p>
-                    <button onClick={onBackToMenu} className="mt-4 text-xs font-bold tracking-[0.2em] uppercase text-white hover:underline underline-offset-4">Return to Menu</button>
+                <div className="text-center py-24 border border-white/5 bg-white/[0.02] rounded-2xl backdrop-blur-sm">
+                    <p className="text-white/30 uppercase tracking-[0.4em] text-[10px] font-bold mb-8">Your cart is currently empty</p>
+                    <button onClick={onBackToMenu} className="px-8 py-3 border border-white/20 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase text-white hover:bg-white hover:text-base-100 transition-all">Explore Menu</button>
                 </div>
             ) : (
-                <div className="space-y-6">
-                    <div className="space-y-4">
+                <div className="space-y-12">
+                    <div className="space-y-6">
                         {state.cart.map((item: CartItem) => (
-                            <div key={item.dish.id} className="flex items-center justify-between border-b border-white/10 pb-4">
-                                <div className="flex gap-4 items-center">
-                                   <div className="w-16 h-16 rounded-sm overflow-hidden border border-white/10">
+                            <div key={item.dish.id} className="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 border border-white/5 bg-white/[0.02] rounded-2xl hover:bg-white/[0.04] transition-all">
+                                <div className="flex gap-6 items-center">
+                                   <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10 shrink-0">
                                        <img src={item.dish.imageUrl} alt={item.dish.name} className="w-full h-full object-cover" />
                                    </div>
                                     <div>
-                                        <h3 className="font-bold text-sm tracking-widest uppercase text-white">{item.dish.name}</h3>
-                                        <p className="text-[10px] text-white/40 tracking-widest uppercase">₹{item.dish.price} each</p>
-                                        {item.instructions && <p className="text-[10px] text-white/70 mt-1 italic font-light italic opacity-60">Note: {item.instructions}</p>}
+                                        <h3 className="font-serif italic text-xl text-white mb-1">{item.dish.name}</h3>
+                                        <p className="text-[10px] text-white/40 tracking-widest uppercase mb-2">₹{item.dish.price} each</p>
+                                        {item.instructions && (
+                                            <p className="text-[10px] text-white/60 bg-white/5 px-3 py-1.5 rounded-sm italic max-w-xs">
+                                                “{item.instructions}”
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-6">
-                                    <div className="flex items-center border border-white/20 rounded-sm">
-                                        <button onClick={() => handleQuantityChange(item.dish.id, item.quantity - 1)} className="w-8 h-8 text-xs hover:bg-white/10">-</button>
-                                        <span className="px-3 text-xs font-bold">{item.quantity}</span>
-                                        <button onClick={() => handleQuantityChange(item.dish.id, item.quantity + 1)} className="w-8 h-8 text-xs hover:bg-white/10">+</button>
+                                <div className="flex items-center justify-between md:justify-end gap-10">
+                                    <div className="flex items-center gap-4">
+                                        <button onClick={() => handleQuantityChange(item.dish.id, item.quantity - 1)} className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">−</button>
+                                        <span className="text-lg font-serif italic text-white w-4 text-center">{item.quantity}</span>
+                                        <button onClick={() => handleQuantityChange(item.dish.id, item.quantity + 1)} className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">+</button>
                                     </div>
-                                    <span className="font-bold text-sm tracking-widest w-16 text-right">₹{item.dish.price * item.quantity}</span>
-                                    <button onClick={() => handleRemove(item.dish.id)} className="text-white/30 hover:text-white transition-colors">
-                                        <TrashIcon className="w-4 h-4"/>
-                                    </button>
+                                    <div className="flex flex-col items-end gap-2">
+                                        <span className="font-serif italic text-xl text-white">₹{item.dish.price * item.quantity}</span>
+                                        <button onClick={() => handleRemove(item.dish.id)} className="text-[9px] tracking-widest uppercase text-white/30 hover:text-error transition-colors flex items-center gap-2 group">
+                                            <TrashIcon className="w-3 h-3 group-hover:scale-110"/>
+                                            Remove
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                     
-                    <div className="pt-8 space-y-4">
-                        <div className="flex justify-between items-center text-sm font-bold tracking-[0.2em] uppercase">
-                            <span className="text-white/50">Subtotal</span>
-                            <span className="text-white text-xl">₹{subtotal}</span>
+                    <div className="pt-12 border-t border-white/5 space-y-10">
+                        <div className="flex flex-col items-center gap-4">
+                            <span className="text-[11px] tracking-[0.5em] uppercase text-white/30 font-bold">Total Investment</span>
+                            <span className="text-6xl font-serif italic text-white">₹{subtotal}</span>
                         </div>
-                        <div className="p-4 bg-white/5 rounded-sm border border-white/5">
-                            <p className="text-[10px] tracking-widest uppercase text-white/40 leading-relaxed">
-                                Prices exclude GST. Some orders may require more than 20 minutes preparation.
+                        
+                        <div className="p-8 bg-white/[0.03] rounded-2xl border border-white/5 text-center max-w-md mx-auto">
+                            <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 leading-relaxed italic">
+                                All prices exclude GST. Our culinary team prepares each selection with focused attention.
                             </p>
                         </div>
+
                         <button
                            onClick={handlePlaceOrder}
-                           className="w-full bg-white text-base-100 py-4 mt-4 rounded-sm font-black text-xs tracking-[0.3em] uppercase hover:bg-white/90 transition-transform active:scale-[0.98]"
+                           className="w-full max-w-md mx-auto block bg-white text-base-100 py-6 rounded-sm font-black text-xs tracking-[0.5em] uppercase hover:bg-white/90 transition-transform active:scale-[0.98] shadow-2xl"
                         >
-                            Place Order
+                            Finalize Order
                         </button>
                     </div>
                 </div>

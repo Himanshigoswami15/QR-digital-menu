@@ -30,68 +30,94 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
 
     return (
         <>
-            <div className="bg-white/5 border border-white/10 rounded-sm overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col">
-                <div className="relative overflow-hidden aspect-[4/3]">
+            <div className="group flex flex-col items-center text-center transition-all duration-500">
+                <div 
+                    className="relative w-full aspect-square mb-8 cursor-pointer overflow-hidden rounded-full border border-white/5 shadow-2xl"
+                    onClick={() => setIsModalOpen(true)}
+                >
                     <img 
                         src={dish.imageUrl} 
                         alt={dish.name} 
-                        className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" 
+                        className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-base-100/60 to-transparent"></div>
-                </div>
-                <div className="p-5 flex flex-col flex-grow">
-                    <div className="flex-grow">
-                        <div className="flex justify-between items-start mb-2">
-                            <h3 className="text-lg font-semibold tracking-wide text-white uppercase">{dish.name}</h3>
-                            <span className="text-sm font-light tracking-widest text-white/70">₹{dish.price}</span>
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-base-100 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <PlusCircleIcon className="w-6 h-6" />
                         </div>
-                        <p className="text-white/50 text-xs leading-relaxed font-light line-clamp-2 italic">{dish.description}</p>
                     </div>
-                    <div className="mt-6">
+                </div>
+
+                <div className="flex flex-col items-center max-w-[280px]">
+                    <h3 className="text-2xl font-serif italic text-white mb-2 leading-tight">{dish.name}</h3>
+                    <p className="text-white/40 text-[11px] leading-relaxed font-light tracking-wide mb-4 line-clamp-2 uppercase">
+                        {dish.description}
+                    </p>
+                    <div className="flex items-center gap-4">
+                        <span className="text-lg font-serif italic text-white/80">₹{dish.price}</span>
+                        <div className="w-[1px] h-4 bg-white/10"></div>
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="w-full border border-white text-white hover:bg-white hover:text-base-100 px-4 py-2 rounded-sm text-xs font-bold tracking-widest uppercase transition-all flex items-center justify-center gap-2"
+                            className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors"
                         >
-                            <PlusCircleIcon className="w-4 h-4" />
-                            Add to Order
+                            Select
                         </button>
                     </div>
                 </div>
-                 {showSuccess && <div className="bg-white text-base-100 text-center py-1 text-[10px] font-black uppercase tracking-widest">Added to Order</div>}
+                
+                {showSuccess && (
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-white text-base-100 px-4 py-1 rounded-full text-[9px] font-black uppercase tracking-[0.2em] animate-bounce shadow-xl">
+                        Added
+                    </div>
+                )}
             </div>
 
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                <h2 className="text-xl font-bold tracking-[0.2em] uppercase mb-4 text-white">{dish.name}</h2>
-                <img src={dish.imageUrl} alt={dish.name} className="w-full h-48 object-cover rounded-sm mb-6 border border-white/10"/>
-                
-                <div className="space-y-6">
-                    <div>
-                        <label className="block text-[10px] tracking-widest uppercase text-white/50 mb-3 font-bold">Quantity</label>
-                        <div className="flex items-center">
-                            <button onClick={() => setQuantity(q => Math.max(1, q - 1))} className="w-12 h-12 border border-white/20 hover:bg-white/10 flex items-center justify-center text-white transition-colors">-</button>
-                            <div className="w-16 h-12 flex items-center justify-center border-t border-b border-white/20 text-white font-bold">{quantity}</div>
-                            <button onClick={() => setQuantity(q => q + 1)} className="w-12 h-12 border border-white/20 hover:bg-white/10 flex items-center justify-center text-white transition-colors">+</button>
+                <div className="p-2">
+                    <h2 className="text-3xl font-serif italic text-white mb-2 text-center">{dish.name}</h2>
+                    <p className="text-[10px] tracking-[0.3em] uppercase text-white/40 text-center mb-8">Customize Your Selection</p>
+                    
+                    <div className="relative w-40 h-40 mx-auto mb-10 rounded-full overflow-hidden border-2 border-white/10">
+                        <img src={dish.imageUrl} alt={dish.name} className="w-full h-full object-cover" />
+                    </div>
+                    
+                    <div className="space-y-10">
+                        <div className="flex flex-col items-center">
+                            <label className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-4 font-bold">Quantity</label>
+                            <div className="flex items-center gap-8">
+                                <button 
+                                    onClick={() => setQuantity(q => Math.max(1, q - 1))} 
+                                    className="w-10 h-10 rounded-full border border-white/10 hover:bg-white hover:text-base-100 transition-all text-xl flex items-center justify-center"
+                                >
+                                    −
+                                </button>
+                                <span className="text-2xl font-serif italic text-white w-8 text-center">{quantity}</span>
+                                <button 
+                                    onClick={() => setQuantity(q => q + 1)} 
+                                    className="w-10 h-10 rounded-full border border-white/10 hover:bg-white hover:text-base-100 transition-all text-xl flex items-center justify-center"
+                                >
+                                    +
+                                </button>
+                            </div>
                         </div>
+                        
+                        <div>
+                            <label htmlFor="instructions" className="block text-[10px] tracking-[0.4em] uppercase text-white/30 mb-4 font-bold text-center">Chef's Notes</label>
+                            <textarea
+                                id="instructions"
+                                value={instructions}
+                                onChange={(e) => setInstructions(e.target.value)}
+                                placeholder="Any special requests or allergens?"
+                                className="w-full bg-white/5 border border-white/10 rounded-sm p-4 text-white placeholder:text-white/20 focus:border-white/40 focus:outline-none transition-all text-xs font-light min-h-[100px] text-center"
+                            ></textarea>
+                        </div>
+                        
+                        <button
+                            onClick={handleAddToCart}
+                            className="w-full bg-white text-base-100 py-5 rounded-sm font-black text-[11px] tracking-[0.4em] uppercase hover:bg-white/90 transition-all shadow-[0_10px_30px_rgba(255,255,255,0.1)]"
+                        >
+                            Add Selection — ₹{dish.price * quantity}
+                        </button>
                     </div>
-                    
-                    <div>
-                        <label htmlFor="instructions" className="block text-[10px] tracking-widest uppercase text-white/50 mb-3 font-bold">Special Requests</label>
-                        <textarea
-                            id="instructions"
-                            value={instructions}
-                            onChange={(e) => setInstructions(e.target.value)}
-                            placeholder="e.g., extra spicy, allergens..."
-                            className="w-full bg-white/5 border border-white/20 rounded-sm p-3 text-white placeholder:text-white/20 focus:border-white focus:outline-none transition-all text-sm font-light"
-                            rows={3}
-                        ></textarea>
-                    </div>
-                    
-                    <button
-                        onClick={handleAddToCart}
-                        className="w-full bg-white text-base-100 py-4 rounded-sm font-bold text-xs tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
-                    >
-                        Confirm — ₹{dish.price * quantity}
-                    </button>
                 </div>
             </Modal>
         </>

@@ -6,21 +6,28 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kargil Kitchen - Digital Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Montserrat', 'sans-serif'],
+            },
             colors: {
-              primary: '#ffffff', // Pure white for primary buttons/highlights
+              primary: '#ffffff',
               'primary-focus': '#f0f0f0', 
-              'primary-content': '#204534', // Green text on white buttons
-              secondary: '#2a5a44', // Lighter green for secondary UI
-              accent: '#ffffff', // High contrast accents
+              'primary-content': '#204534',
+              secondary: '#2a5a44',
+              accent: '#ffffff',
               neutral: '#ffffff',
-              'base-100': '#204534', // Deep Forest Green Background
-              'base-200': '#2b5843', // Slightly lighter green for cards
-              'base-300': '#376b53', // Even lighter green for borders/hovers
+              'base-100': '#204534',
+              'base-200': '#2b5843',
+              'base-300': '#376b53',
               info: '#ffffff',
               success: '#ffffff',
               warning: '#ffffff',
@@ -40,7 +47,7 @@
 }
 </script>
 </head>
-  <body class="bg-base-100 text-white selection:bg-white selection:text-emerald-900">
+  <body class="bg-base-100 text-white selection:bg-white selection:text-emerald-900 font-sans">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

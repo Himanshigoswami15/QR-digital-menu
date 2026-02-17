@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useAppContext } from '../context/AppContext';
 import { ShoppingCartIcon, UtensilsIcon, ChefHatIcon } from './icons/Icons';
@@ -22,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ onCartClick, onMenuClick, onKitchenClic
                     >
                         <UtensilsIcon className="w-8 h-8 text-primary" />
                         <h1 className="text-xl font-bold text-white tracking-wider">
-                            QR Dine<span className="text-primary">In</span>
+                            Kargil <span className="text-primary">Kitchen</span>
                         </h1>
                     </div>
                     <div className="flex items-center gap-6">

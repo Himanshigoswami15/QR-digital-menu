@@ -57,15 +57,19 @@ const Menu: React.FC = () => {
                     return (
                         <section key={category} id={sectionId} className="scroll-mt-32">
                             <div className="flex flex-col items-center mb-16 text-center">
-                                <span className="text-[10px] tracking-[0.5em] uppercase text-white/30 font-bold mb-4">Discover Our</span>
+                                <div className="flex items-center gap-3 mb-4 opacity-30">
+                                    <div className="w-8 h-[1px] bg-white"></div>
+                                    <span className="text-[10px] tracking-[0.5em] uppercase font-bold">Menu</span>
+                                    <div className="w-8 h-[1px] bg-white"></div>
+                                </div>
                                 <h2 className="text-4xl md:text-5xl font-serif italic text-white mb-6">{category}</h2>
                                 <div className="flex items-center gap-4 w-full max-w-xs">
                                     <div className="h-[1px] flex-grow bg-gradient-to-l from-white/20 to-transparent"></div>
-                                    <div className="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+                                    <div className="w-2 h-2 rotate-45 border border-white/40"></div>
                                     <div className="h-[1px] flex-grow bg-gradient-to-r from-white/20 to-transparent"></div>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
                                 {items.map((dish: Dish) => (
                                     <MenuItem key={dish.id} dish={dish} />
                                 ))}

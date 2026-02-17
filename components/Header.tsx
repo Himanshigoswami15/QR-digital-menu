@@ -6,6 +6,20 @@ const Header: React.FC = () => {
 
     return (
         <header className="relative w-full bg-base-100 h-[65vh] md:h-[80vh] flex flex-col items-center justify-center overflow-hidden border-b border-white/5 transition-all duration-1000 ease-out">
+            {/* Decorative Ornaments */}
+            <div className="absolute top-0 left-0 p-8 opacity-20 pointer-events-none hidden md:block">
+                <svg width="120" height="120" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <path d="M0 20 C 40 20, 20 40, 20 100 M0 40 C 60 40, 40 60, 40 100 M0 0 L 100 0" strokeWidth="0.5" />
+                    <circle cx="10" cy="10" r="2" fill="currentColor" />
+                </svg>
+            </div>
+            <div className="absolute top-0 right-0 p-8 opacity-20 pointer-events-none rotate-90 hidden md:block">
+                <svg width="120" height="120" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <path d="M0 20 C 40 20, 20 40, 20 100 M0 40 C 60 40, 40 60, 40 100 M0 0 L 100 0" strokeWidth="0.5" />
+                    <circle cx="10" cy="10" r="2" fill="currentColor" />
+                </svg>
+            </div>
+
             {/* Dynamic Background Elements */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-gradient-radial from-white/[0.04] to-transparent opacity-60 blur-3xl"></div>

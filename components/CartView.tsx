@@ -66,7 +66,7 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                         {state.cart.map((item: CartItem) => (
                             <div key={item.dish.id} className="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 border border-white/5 bg-white/[0.02] rounded-2xl hover:bg-white/[0.04] transition-all">
                                 <div className="flex gap-6 items-center">
-                                   <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10 shrink-0">
+                                   <div className="w-24 h-24 rounded-lg overflow-hidden border border-white/10 shrink-0">
                                        <img src={item.dish.imageUrl} alt={item.dish.name} className="w-full h-full object-cover" />
                                    </div>
                                     <div>

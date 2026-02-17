@@ -1,13 +1,14 @@
+
 import React, { useState } from 'react';
 import { useAppContext } from '../context/AppContext';
 import { OrderStatus } from '../types';
 import { CheckCircleIcon, CreditCardIcon, ClockIcon, KitchenDisplayIcon } from './icons/Icons';
 
 const statusMap = {
-    [OrderStatus.Pending]: { text: 'Order Sent', description: 'Your order is now live on the kitchen dashboard.', index: 0 },
-    [OrderStatus.Preparing]: { text: 'Preparing', description: 'The kitchen is preparing your delicious meal.', index: 1 },
-    [OrderStatus.Ready]: { text: 'Ready', description: 'Your order is ready and on its way!', index: 2 },
-    [OrderStatus.Served]: { text: 'Served', description: 'Enjoy your meal!', index: 3 },
+    [OrderStatus.Pending]: { text: 'Received', description: 'Your selection is being reviewed by the chef.', index: 0 },
+    [OrderStatus.Preparing]: { text: 'Preparing', description: 'Fresh ingredients are being combined with care.', index: 1 },
+    [OrderStatus.Ready]: { text: 'Finishing', description: 'Your order is being plated and is ready for service.', index: 2 },
+    [OrderStatus.Served]: { text: 'Enjoy', description: 'We hope you find every bite memorable.', index: 3 },
 };
 
 const OrderStatusView: React.FC = () => {
@@ -17,64 +18,75 @@ const OrderStatusView: React.FC = () => {
     const order = state.orders.find(o => o.id === state.currentOrderId);
 
     if (!order) {
-        return <div className="text-center text-gray-400">No active order found.</div>;
+        return (
+            <div className="flex flex-col items-center justify-center py-20 text-white/30 uppercase tracking-[0.2em] text-xs">
+                <p>No active order found.</p>
+            </div>
+        );
     }
 
     const currentStatusIndex = statusMap[order.status].index;
     const isOrderComplete = order.status === OrderStatus.Served;
 
     return (
-        <div className="bg-base-200 p-6 rounded-xl shadow-2xl max-w-4xl mx-auto">
-            <h2 className="text-3xl font-extrabold text-white text-center mb-2">Your Order Status</h2>
-            <p className="text-center text-gray-400 mb-8">Order ID: {order.id}</p>
+        <div className="max-w-2xl mx-auto py-10">
+            <div className="text-center mb-12">
+                <h2 className="text-2xl font-light tracking-[0.4em] uppercase text-white mb-2">Order Tracking</h2>
+                <p className="text-[10px] tracking-[0.3em] text-white/40 uppercase">Ref No: {order.id}</p>
+            </div>
 
-            <div className="flex justify-between items-start mb-10 px-4">
+            <div className="flex justify-between items-center mb-16 relative">
+                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -z-10"></div>
                 {Object.values(OrderStatus).map((status) => {
                     const statusInfo = statusMap[status];
                     const isCompleted = statusInfo.index <= currentStatusIndex;
                     const isCurrent = statusInfo.index === currentStatusIndex;
 
                     return (
-                        <React.Fragment key={status}>
-                            <div className="flex flex-col items-center text-center w-24">
-                                <div className={`w-12 h-12 rounded-full flex items-center justify-center border-4 ${isCompleted ? 'bg-accent border-accent' : 'bg-base-300 border-gray-600'} transition-all duration-500`}>
-                                    {isCompleted ? <CheckCircleIcon className="w-8 h-8 text-white"/> : <div className={`w-4 h-4 rounded-full ${isCurrent ? 'bg-primary animate-pulse' : 'bg-gray-500'}`}></div> }
-                                </div>
-                                <p className={`mt-2 font-bold ${isCompleted ? 'text-white' : 'text-gray-500'}`}>{statusInfo.text}</p>
+                        <div key={status} className="flex flex-col items-center gap-4 bg-base-100 px-2">
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-700 ${isCompleted ? 'bg-white border-white' : 'bg-base-100 border-white/20'}`}>
+                                {isCompleted ? (
+                                    <CheckCircleIcon className="w-6 h-6 text-base-100"/>
+                                ) : (
+                                    <div className={`w-2 h-2 rounded-full ${isCurrent ? 'bg-white animate-pulse' : 'bg-white/10'}`}></div>
+                                )}
                             </div>
-                            {statusInfo.index < 3 && <div className={`flex-1 h-1 mt-6 ${statusInfo.index < currentStatusIndex ? 'bg-accent' : 'bg-gray-600'}`}></div>}
-                        </React.Fragment>
+                            <span className={`text-[9px] font-bold tracking-[0.2em] uppercase ${isCompleted ? 'text-white' : 'text-white/20'}`}>
+                                {statusInfo.text}
+                            </span>
+                        </div>
                     );
                 })}
             </div>
             
-            <div className="bg-base-300 p-6 rounded-lg text-center mb-8">
-                <h3 className="text-2xl font-bold text-primary">{statusMap[order.status].text}</h3>
-                <p className="text-gray-300 mt-1">{statusMap[order.status].description}</p>
+            <div className="bg-white/5 border border-white/10 p-10 rounded-sm text-center mb-12">
+                <h3 className="text-xl font-bold tracking-[0.2em] uppercase text-white mb-3">{statusMap[order.status].text}</h3>
+                <p className="text-sm font-light text-white/60 italic">"{statusMap[order.status].description}"</p>
                  {order.status === OrderStatus.Pending && (
-                    <div className="mt-4 flex items-center justify-center gap-3 bg-base-100/50 p-3 rounded-lg border border-accent/50">
-                        <KitchenDisplayIcon className="w-8 h-8 text-accent flex-shrink-0" />
-                        <span className="font-semibold text-white">Confirmed on Kitchen Display</span>
+                    <div className="mt-8 flex items-center justify-center gap-3">
+                        <div className="w-8 h-[1px] bg-white/20"></div>
+                        <KitchenDisplayIcon className="w-5 h-5 text-white/40" />
+                        <span className="text-[9px] tracking-widest uppercase text-white/40">Verified by Kitchen</span>
+                        <div className="w-8 h-[1px] bg-white/20"></div>
                     </div>
                 )}
             </div>
             
             {isOrderComplete && (
-                <div className="border-t border-base-300 pt-6 mt-6">
-                     <h3 className="text-2xl font-bold text-white text-center mb-4">Payment</h3>
+                <div className="border-t border-white/10 pt-10 mt-10">
+                     <h3 className="text-xl font-bold tracking-[0.3em] uppercase text-white text-center mb-8">Settlement</h3>
                      {paymentMethod ? (
-                        <div className="text-center bg-base-300 p-6 rounded-lg">
-                           <h4 className="text-xl font-bold text-success">Thank You!</h4>
-                           {paymentMethod === 'later' && <p>Please pay at the counter when you're ready to leave.</p>}
-                           {paymentMethod === 'online' && <p>Your payment has been processed. We appreciate your business!</p>}
+                        <div className="text-center p-8 bg-white text-base-100 rounded-sm">
+                           <h4 className="text-sm font-black tracking-widest uppercase mb-2">Payment Acknowledged</h4>
+                           <p className="text-xs font-light italic">Thank you for dining with us at Kargil Kitchen.</p>
                         </div>
                      ) : (
                          <div className="flex flex-col md:flex-row gap-4">
-                            <button onClick={() => setPaymentMethod('later')} className="flex-1 bg-secondary text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-800 transition-colors flex items-center justify-center gap-2">
-                               <ClockIcon className="w-6 h-6"/> Pay Later
+                            <button onClick={() => setPaymentMethod('later')} className="flex-1 border border-white/40 text-white py-4 rounded-sm font-bold text-xs tracking-widest uppercase hover:bg-white/10 transition-colors flex items-center justify-center gap-3">
+                               <ClockIcon className="w-5 h-5"/> Pay at Counter
                             </button>
-                            <button onClick={() => setPaymentMethod('online')} className="flex-1 bg-primary text-white py-3 rounded-lg font-bold text-lg hover:bg-primary-focus transition-colors flex items-center justify-center gap-2">
-                               <CreditCardIcon className="w-6 h-6"/> Pay Online Now
+                            <button onClick={() => setPaymentMethod('online')} className="flex-1 bg-white text-base-100 py-4 rounded-sm font-black text-xs tracking-widest uppercase hover:bg-white/90 transition-colors flex items-center justify-center gap-3">
+                               <CreditCardIcon className="w-5 h-5"/> Online Payment
                             </button>
                          </div>
                      )}

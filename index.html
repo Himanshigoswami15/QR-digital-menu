@@ -12,19 +12,19 @@
         theme: {
           extend: {
             colors: {
-              primary: '#ea580c', // Orange 600
-              'primary-focus': '#c2410c', // Orange 700
-              'primary-content': '#ffffff',
-              secondary: '#1e293b', // Slate 800
-              accent: '#f59e0b', // Amber 500
-              neutral: '#3d4451',
-              'base-100': '#0f172a', // Slate 900
-              'base-200': '#1e293b', // Slate 800
-              'base-300': '#334155', // Slate 700
-              info: '#38bdf8',
-              success: '#22c55e',
-              warning: '#facc15',
-              error: '#ef4444',
+              primary: '#ffffff', // Pure white for primary buttons/highlights
+              'primary-focus': '#f0f0f0', 
+              'primary-content': '#204534', // Green text on white buttons
+              secondary: '#2a5a44', // Lighter green for secondary UI
+              accent: '#ffffff', // High contrast accents
+              neutral: '#ffffff',
+              'base-100': '#204534', // Deep Forest Green Background
+              'base-200': '#2b5843', // Slightly lighter green for cards
+              'base-300': '#376b53', // Even lighter green for borders/hovers
+              info: '#ffffff',
+              success: '#ffffff',
+              warning: '#ffffff',
+              error: '#ff6b6b',
             },
           },
         },
@@ -40,7 +40,7 @@
 }
 </script>
 </head>
-  <body class="bg-base-100 text-white">
+  <body class="bg-base-100 text-white selection:bg-white selection:text-emerald-900">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

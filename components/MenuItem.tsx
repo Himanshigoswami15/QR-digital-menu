@@ -24,62 +24,75 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
         setIsModalOpen(false);
         setShowSuccess(true);
         setTimeout(() => setShowSuccess(false), 2000);
-        // Reset for next time
         setQuantity(1);
         setInstructions('');
     };
 
     return (
         <>
-            <div className="bg-base-200 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 flex flex-col">
-                <img src={dish.imageUrl} alt={dish.name} className="w-full h-48 object-cover" />
-                <div className="p-4 flex flex-col flex-grow">
+            <div className="bg-white/5 border border-white/10 rounded-sm overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col">
+                <div className="relative overflow-hidden aspect-[4/3]">
+                    <img 
+                        src={dish.imageUrl} 
+                        alt={dish.name} 
+                        className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-base-100/60 to-transparent"></div>
+                </div>
+                <div className="p-5 flex flex-col flex-grow">
                     <div className="flex-grow">
-                        <h3 className="text-xl font-bold text-white">{dish.name}</h3>
-                        <p className="text-gray-400 mt-2 text-sm">{dish.description}</p>
+                        <div className="flex justify-between items-start mb-2">
+                            <h3 className="text-lg font-semibold tracking-wide text-white uppercase">{dish.name}</h3>
+                            <span className="text-sm font-light tracking-widest text-white/70">${dish.price.toFixed(2)}</span>
+                        </div>
+                        <p className="text-white/50 text-xs leading-relaxed font-light line-clamp-2 italic">{dish.description}</p>
                     </div>
-                    <div className="flex justify-between items-center mt-4">
-                        <span className="text-lg font-semibold text-accent">${dish.price.toFixed(2)}</span>
+                    <div className="mt-6">
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="bg-primary text-primary-content px-4 py-2 rounded-full font-semibold hover:bg-primary-focus transition-colors flex items-center gap-2"
+                            className="w-full border border-white text-white hover:bg-white hover:text-base-100 px-4 py-2 rounded-sm text-xs font-bold tracking-widest uppercase transition-all flex items-center justify-center gap-2"
                         >
-                            <PlusCircleIcon className="w-5 h-5" />
-                            Add
+                            <PlusCircleIcon className="w-4 h-4" />
+                            Add to Order
                         </button>
                     </div>
                 </div>
-                 {showSuccess && <div className="bg-success text-white text-center py-1 text-sm font-bold">Added to cart!</div>}
+                 {showSuccess && <div className="bg-white text-base-100 text-center py-1 text-[10px] font-black uppercase tracking-widest">Added to Order</div>}
             </div>
 
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                <h2 className="text-2xl font-bold mb-4 text-white">{dish.name}</h2>
-                <img src={dish.imageUrl} alt={dish.name} className="w-full h-48 object-cover rounded-lg mb-4"/>
-                <div className="mb-4">
-                    <label className="block text-gray-300 mb-2">Quantity</label>
-                    <div className="flex items-center">
-                        <button onClick={() => setQuantity(q => Math.max(1, q - 1))} className="bg-base-300 px-4 py-2 rounded-l-lg font-bold text-xl">-</button>
-                        <input type="text" readOnly value={quantity} className="w-16 text-center bg-base-200 py-2" />
-                        <button onClick={() => setQuantity(q => q + 1)} className="bg-base-300 px-4 py-2 rounded-r-lg font-bold text-xl">+</button>
+                <h2 className="text-xl font-bold tracking-[0.2em] uppercase mb-4 text-white">{dish.name}</h2>
+                <img src={dish.imageUrl} alt={dish.name} className="w-full h-48 object-cover rounded-sm mb-6 border border-white/10"/>
+                
+                <div className="space-y-6">
+                    <div>
+                        <label className="block text-[10px] tracking-widest uppercase text-white/50 mb-3 font-bold">Quantity</label>
+                        <div className="flex items-center">
+                            <button onClick={() => setQuantity(q => Math.max(1, q - 1))} className="w-12 h-12 border border-white/20 hover:bg-white/10 flex items-center justify-center text-white transition-colors">-</button>
+                            <div className="w-16 h-12 flex items-center justify-center border-t border-b border-white/20 text-white font-bold">{quantity}</div>
+                            <button onClick={() => setQuantity(q => q + 1)} className="w-12 h-12 border border-white/20 hover:bg-white/10 flex items-center justify-center text-white transition-colors">+</button>
+                        </div>
                     </div>
+                    
+                    <div>
+                        <label htmlFor="instructions" className="block text-[10px] tracking-widest uppercase text-white/50 mb-3 font-bold">Special Requests</label>
+                        <textarea
+                            id="instructions"
+                            value={instructions}
+                            onChange={(e) => setInstructions(e.target.value)}
+                            placeholder="e.g., extra spicy, allergens..."
+                            className="w-full bg-white/5 border border-white/20 rounded-sm p-3 text-white placeholder:text-white/20 focus:border-white focus:outline-none transition-all text-sm font-light"
+                            rows={3}
+                        ></textarea>
+                    </div>
+                    
+                    <button
+                        onClick={handleAddToCart}
+                        className="w-full bg-white text-base-100 py-4 rounded-sm font-bold text-xs tracking-[0.2em] uppercase hover:bg-white/90 transition-all"
+                    >
+                        Confirm — ${(dish.price * quantity).toFixed(2)}
+                    </button>
                 </div>
-                <div className="mb-6">
-                    <label htmlFor="instructions" className="block text-gray-300 mb-2">Special Instructions</label>
-                    <textarea
-                        id="instructions"
-                        value={instructions}
-                        onChange={(e) => setInstructions(e.target.value)}
-                        placeholder="e.g., extra spicy, no onions"
-                        className="w-full bg-base-200 border border-base-300 rounded-lg p-2 focus:ring-2 focus:ring-primary focus:border-primary transition"
-                        rows={3}
-                    ></textarea>
-                </div>
-                <button
-                    onClick={handleAddToCart}
-                    className="w-full bg-primary text-primary-content py-3 rounded-lg font-bold text-lg hover:bg-primary-focus transition-colors"
-                >
-                    Add to Cart - ${(dish.price * quantity).toFixed(2)}
-                </button>
             </Modal>
         </>
     );

@@ -16,7 +16,7 @@ const Notification: React.FC = () => {
     }
 
     return (
-        <div className="fixed top-32 right-4 w-full max-w-sm z-[100]">
+        <div className="fixed top-40 right-4 w-full max-w-sm z-[100]">
             <div className="bg-secondary text-white p-4 rounded-sm border border-white/10 shadow-2xl flex items-start gap-3 animate-fade-in-down">
                 <InformationCircleIcon className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <p className="flex-grow text-xs font-medium tracking-wide leading-relaxed">{state.notification}</p>
@@ -98,8 +98,8 @@ const AppContainer: React.FC = () => {
               onMenuClick={() => setView('menu')}
               onKitchenClick={() => setView('kitchen')}
             />
-            {/* Increased padding-top for the taller branding header */}
-            <main className="p-4 pt-36 md:pt-48 max-w-7xl mx-auto">
+            {/* Adjusted padding-top for the significantly larger branding header */}
+            <main className="p-4 pt-44 md:pt-60 max-w-7xl mx-auto transition-all duration-500">
                 {renderContent()}
             </main>
         </div>

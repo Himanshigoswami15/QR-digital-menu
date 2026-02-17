@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MENU_ITEMS } from '../constants';
 import MenuItem from './MenuItem';
 import type { Dish } from '../types';
@@ -17,10 +17,51 @@ const Menu: React.FC = () => {
         'Salad & Raita'
     ];
 
-    const scrollToSection = (id: string) => {
+    const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
+    const navRef = useRef<HTMLDivElement>(null);
+    const observer = useRef<IntersectionObserver | null>(null);
+
+    useEffect(() => {
+        // Observer to track which section is currently in view
+        observer.current = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const categoryName = entry.target.getAttribute('data-category');
+                    if (categoryName) {
+                        setActiveCategory(categoryName);
+                        // Automatically scroll the navigation bar to the active item
+                        const navButton = document.querySelector(`[data-nav-item="${categoryName}"]`);
+                        if (navButton && navRef.current) {
+                            navButton.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'nearest',
+                                inline: 'center'
+                            });
+                        }
+                    }
+                }
+            });
+        }, {
+            // Adjust rootMargin to trigger when section is near the top of the viewport
+            rootMargin: '-20% 0% -70% 0%',
+            threshold: 0
+        });
+
+        // Attach observer to all sections
+        categories.forEach(category => {
+            const sectionId = category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
+            const el = document.getElementById(sectionId);
+            if (el) observer.current?.observe(el);
+        });
+
+        return () => observer.current?.disconnect();
+    }, []);
+
+    const scrollToSection = (category: string) => {
+        const id = category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
         const element = document.getElementById(id);
         if (element) {
-            const headerOffset = 100;
+            const headerOffset = 140;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -35,16 +76,28 @@ const Menu: React.FC = () => {
         <div className="relative">
             {/* Sticky Section Navigation */}
             <nav className="sticky top-6 z-40 mb-20 mx-auto max-w-fit px-4">
-                <div className="bg-white/[0.08] backdrop-blur-3xl border border-white/10 p-2 rounded-full flex items-center gap-1 overflow-x-auto no-scrollbar max-w-[92vw] md:max-w-5xl shadow-[0_10px_40px_rgba(0,0,0,0.3)]">
-                    {categories.map(category => (
-                        <button
-                            key={category}
-                            onClick={() => scrollToSection(category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-'))}
-                            className="px-5 py-2.5 rounded-full text-[9px] md:text-[10px] tracking-[0.1em] uppercase font-bold text-white/50 hover:text-white hover:bg-white/10 transition-all whitespace-nowrap"
-                        >
-                            {category}
-                        </button>
-                    ))}
+                <div 
+                    ref={navRef}
+                    className="bg-white/[0.08] backdrop-blur-3xl border border-white/10 p-2 rounded-full flex items-center gap-1 overflow-x-auto no-scrollbar max-w-[92vw] md:max-w-5xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] scroll-smooth"
+                >
+                    {categories.map(category => {
+                        const isActive = activeCategory === category;
+                        return (
+                            <button
+                                key={category}
+                                data-nav-item={category}
+                                onClick={() => scrollToSection(category)}
+                                className={`relative px-5 py-2.5 rounded-full text-[9px] md:text-[10px] tracking-[0.15em] uppercase font-bold transition-all whitespace-nowrap ${
+                                    isActive ? 'text-white' : 'text-white/40 hover:text-white/70'
+                                }`}
+                            >
+                                {category}
+                                {isActive && (
+                                    <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-[1px] bg-white animate-width-expand"></div>
+                                )}
+                            </button>
+                        );
+                    })}
                 </div>
             </nav>
 
@@ -55,7 +108,12 @@ const Menu: React.FC = () => {
                     const sectionId = category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
                     
                     return (
-                        <section key={category} id={sectionId} className="scroll-mt-32 px-4">
+                        <section 
+                            key={category} 
+                            id={sectionId} 
+                            data-category={category}
+                            className="scroll-mt-40 px-4"
+                        >
                             <div className="flex flex-col items-center mb-20 text-center">
                                 <div className="flex items-center gap-5 mb-6 opacity-20">
                                     <div className="w-12 h-[1px] bg-white"></div>
@@ -90,6 +148,13 @@ const Menu: React.FC = () => {
                 .no-scrollbar {
                     -ms-overflow-style: none;
                     scrollbar-width: none;
+                }
+                @keyframes width-expand {
+                    from { width: 0; opacity: 0; }
+                    to { width: 1rem; opacity: 1; }
+                }
+                .animate-width-expand {
+                    animation: width-expand 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
                 }
             `}</style>
         </div>

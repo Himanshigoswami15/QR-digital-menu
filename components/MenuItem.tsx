@@ -67,7 +67,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                             onClick={() => setIsModalOpen(true)}
                             className="text-[10px] font-black tracking-[0.25em] uppercase text-white/50 hover:text-white transition-all border-b border-transparent hover:border-white/40 pb-1"
                         >
-                            Explore
+                            Add to Cart
                         </button>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ import Menu from './components/Menu';
 import CartView from './components/CartView';
 import OrderStatusView from './components/OrderStatusView';
 import KitchenDashboard from './components/KitchenDashboard';
-import { InformationCircleIcon, XIcon } from './components/icons/Icons';
+import { InformationCircleIcon, XIcon, ShoppingCartIcon, ChefHatIcon, UtensilsIcon } from './components/icons/Icons';
 
 const Notification: React.FC = () => {
     const { state, dispatch } = useAppContext();
@@ -16,7 +16,7 @@ const Notification: React.FC = () => {
     }
 
     return (
-        <div className="fixed top-40 right-4 w-full max-w-sm z-[100]">
+        <div className="fixed top-56 right-4 w-full max-w-sm z-[100]">
             <div className="bg-secondary text-white p-4 rounded-sm border border-white/10 shadow-2xl flex items-start gap-3 animate-fade-in-down">
                 <InformationCircleIcon className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                 <p className="flex-grow text-xs font-medium tracking-wide leading-relaxed">{state.notification}</p>
@@ -47,6 +47,44 @@ const Notification: React.FC = () => {
     );
 };
 
+const FloatingNav: React.FC<{ setView: (v: any) => void, currentView: string }> = ({ setView, currentView }) => {
+    const { state } = useAppContext();
+    const cartItemCount = state.cart.reduce((total, item) => total + item.quantity, 0);
+
+    return (
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] flex items-center bg-base-100/80 backdrop-blur-xl border border-white/10 px-2 py-2 rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.5)] scale-110 md:scale-125">
+            <button 
+                onClick={() => setView('menu')}
+                className={`p-3 rounded-full transition-all ${currentView === 'menu' ? 'bg-white text-base-100' : 'text-white/50 hover:text-white'}`}
+            >
+                <UtensilsIcon className="w-5 h-5" />
+            </button>
+            
+            <div className="h-6 w-[1px] bg-white/10 mx-1"></div>
+
+            <button 
+                onClick={() => setView('cart')}
+                className={`p-3 rounded-full transition-all relative ${currentView === 'cart' ? 'bg-white text-base-100' : 'text-white/50 hover:text-white'}`}
+            >
+                <ShoppingCartIcon className="w-5 h-5" />
+                {cartItemCount > 0 && (
+                    <span className="absolute top-1 right-1 bg-white text-base-100 text-[8px] font-black rounded-full h-4 w-4 flex items-center justify-center border border-base-100">
+                        {cartItemCount}
+                    </span>
+                )}
+            </button>
+
+            <div className="h-6 w-[1px] bg-white/10 mx-1"></div>
+
+            <button 
+                onClick={() => setView('kitchen')}
+                className={`p-3 rounded-full transition-all ${currentView === 'kitchen' ? 'bg-white text-base-100' : 'text-white/50 hover:text-white'}`}
+            >
+                <ChefHatIcon className="w-5 h-5" />
+            </button>
+        </div>
+    );
+};
 
 const AppContainer: React.FC = () => {
     const { state, dispatch } = useAppContext();
@@ -60,7 +98,6 @@ const AppContainer: React.FC = () => {
         if (state.currentOrderId && view !== 'kitchen' && view !== 'cart') {
             setView('status');
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.currentOrderId]);
     
     useEffect(() => {
@@ -75,7 +112,7 @@ const AppContainer: React.FC = () => {
     if (state.tableNumber === null) {
         return (
              <div className="min-h-screen bg-base-100 flex items-center justify-center p-4">
-                 <div className="text-white text-[10px] tracking-[0.5em] uppercase font-light animate-pulse">Initializing Kitchen...</div>
+                 <div className="text-white text-[10px] tracking-[0.5em] uppercase font-light animate-pulse">Initializing...</div>
              </div>
         );
     }
@@ -91,15 +128,13 @@ const AppContainer: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen bg-base-100 font-sans selection:bg-white selection:text-emerald-900">
+        <div className="min-h-screen bg-base-100 font-sans selection:bg-white selection:text-emerald-900 pb-32">
             <Notification />
-            <Header 
-              onCartClick={() => setView('cart')} 
-              onMenuClick={() => setView('menu')}
-              onKitchenClick={() => setView('kitchen')}
-            />
-            {/* Adjusted padding-top for the significantly larger branding header */}
-            <main className="p-4 pt-44 md:pt-60 max-w-7xl mx-auto transition-all duration-500">
+            <Header />
+            <FloatingNav setView={setView} currentView={view} />
+            
+            {/* Massive padding top for the massive logo header */}
+            <main className="p-4 pt-60 md:pt-80 max-w-7xl mx-auto transition-all duration-700 ease-in-out">
                 {renderContent()}
             </main>
         </div>

@@ -30,30 +30,34 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
 
     return (
         <>
-            <div className="flex flex-col items-center text-center px-4">
+            <div className="group flex flex-col items-center text-center transition-all duration-700">
                 <div 
-                    className="relative w-full aspect-[4/3] mb-6 cursor-pointer overflow-hidden rounded-3xl border border-white/5 shadow-2xl active:scale-95 transition-transform duration-300"
+                    className="relative w-full aspect-[4/3] mb-8 cursor-pointer overflow-hidden rounded-[2rem] border border-white/5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.7)] transition-all duration-700"
                     onClick={() => setIsModalOpen(true)}
                 >
                     <img 
                         src={dish.imageUrl} 
                         alt={dish.name} 
-                        className="w-full h-full object-cover grayscale-[10%]" 
+                        className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" 
                     />
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-base-100 p-2.5 rounded-full shadow-lg">
-                        <PlusCircleIcon className="w-5 h-5" />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                        <div className="bg-white text-base-100 p-4 rounded-full shadow-2xl transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-75">
+                            <PlusCircleIcon className="w-8 h-8" />
+                        </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center w-full">
-                    <h3 className="text-2xl font-serif italic text-white/95 mb-2 leading-tight tracking-tight">{dish.name}</h3>
+                <div className="flex flex-col items-center w-full max-w-[340px] px-4">
+                    <h3 className="text-3xl font-serif italic text-white/95 mb-3 leading-tight tracking-tight group-hover:text-white transition-all duration-300">{dish.name}</h3>
                     
-                    <div className="flex items-center gap-4 mt-2">
-                        <span className="text-lg font-serif italic text-white/90">₹{dish.price}</span>
-                        <div className="w-[1px] h-4 bg-white/10"></div>
+                    <div className="w-10 h-[1px] bg-white/20 mb-5 transform scale-x-50 group-hover:scale-x-150 transition-transform duration-700"></div>
+
+                    <div className="flex items-center gap-6">
+                        <span className="text-xl font-serif italic text-white/90">₹{dish.price}</span>
+                        <div className="w-[1px] h-5 bg-white/10"></div>
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="text-[9px] font-black tracking-[0.2em] uppercase text-white/60 active:text-white transition-colors py-2"
+                            className="text-[10px] font-black tracking-[0.25em] uppercase text-white/50 hover:text-white transition-all border-b border-transparent hover:border-white/30 pb-1"
                         >
                             Add to Cart
                         </button>
@@ -61,36 +65,36 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                 </div>
                 
                 {showSuccess && (
-                    <div className="fixed top-20 left-1/2 -translate-x-1/2 bg-white text-base-100 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-2xl z-50 animate-bounce">
-                        Added to Tray
+                    <div className="fixed top-24 left-1/2 -translate-x-1/2 bg-white text-base-100 px-8 py-3 rounded-full text-[11px] font-black uppercase tracking-[0.3em] shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-50 animate-bounce">
+                        Saved to Selection
                     </div>
                 )}
             </div>
 
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                <div className="p-0">
-                    <h2 className="text-3xl font-serif italic text-white mb-1 text-center">{dish.name}</h2>
-                    <p className="text-[8px] tracking-[0.4em] uppercase text-white/30 text-center mb-6 font-bold">Preferences</p>
+                <div className="p-2">
+                    <h2 className="text-4xl font-serif italic text-white mb-2 text-center tracking-tight">{dish.name}</h2>
+                    <p className="text-[10px] tracking-[0.5em] uppercase text-white/30 text-center mb-10 font-bold">Preferences</p>
                     
-                    <div className="relative w-full aspect-video mx-auto mb-8 rounded-2xl overflow-hidden border border-white/5">
+                    <div className="relative w-full aspect-[16/10] mx-auto mb-10 rounded-[1.5rem] overflow-hidden border border-white/5 shadow-2xl">
                         <img src={dish.imageUrl} alt={dish.name} className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                     
-                    <div className="space-y-8">
+                    <div className="space-y-12">
                         <div className="flex flex-col items-center">
-                            <label className="text-[9px] tracking-[0.4em] uppercase text-white/20 mb-4 font-black">Quantity</label>
-                            <div className="flex items-center gap-8">
+                            <label className="text-[10px] tracking-[0.6em] uppercase text-white/20 mb-6 font-black">Quantity</label>
+                            <div className="flex items-center gap-12">
                                 <button 
                                     onClick={() => setQuantity(q => Math.max(1, q - 1))} 
-                                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-xl font-light text-white"
+                                    className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-2xl font-light text-white hover:bg-white hover:text-base-100 transition-all"
                                 >
                                     −
                                 </button>
-                                <span className="text-3xl font-serif italic text-white w-10 text-center">{quantity}</span>
+                                <span className="text-4xl font-serif italic text-white w-14 text-center">{quantity}</span>
                                 <button 
                                     onClick={() => setQuantity(q => q + 1)} 
-                                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-xl font-light text-white"
+                                    className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-2xl font-light text-white hover:bg-white hover:text-base-100 transition-all"
                                 >
                                     +
                                 </button>
@@ -103,15 +107,15 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                                 value={instructions}
                                 onChange={(e) => setInstructions(e.target.value)}
                                 placeholder="Special notes? (E.g. extra spicy)"
-                                className="w-full bg-white/[0.04] border border-white/5 rounded-2xl p-4 text-white placeholder:text-white/20 focus:outline-none text-[11px] font-light min-h-[80px] italic leading-relaxed"
+                                className="w-full bg-white/[0.04] border border-white/10 rounded-2xl p-6 text-white placeholder:text-white/20 focus:outline-none focus:border-white/30 text-[12px] font-light min-h-[100px] italic leading-relaxed transition-all"
                             ></textarea>
                         </div>
                         
                         <button
                             onClick={handleAddToCart}
-                            className="w-full bg-white text-base-100 py-5 rounded-2xl font-black text-[11px] tracking-[0.4em] uppercase shadow-lg active:scale-95 transition-transform"
+                            className="w-full bg-white text-base-100 py-6 rounded-2xl font-black text-[12px] tracking-[0.5em] uppercase shadow-2xl hover:bg-white/90 active:scale-[0.98] transition-all"
                         >
-                            Confirm — ₹{dish.price * quantity}
+                            Confirm Selection — ₹{dish.price * quantity}
                         </button>
                     </div>
                 </div>

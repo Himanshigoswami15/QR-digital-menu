@@ -40,7 +40,7 @@ const Menu: React.FC = () => {
                 }
             });
         }, {
-            rootMargin: '-15% 0% -80% 0%',
+            rootMargin: '-20% 0% -70% 0%',
             threshold: 0
         });
 
@@ -57,7 +57,7 @@ const Menu: React.FC = () => {
         const id = category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
         const element = document.getElementById(id);
         if (element) {
-            const headerOffset = 100;
+            const headerOffset = 120;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -69,12 +69,12 @@ const Menu: React.FC = () => {
     };
 
     return (
-        <div className="relative">
-            {/* Sticky Section Navigation - Mobile Optimized */}
-            <nav className="sticky top-4 z-40 mb-12 mx-auto">
+        <div className="relative py-12">
+            {/* Sticky Section Navigation */}
+            <nav className="sticky top-6 z-40 mb-16 max-w-5xl mx-auto">
                 <div 
                     ref={navRef}
-                    className="bg-white/[0.08] backdrop-blur-3xl border border-white/10 p-1.5 rounded-full flex items-center gap-1 overflow-x-auto no-scrollbar shadow-[0_10px_30px_rgba(0,0,0,0.3)] scroll-smooth mx-2"
+                    className="bg-white/[0.08] backdrop-blur-3xl border border-white/10 p-2 rounded-full flex items-center gap-1 overflow-x-auto no-scrollbar shadow-[0_20px_50px_rgba(0,0,0,0.4)] scroll-smooth"
                 >
                     {categories.map(category => {
                         const isActive = activeCategory === category;
@@ -83,8 +83,8 @@ const Menu: React.FC = () => {
                                 key={category}
                                 data-nav-item={category}
                                 onClick={() => scrollToSection(category)}
-                                className={`relative px-4 py-2 rounded-full text-[10px] tracking-wider uppercase font-bold transition-all whitespace-nowrap ${
-                                    isActive ? 'text-white bg-white/10' : 'text-white/40'
+                                className={`relative px-5 py-2.5 rounded-full text-[10px] md:text-[11px] tracking-wider uppercase font-bold transition-all whitespace-nowrap ${
+                                    isActive ? 'text-base-100 bg-white' : 'text-white/40 hover:text-white/70'
                                 }`}
                             >
                                 {category}
@@ -94,7 +94,7 @@ const Menu: React.FC = () => {
                 </div>
             </nav>
 
-            <div className="space-y-24 pb-20">
+            <div className="space-y-32 pb-32">
                 {categories.map((category, index) => {
                     const items = MENU_ITEMS.filter(item => item.category === category);
                     if (items.length === 0) return null;
@@ -105,19 +105,20 @@ const Menu: React.FC = () => {
                             key={category} 
                             id={sectionId} 
                             data-category={category}
-                            className="scroll-mt-32 px-2"
+                            className="scroll-mt-36"
                         >
-                            <div className="flex flex-col items-center mb-10 text-center">
-                                <div className="flex items-center gap-3 mb-4 opacity-20">
-                                    <div className="w-8 h-[1px] bg-white"></div>
-                                    <span className="text-[9px] tracking-[0.5em] uppercase font-black italic">Page {index + 1}</span>
-                                    <div className="w-8 h-[1px] bg-white"></div>
+                            <div className="flex flex-col items-center mb-16 text-center">
+                                <div className="flex items-center gap-4 mb-6 opacity-30">
+                                    <div className="w-12 h-[1px] bg-white"></div>
+                                    <span className="text-[10px] md:text-[12px] tracking-[0.6em] uppercase font-black italic">Section {index + 1}</span>
+                                    <div className="w-12 h-[1px] bg-white"></div>
                                 </div>
-                                <h2 className="text-4xl font-serif italic text-white mb-4 tracking-tight">{category}</h2>
-                                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                                <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif italic text-white mb-6 tracking-tight">{category}</h2>
+                                <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
                             </div>
-                            {/* Strictly 1 column for mobile impact */}
-                            <div className="grid grid-cols-1 gap-y-16">
+                            
+                            {/* Responsive Grid for all devices */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
                                 {items.map((dish: Dish) => (
                                     <MenuItem key={dish.id} dish={dish} />
                                 ))}

@@ -14,7 +14,7 @@ const Notification: React.FC = () => {
     }
 
     return (
-        <div className="fixed top-4 right-4 left-4 z-[100]">
+        <div className="fixed top-4 right-4 left-4 md:left-auto md:w-96 z-[100]">
             <div className="bg-secondary text-white p-4 rounded-xl border border-white/10 shadow-2xl flex items-start gap-3 animate-fade-in-down">
                 <InformationCircleIcon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <p className="flex-grow text-[11px] font-medium tracking-wide leading-relaxed">{state.notification}</p>
@@ -54,12 +54,12 @@ const CornerCart: React.FC<{ setView: (v: 'menu' | 'cart') => void, currentView:
     return (
         <button 
             onClick={() => setView('cart')}
-            className="fixed bottom-6 right-6 z-[100] flex items-center justify-center bg-white text-base-100 h-14 w-14 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] active:scale-90 transition-all duration-200"
+            className="fixed bottom-6 right-6 z-[100] flex items-center justify-center bg-white text-base-100 h-16 w-16 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.6)] active:scale-90 hover:scale-105 transition-all duration-300"
             title="View Cart"
         >
-            <ShoppingCartIcon className="w-6 h-6" />
+            <ShoppingCartIcon className="w-7 h-7" />
             {cartItemCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-black rounded-full h-5 w-5 flex items-center justify-center border-2 border-base-100 animate-bounce">
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-black rounded-full h-6 w-6 flex items-center justify-center border-2 border-base-100 animate-bounce">
                     {cartItemCount}
                 </span>
             )}
@@ -87,7 +87,7 @@ const AppContainer: React.FC = () => {
     if (state.tableNumber === null) {
         return (
              <div className="min-h-screen bg-base-100 flex items-center justify-center p-4">
-                 <div className="text-white text-[10px] tracking-[0.5em] uppercase font-light animate-pulse font-sans">Initializing Kargil Kitchen...</div>
+                 <div className="text-white text-[12px] tracking-[0.5em] uppercase font-light animate-pulse font-sans">Initializing Kargil Kitchen...</div>
              </div>
         );
     }
@@ -101,20 +101,22 @@ const AppContainer: React.FC = () => {
     }
 
     return (
-        /* Mobile Centered Layout */
-        <div className="min-h-screen bg-black/20 md:bg-[#153024] flex justify-center">
-            <div className="w-full max-w-[480px] min-h-screen bg-base-100 relative shadow-2xl overflow-x-hidden">
-                <Notification />
-                {view === 'menu' && <Header />}
-                <CornerCart setView={setView} currentView={view} />
-                
-                <main className={`p-4 transition-all duration-500 ease-in-out ${view === 'menu' ? 'pt-8' : 'pt-20'}`}>
+        <div className="min-h-screen bg-base-100 relative selection:bg-white selection:text-base-100">
+            <Notification />
+            {view === 'menu' && <Header />}
+            <CornerCart setView={setView} currentView={view} />
+            
+            <main className={`transition-all duration-700 ease-in-out ${view === 'menu' ? 'pt-0' : 'pt-24'}`}>
+                <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                     {renderContent()}
-                </main>
-                
-                {/* Mobile Bottom Padding */}
-                <div className="h-24"></div>
-            </div>
+                </div>
+            </main>
+            
+            <footer className="py-20 flex flex-col items-center justify-center opacity-20 gap-4 pointer-events-none">
+                <div className="w-12 h-[1px] bg-white"></div>
+                <p className="text-[10px] tracking-[0.6em] uppercase font-bold">Kargil Kitchen</p>
+                <p className="text-[8px] tracking-[0.3em] uppercase">Est. 2024</p>
+            </footer>
         </div>
     );
 };

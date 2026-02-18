@@ -19,7 +19,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 115, name: 'Soya Malai Chap', price: 450, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Download%20vegetarian%20soya%20malai%20chaap%20made%20using%20soya%20chaap%20with%20white%20creamy%20gravy%20for%20free.jpg' },
     { id: 116, name: 'Veg Pakoda (8pcs)', price: 100, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/MIX%20VEG.%20PAKORA.jpeg?updatedAt=1758293753579' },
     { id: 106, name: 'Cheese Balls (8pcs)', price: 490, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Reisb%C3%A4llchen%20aus%20dem%20Airfryer%20_%20knuspriger%20Snack%20zur%20Resteverwertung.jpg' },
-    { id: 117, name: 'French Paneer', price: 180, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
+    { id: 117, name: 'French Paneer', price: 180, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(3).jpg' },
     
     // CHAAT HOUSE
     { id: 201, name: 'Paneer Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/paneer%20chat.webp' },

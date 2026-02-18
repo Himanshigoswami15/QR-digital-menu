@@ -10,7 +10,7 @@ const Menu: React.FC = () => {
         'Chaat House', 
         'Tandoori Starters', 
         'Chinese', 
-        'Shahi Vegetable', 
+        'Shahi Sweet Vegetable', 
         'Veg Main Course', 
         'Dal & Rice', 
         'Indian Bread', 

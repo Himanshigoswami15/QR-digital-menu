@@ -1,3 +1,4 @@
+
 import type { Dish } from './types';
 
 export const MENU_ITEMS: Dish[] = [
@@ -34,21 +35,29 @@ export const MENU_ITEMS: Dish[] = [
     // TANDOORI STARTERS
     { id: 301, name: 'Paneer Tikka (6pcs)', price: 280, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20TIKKA%20SHASHLIK.webp?updatedAt=1759148980181' },
     { id: 304, name: 'Paneer Punjabi Tikka (6pcs)', price: 300, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PERI%20PERI%20PANEER%20TIKKA.jpg?updatedAt=1763549692015' },
-    { id: 305, name: 'Paneer Hariyali Tikka', price: 360, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20PAHADI%20TIKKA.jpg?updatedAt=1763551270595' },
+    { id: 305, name: 'Paneer Hariyali Tikka', price: 360, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20PUDINA%20TIKKA.jpg?updatedAt=1763551267850' },
     { id: 306, name: 'Anjeer Malai Tikka', price: 450, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20AFGHANI%20TIKKA.jpg?updatedAt=1763551273654' },
     { id: 303, name: 'Mushroom Chilly', price: 350, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(5).jpg' },
     { id: 302, name: 'Dahi Kebab', price: 400, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Dahi%20Ke%20Kebab%20Recipe%20_%20Dahi%20Kebab%20_%20Greek%20Yogurt%20Kebabs%20Recipe%20-%20Complete%20Guide.jpg' },
     { id: 307, name: 'Tandoori Malai Tikka', price: 400, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20MALAI%20TIKKA.jpg?updatedAt=1763551273669' },
-    { id: 308, name: 'Paneer Multani Tikka (8 pcs)', price: 310, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/5ulc3448_paneer-tikka_625x300_30_March_20.webp' },
+    { id: 308, name: 'Paneer Multani Tikka (8 pcs)', price: 310, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(7).jpg' },
 
     // CHINESE
+    { id: 403, name: 'Chilli Panner Gravy', price: 400, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400' },
     { id: 401, name: 'Paneer 65 (8pcs)', price: 350, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },
+    { id: 404, name: 'Paneer Tikka', price: 360, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
     { id: 402, name: 'Manchurian Dry', price: 280, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1623961980041-b82582c9c81b?auto=format&fit=crop&q=80&w=400' },
+    { id: 405, name: 'Manchurian Gravy', price: 260, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400' },
+    { id: 406, name: 'Paneer Hot Pan', price: 350, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&q=80&w=400' },
+    { id: 407, name: 'Chilli Paneer (8pcs)', price: 280, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400' },
 
-    // SHAHI VEGETABLE
-    { id: 501, name: 'Shahi Paneer', price: 260, category: 'Shahi Vegetable', imageUrl: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&q=80&w=400' },
-    { id: 502, name: 'Malai Kofta', price: 270, category: 'Shahi Vegetable', imageUrl: 'https://images.unsplash.com/photo-1626777552726-4a6b547b4e5c?auto=format&fit=crop&q=80&w=400' },
-    { id: 503, name: 'Kaju Curry', price: 350, category: 'Shahi Vegetable', imageUrl: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&q=80&w=400' },
+    // SHAHI SWEET VEGETABLE
+    { id: 502, name: 'Malai Kofta', price: 270, category: 'Shahi Sweet Vegetable', imageUrl: 'https://images.unsplash.com/photo-1626777552726-4a6b547b4e5c?auto=format&fit=crop&q=80&w=400' },
+    { id: 504, name: 'Navratan Korma', price: 300, category: 'Shahi Sweet Vegetable', imageUrl: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&q=80&w=400' },
+    { id: 501, name: 'Shahi Paneer', price: 260, category: 'Shahi Sweet Vegetable', imageUrl: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&q=80&w=400' },
+    { id: 505, name: 'Methi Malai Matar', price: 260, category: 'Shahi Sweet Vegetable', imageUrl: 'https://images.unsplash.com/photo-1626777552726-4a6b547b4e5c?auto=format&fit=crop&q=80&w=400' },
+    { id: 503, name: 'Kaju Curry', price: 350, category: 'Shahi Sweet Vegetable', imageUrl: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&q=80&w=400' },
+    { id: 506, name: 'Mushroom Kofta', price: 280, category: 'Shahi Sweet Vegetable', imageUrl: 'https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&q=80&w=400' },
 
     // VEG MAIN COURSE
     { id: 601, name: 'Paneer Lababdar', price: 280, category: 'Veg Main Course', imageUrl: 'https://images.unsplash.com/photo-1601050633647-8f8f203d078a?auto=format&fit=crop&q=80&w=400' },

@@ -1,4 +1,3 @@
-
 import type { Dish } from './types';
 
 export const MENU_ITEMS: Dish[] = [
@@ -23,13 +22,24 @@ export const MENU_ITEMS: Dish[] = [
     
     // CHAAT HOUSE
     { id: 201, name: 'Paneer Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/paneer%20chat.webp' },
-    { id: 202, name: 'Veg Aloo Tikki (2pcs)', price: 80, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1589670307596-a1767553e1d4?auto=format&fit=crop&q=80&w=400' },
+    { id: 204, name: 'Chana Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KABULI%20CHANA%20CHAAT.jpeg?updatedAt=1759147343617' },
+    { id: 205, name: 'Chana Chaat Garlic', price: 140, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/9%20Indian%20snacks%20that%20do%20not%20increase%20cholesterol%20levels.jpg' },
+    { id: 202, name: 'Veg Aloo Tikki (2pcs)', price: 80, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Street-Style%20Aloo%20Tikki%20with%20Spiced%20Chana_%20The%20Ultimate%20Indian%20Comfort%20Food.jpg' },
     { id: 203, name: 'Masala Papd', price: 60, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },
+    { id: 206, name: 'Masala Khichiya', price: 70, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },
+    { id: 207, name: 'Fry Khichiya', price: 50, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },
+    { id: 208, name: 'Fry Papd', price: 60, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },
+    { id: 209, name: 'Roasted Papd', price: 30, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },
 
     // TANDOORI STARTERS
     { id: 301, name: 'Paneer Tikka (6pcs)', price: 280, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
-    { id: 302, name: 'Dahi Kebab', price: 400, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1626508064441-799d057008ee?auto=format&fit=crop&q=80&w=400' },
+    { id: 304, name: 'Paneer Punjabi Tikka (6pcs)', price: 300, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
+    { id: 305, name: 'Paneer Hariyali Tikka', price: 360, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
+    { id: 306, name: 'Anjeer Malai Tikka', price: 450, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
     { id: 303, name: 'Mushroom Chilly', price: 350, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&q=80&w=400' },
+    { id: 302, name: 'Dahi Kebab', price: 400, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1626508064441-799d057008ee?auto=format&fit=crop&q=80&w=400' },
+    { id: 307, name: 'Tandoori Malai Tikka', price: 400, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
+    { id: 308, name: 'Paneer Multani Tikka (8 pcs)', price: 310, category: 'Tandoori Starters', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
 
     // CHINESE
     { id: 401, name: 'Paneer 65 (8pcs)', price: 350, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },

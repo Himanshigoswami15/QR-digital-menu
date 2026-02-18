@@ -5,13 +5,24 @@ export const MENU_ITEMS: Dish[] = [
     // ON THE RUN
     { id: 101, name: 'French Fries', price: 180, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/french%20fries.webp?updatedAt=1758211132814' },
     { id: 102, name: 'Cheesy Loaded Fries', price: 350, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Louisiana%20Voodoo%20Fries%20(Wingstop%20Copycat).jpg?updatedAt=1771257633313' },
+    { id: 107, name: 'Perry Perry French Fries', price: 260, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Peri%20Peri%20Fries__.jpg?updatedAt=1771257841371' },
     { id: 103, name: 'Garlic French Fries', price: 190, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Peri%20Peri%20Fries__.jpg?updatedAt=1771257841371' },
     { id: 104, name: 'Honey Chilli Potato', price: 180, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/honey%20chilli%20potato.webp?updatedAt=1758211139092' },
+    { id: 108, name: 'Baby Corn Chilli', price: 350, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400' },
+    { id: 109, name: 'Crispy Baby Corn Chilli', price: 360, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400' },
+    { id: 110, name: 'Baby Corn Salt Pepper', price: 350, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1626777552726-4a6b547b4e5c?auto=format&fit=crop&q=80&w=400' },
     { id: 105, name: 'Crispy Corn', price: 350, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CRISPY%20CORN.webp?updatedAt=1758292974618' },
+    { id: 111, name: 'Malai Chap (6pcs)', price: 280, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1601050633647-8f8f203d078a?auto=format&fit=crop&q=80&w=400' },
+    { id: 112, name: 'Paneer Pakoda (10pcs)', price: 180, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1601050633647-8f8f203d078a?auto=format&fit=crop&q=80&w=400' },
+    { id: 113, name: 'Crispy Chap (6pcs)', price: 180, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
+    { id: 114, name: 'Soya Chap', price: 380, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
+    { id: 115, name: 'Soya Malai Chap', price: 450, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
+    { id: 116, name: 'Veg Pakoda (8pcs)', price: 100, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&q=80&w=400' },
     { id: 106, name: 'Cheese Balls (8pcs)', price: 490, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Reisb%C3%A4llchen%20aus%20dem%20Airfryer%20_%20knuspriger%20Snack%20zur%20Resteverwertung.jpg' },
+    { id: 117, name: 'French Paneer', price: 180, category: 'On The Run', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
     
     // CHAAT HOUSE
-    { id: 201, name: 'Paneer Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1601050633647-8f8f203d078a?auto=format&fit=crop&q=80&w=400' },
+    { id: 201, name: 'Paneer Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/paneer%20chat.webp' },
     { id: 202, name: 'Veg Aloo Tikki (2pcs)', price: 80, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1589670307596-a1767553e1d4?auto=format&fit=crop&q=80&w=400' },
     { id: 203, name: 'Masala Papd', price: 60, category: 'Chaat House', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },
 

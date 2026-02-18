@@ -2,7 +2,6 @@
 export interface Dish {
     id: number;
     name: string;
-    description: string;
     price: number;
     category: 'On The Run' | 'Chaat House' | 'Tandoori Starters' | 'Chinese' | 'Shahi Vegetable' | 'Veg Main Course' | 'Dal & Rice' | 'Indian Bread' | 'Salad & Raita';
     imageUrl: string;

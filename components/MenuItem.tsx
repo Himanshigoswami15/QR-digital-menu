@@ -54,11 +54,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                     <h3 className="text-3xl font-serif italic text-white/95 mb-3 leading-tight tracking-tight group-hover:text-white transition-all duration-300">{dish.name}</h3>
                     
                     {/* Delicate Divider */}
-                    <div className="w-8 h-[1px] bg-white/20 mb-4 transform scale-x-0 group-hover:scale-x-150 transition-transform duration-700"></div>
-
-                    <p className="text-white/40 text-[10px] leading-relaxed font-light tracking-[0.15em] mb-6 line-clamp-2 uppercase">
-                        {dish.description}
-                    </p>
+                    <div className="w-8 h-[1px] bg-white/20 mb-6 transform scale-x-0 group-hover:scale-x-150 transition-transform duration-700"></div>
                     
                     <div className="flex items-center gap-6">
                         <span className="text-xl font-serif italic text-white/90">₹{dish.price}</span>

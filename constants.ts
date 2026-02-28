@@ -43,13 +43,13 @@ export const MENU_ITEMS: Dish[] = [
     { id: 308, name: 'Paneer Multani Tikka (8 pcs)', price: 310, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(7).jpg' },
 
     // CHINESE
-    { id: 403, name: 'Chilli Panner Gravy', price: 400, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400' },
-    { id: 401, name: 'Paneer 65 (8pcs)', price: 350, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1626132644529-56e94e93fc9a?auto=format&fit=crop&q=80&w=400' },
-    { id: 404, name: 'Paneer Tikka', price: 360, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1567184109411-47a7a39485ed?auto=format&fit=crop&q=80&w=400' },
-    { id: 402, name: 'Manchurian Dry', price: 280, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1623961980041-b82582c9c81b?auto=format&fit=crop&q=80&w=400' },
-    { id: 405, name: 'Manchurian Gravy', price: 260, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400' },
-    { id: 406, name: 'Paneer Hot Pan', price: 350, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&q=80&w=400' },
-    { id: 407, name: 'Chilli Paneer (8pcs)', price: 280, category: 'Chinese', imageUrl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400' },
+    { id: 403, name: 'Chilli Panner Gravy', price: 400, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sometimes%20all%20you%20need%20is%20Chilli%20Paneer%20_%20_%20.%20.%20.%20.%20%20%20_countrykitchen%20_chillipaneer%20_foodiesays?updatedAt=1771913129595' },
+    { id: 401, name: 'Paneer 65 (8pcs)', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/5%20Desi%20Office%20Potluck%20Recipes.jpg?updatedAt=1771913297489' },
+    { id: 404, name: 'Paneer Tikka', price: 360, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20SUFIYANA%20TIKKA.jpg?updatedAt=1763551271712' },
+    { id: 402, name: 'Manchurian Dry', price: 280, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/manchurian.jpg?updatedAt=1758211139469' },
+    { id: 405, name: 'Manchurian Gravy', price: 260, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Indian%20Khana_%20Vegetable%20Manchurian%20Gravy%20Recipe%20_%20Veg%20Manchurian%20_%20Indo-Chinese%20Recipes.jpg?updatedAt=1771913487864' },
+    { id: 406, name: 'Paneer Hot Pan', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Hot%20Pan%20Paneer%20Sizzler%2042973R%20Recipe.jpg?updatedAt=1772041396646' },
+    { id: 407, name: 'Chilli Paneer (8pcs)', price: 280, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/chilli%20panner.jpeg?updatedAt=1758292957291' },
 
     // SHAHI SWEET VEGETABLE
     { id: 502, name: 'Malai Kofta', price: 270, category: 'Shahi Sweet Vegetable', imageUrl: 'https://images.unsplash.com/photo-1626777552726-4a6b547b4e5c?auto=format&fit=crop&q=80&w=400' },

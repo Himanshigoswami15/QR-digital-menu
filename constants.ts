@@ -124,7 +124,19 @@ export const MENU_ITEMS: Dish[] = [
     { id: 814, name: 'Family Naan', price: 150, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Vegan%20Naan.jpg' },
     { id: 815, name: 'Rumali Roti', price: 40, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Rumali%20Roti%20_%20Homemade%20Roomali%20Roti%20Recipe%20-%20Cooking%20From%20Heart.jpg' },
 
-    // SALAD & RAITA
-    { id: 901, name: 'Mix Veg Raita', price: 160, category: 'Salad & Raita', imageUrl: 'https://images.unsplash.com/photo-1596797038530-2c39bb9ed97c?auto=format&fit=crop&q=80&w=400' },
-    { id: 902, name: 'Cucumber Salad', price: 60, category: 'Salad & Raita', imageUrl: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=400' },
+    // SALAD
+    { id: 903, name: 'Tomato Salaad', price: 50, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/My%20favourite%20Tomato%20Salad%20(1).jpg' },
+    { id: 904, name: 'Onion Sallad', price: 30, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sumac%20Onions%20(Turkish%20Onion%20Salad).jpg' },
+    { id: 905, name: 'Green Salaad', price: 80, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/FRESH%20GARDEN%20GREEN%20SALAD.webp?updatedAt=1759147133616' },
+    { id: 902, name: 'Cacumber Salaad', price: 60, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Cucumber%20Salad%20with%20Herb%20Garlic%20Vinaigrette.jpg' },
+    { id: 906, name: 'Rashion Salaad', price: 80, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/RUSSIAN%20SALAD.webp?updatedAt=1759147890223' },
+    { id: 907, name: 'Kachumber Salaad', price: 50, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Kachumber%20Salad.jpg' },
+
+    // RAITA
+    { id: 901, name: 'Mix Veg Raita', price: 160, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mix%20raita.jpg?updatedAt=1759147518458' },
+    { id: 908, name: 'Boondi Raita', price: 150, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/boondi%20raita.webp?updatedAt=1759151509908' },
+    { id: 909, name: 'Cacumber Raita', price: 170, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/cucumber%20raita.webp?updatedAt=1759147133020' },
+    { id: 910, name: 'Onion Raita', price: 140, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/onion%20raita.webp?updatedAt=1759147517559' },
+    { id: 911, name: 'Deshi Raita', price: 150, category: 'Raita', imageUrl: '' },
+    { id: 912, name: 'Fry Raita', price: 180, category: 'Raita', imageUrl: '' },
 ];

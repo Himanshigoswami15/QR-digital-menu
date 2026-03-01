@@ -93,9 +93,9 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1014, name: 'Mix Veg', price: 200, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mix%20veg.webp?updatedAt=1759147517677' },
 
     // DAL & RICE
-    { id: 701, name: 'Dal Tadka', price: 200, category: 'Dal & Rice', imageUrl: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80&w=400' },
-    { id: 702, name: 'Zeera Rice', price: 180, category: 'Dal & Rice', imageUrl: 'https://images.unsplash.com/photo-1512058560366-cd2427ff56f3?auto=format&fit=crop&q=80&w=400' },
-    { id: 703, name: 'Paneer Pulao', price: 260, category: 'Dal & Rice', imageUrl: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&q=80&w=400' },
+    { id: 701, name: 'Dal Tadka', price: 200, category: 'Dal & Rice', imageUrl: '' },
+    { id: 702, name: 'Zeera Rice', price: 180, category: 'Dal & Rice', imageUrl: '' },
+    { id: 703, name: 'Paneer Pulao', price: 260, category: 'Dal & Rice', imageUrl: '' },
 
     // INDIAN BREAD
     { id: 801, name: 'Tandoori Roti Butter', price: 25, category: 'Indian Bread', imageUrl: 'https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&q=80&w=400' },

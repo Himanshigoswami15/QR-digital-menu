@@ -13,7 +13,8 @@ const Menu: React.FC = () => {
         'Shahi Sweet Vegetable', 
         'Paneer Main Course',
         'Veg Main Course', 
-        'Dal & Rice', 
+        'Dal',
+        'Basmati Rice', 
         'Indian Bread', 
         'Salad & Raita'
     ];

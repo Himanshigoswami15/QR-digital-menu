@@ -36,7 +36,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                     onClick={() => setIsModalOpen(true)}
                 >
                     <img 
-                        src={dish.imageUrl} 
+                        src={dish.imageUrl || undefined} 
                         alt={dish.name} 
                         className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" 
                     />
@@ -77,7 +77,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                     <p className="text-[10px] tracking-[0.5em] uppercase text-white/30 text-center mb-10 font-bold">Preferences</p>
                     
                     <div className="relative w-full aspect-[16/10] mx-auto mb-10 rounded-[1.5rem] overflow-hidden border border-white/5 shadow-2xl">
-                        <img src={dish.imageUrl} alt={dish.name} className="w-full h-full object-cover" />
+                        <img src={dish.imageUrl || undefined} alt={dish.name} className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
                     

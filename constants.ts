@@ -92,15 +92,37 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1013, name: 'Chana Masala', price: 180, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/chana%20masala.webp?updatedAt=1759147037380' },
     { id: 1014, name: 'Mix Veg', price: 200, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mix%20veg.webp?updatedAt=1759147517677' },
 
-    // DAL & RICE
-    { id: 701, name: 'Dal Tadka', price: 200, category: 'Dal & Rice', imageUrl: '' },
-    { id: 702, name: 'Zeera Rice', price: 180, category: 'Dal & Rice', imageUrl: '' },
-    { id: 703, name: 'Paneer Pulao', price: 260, category: 'Dal & Rice', imageUrl: '' },
+    // DAL
+    { id: 704, name: 'Dal Fry', price: 180, category: 'Dal', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Dal%20Fry.jpeg?updatedAt=1759147133157' },
+    { id: 701, name: 'Dal Tadka', price: 200, category: 'Dal', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Dal%20tadka.webp?updatedAt=1759147133405' },
+    { id: 705, name: 'Punjabi Dal Tadka', price: 220, category: 'Dal', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Punjabi%20Toor%20Dal%20Tadka%20and%20rice%20is%20the%20ultimate%20comfort%20food.jpg' },
+
+    // RICE
+    { id: 706, name: 'Steam Rice', price: 140, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/stemmed%20rice.webp?updatedAt=1759147891225' },
+    { id: 702, name: 'Zeera Rice', price: 180, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/jeera-rice-recipe-step-by-step-instructions.webp?updatedAt=1759147269290' },
+    { id: 707, name: 'Butter Rice', price: 190, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Garlic%20Butter%20Rice.jpg' },
+    { id: 708, name: 'Veg Fried Rice', price: 240, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Vegetable%20Fried%20Rice%20(Stovetop%20&%20Instant%20Pot).jpg' },
+    { id: 703, name: 'Paneer Pulao', price: 260, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Dahi%20Pulao.jpg?updatedAt=1772360078309' },
+    { id: 709, name: 'Onion Pulao', price: 180, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/onion%20pullao.jpg?updatedAt=1759147518893' },
+    { id: 710, name: 'Corn Butter Rice', price: 200, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Hot%20Buttered%20Corn%20Rice%20_%20Recipe%20Tin%20Eats.jpg?updatedAt=1772361045753' },
+    { id: 711, name: 'Cheese Chilly Butter Rice', price: 380, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/webCheeseball-lemon-rice-with-chilli-butter-683x1024.webp' },
 
     // INDIAN BREAD
-    { id: 801, name: 'Tandoori Roti Butter', price: 25, category: 'Indian Bread', imageUrl: 'https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&q=80&w=400' },
-    { id: 802, name: 'Butter Naan', price: 80, category: 'Indian Bread', imageUrl: 'https://images.unsplash.com/photo-1601050633647-8f8f203d078a?auto=format&fit=crop&q=80&w=400' },
-    { id: 803, name: 'Garlic Naan', price: 100, category: 'Indian Bread', imageUrl: 'https://images.unsplash.com/photo-1601050633647-8f8f203d078a?auto=format&fit=crop&q=80&w=400' },
+    { id: 804, name: 'Tandoori Roti Plain', price: 20, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Roti.webp?updatedAt=1759150702455' },
+    { id: 801, name: 'Tandoori Roti Butter', price: 25, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/butter%20naan.webp?updatedAt=1759150613034' },
+    { id: 805, name: 'Naan', price: 70, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/plain%20naan.webp?updatedAt=1759147634181' },
+    { id: 802, name: 'Butter Naan', price: 80, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/butter%20naan.webp?updatedAt=1759150613034' },
+    { id: 803, name: 'Garlic Naan', price: 100, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Delicious%20Garlic%20Naan%20Recipe!%20(1).jpg' },
+    { id: 806, name: 'Lachha Parantha', price: 100, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/lachha%20parathan.jpeg?updatedAt=1759147343079' },
+    { id: 807, name: 'Tandoori Kulcha', price: 120, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Kulcha%20Recipe-%20Soft%20&%20Flaky%20_%20Cook%20Click%20N%20Devour!!!.jpg' },
+    { id: 808, name: 'Tandoori Butter Kulcha', price: 130, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/_%E2%9D%A4.jpg' },
+    { id: 809, name: 'Missi Roti', price: 70, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Missi-Roti-665x482.jpg?updatedAt=1759147517669' },
+    { id: 810, name: 'Cheese Naan', price: 110, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Cheese-Stuffed%20Garlic%20Naan%20_%20soft,%20buttery,%20and%20filled%20with%20gooey%20melted%20cheese!%20_%E2%9C%A8%20Perfect%20as%20a%20side%20dish%20or%20on%20its%20own,%20this%20homemade%20naan%20is%20packed%20with%20garlicky%20goodness!%20______%20Cheese-Stuffed%20Garlic%20Naan%20.jpg' },
+    { id: 811, name: 'Tawa Chapati', price: 15, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/tawa-roti-plate-with-wooden-background_950002-600777.jpg?updatedAt=1759150611343' },
+    { id: 812, name: 'Tawa Chapati Butter', price: 20, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Soft%20Indian%20Roti%20(Chapati)%20Recipe%20_%20Easy%20&%20Authentic%20By%20Maple%20Kitchen.jpg' },
+    { id: 813, name: 'Bajra Roti', price: 40, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Bajra%20Roti.jpg' },
+    { id: 814, name: 'Family Naan', price: 150, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Vegan%20Naan.jpg' },
+    { id: 815, name: 'Rumali Roti', price: 40, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Rumali%20Roti%20_%20Homemade%20Roomali%20Roti%20Recipe%20-%20Cooking%20From%20Heart.jpg' },
 
     // SALAD & RAITA
     { id: 901, name: 'Mix Veg Raita', price: 160, category: 'Salad & Raita', imageUrl: 'https://images.unsplash.com/photo-1596797038530-2c39bb9ed97c?auto=format&fit=crop&q=80&w=400' },

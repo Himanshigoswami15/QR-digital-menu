@@ -170,4 +170,21 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1408, name: 'Ginger Chicken (8pc)', price: 410, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Ginger%20Stir-Fry.jpg' },
     { id: 1409, name: 'Kargil Spe. Green Chicken (8pc)', price: 380, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Green%20Chicken%20Recipe.jpg' },
     { id: 1410, name: 'K.F.C. Chicken Boneless (6pc)', price: 450, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KFC%20Chicken%20Tenders%20Recipe.jpg' },
+
+    // NON-VEG TANDOOR
+    { id: 1501, name: 'Tandoori Chicken (Half)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TANDOORI%20CHICKEN%20(HALF).jpg?updatedAt=1763564676390' },
+    { id: 1502, name: 'Tandoori Chicken (Full)', price: 630, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TANDOORI%20CHICKEN%20(HALF).jpg?updatedAt=1763564676390' },
+    { id: 1503, name: 'Afgani Chicken (Half)', price: 483, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Afgani%20Chicken%20%20Half.jpg' },
+    { id: 1504, name: 'Afgani Chicken (Full)', price: 693, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Afghani%20Chicken%20_.jpg' },
+    { id: 1505, name: 'Chicken Tikka (6pc)', price: 284, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/ACHARI%20CHICKEN%20TIKKA.jpg?updatedAt=1763565446614' },
+    { id: 1506, name: 'Lasaniya Kabab (6pc)', price: 386, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Indian%20Lamb%20Seekh%20Kebab%20(Pan-fried%20Spicy%20Lamb%20Skewers).jpg' },
+    { id: 1507, name: 'Malai Tikka (6pc)', price: 386, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20MALAI%20TIKKA%201.jpg?updatedAt=1763565446545' },
+    { id: 1508, name: 'Pahadi Tikka (6pc)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20PAHADI%20TIKKA.jpg?updatedAt=1763564682037' },
+    { id: 1509, name: 'Chicken Seek Kabab (6pc)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20GILAFI%20SEEK%20KEBAB.jpg?updatedAt=1763564686722' },
+    { id: 1510, name: 'Kitchen Kasturi Kabab (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Most-liked%20video%20_%20838K%20views%20_%2016K%20reactions%20_%20Malai%20Chicken%20Kebab_%20Ingredients_%20%20_%20500%20g%20boneless%20chicken%20(pre.%20_malaichickenkebab%20_chicken%20_chickenkebab%20_chickenskewers%20_malaichicken%20_%20Flavours%20by%20Mounika%20_%20Facebook' },
+    { id: 1511, name: 'Chicken Sharabi Tikka (6pc)', price: 465, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Plating%20aesthetics.jpg' },
+    { id: 1512, name: 'Murg Malai Tikka (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Murg%20Malai%20Tikka.jpg' },
+    { id: 1513, name: 'Shikari Murgal Tikka (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Chicken%20Tikka%20Skewers%20with%20a%20Twist.jpg' },
+    { id: 1514, name: 'Tandoori Chicken Platter (12pc)', price: 840, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Chicken%20Thighs%20_%20Authentic%20Indian%20Grilled%20Chicken%20Recipe.jpg' },
 ];
+                                                                                

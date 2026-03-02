@@ -26,11 +26,6 @@ export const MENU_ITEMS: Dish[] = [
     { id: 204, name: 'Chana Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KABULI%20CHANA%20CHAAT.jpeg?updatedAt=1759147343617' },
     { id: 205, name: 'Chana Chaat Garlic', price: 140, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/9%20Indian%20snacks%20that%20do%20not%20increase%20cholesterol%20levels.jpg' },
     { id: 202, name: 'Veg Aloo Tikki (2pcs)', price: 80, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Street-Style%20Aloo%20Tikki%20with%20Spiced%20Chana_%20The%20Ultimate%20Indian%20Comfort%20Food.jpg' },
-    { id: 203, name: 'Masala Papd', price: 60, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala-papad-1000x1000.webp?updatedAt=1759147518990' },
-    { id: 206, name: 'Masala Khichiya', price: 70, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/khichiya%20papad.webp?updatedAt=1759147343478' },
-    { id: 207, name: 'Fry Khichiya', price: 50, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Microwaved%20crispy%20poppadums.jpg' },
-    { id: 208, name: 'Fry Papd', price: 60, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/%E0%AA%B5%E0%AA%BE%E0%AA%A8%E0%AA%B5%E0%AA%BE%20%E0%AA%95%E0%AA%B9%E0%AB%8B%20%E0%AA%95%E0%AB%87%20%E0%AA%AB%E0%AA%BE%E0%AA%AB%E0%AA%A1%E0%AA%BE%20-%20%E0%AA%A4%E0%AB%87%E0%AA%A8%E0%AB%80%20%E0%AA%93%E0%AA%B0%E0%AB%80%E0%AA%9C%E0%AB%80%E0%AA%A8%E0%AA%B2%20%E0%AA%B0%E0%AB%80%E0%AA%A4%E0%AA%A5%E0%AB%80%20_%20%E0%A4%B5%E0%A4%BE%E0%A4%A8%E0%A4%B5%E0%A4%BE%20%E0%A4%B0%E0%A5%87%E0%A4%B8%E0%A4%BF%E0%A4%AA%E0%A5%80%20_%20Vanva%20Recipe.jpg' },
-    { id: 209, name: 'Roasted Papd', price: 30, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PAPAD%20-%20DHAMATA.jpg' },
 
     // TANDOORI STARTERS
     { id: 301, name: 'Paneer Tikka (6pcs)', price: 280, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20TIKKA%20SHASHLIK.webp?updatedAt=1759148980181' },
@@ -137,6 +132,22 @@ export const MENU_ITEMS: Dish[] = [
     { id: 908, name: 'Boondi Raita', price: 150, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/boondi%20raita.webp?updatedAt=1759151509908' },
     { id: 909, name: 'Cacumber Raita', price: 170, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/cucumber%20raita.webp?updatedAt=1759147133020' },
     { id: 910, name: 'Onion Raita', price: 140, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/onion%20raita.webp?updatedAt=1759147517559' },
-    { id: 911, name: 'Deshi Raita', price: 150, category: 'Raita', imageUrl: '' },
-    { id: 912, name: 'Fry Raita', price: 180, category: 'Raita', imageUrl: '' },
+    { id: 911, name: 'Deshi Raita', price: 150, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mooli%20Raita%20(Radish%20Raita).jpg' },
+    { id: 912, name: 'Fry Raita', price: 180, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/fried%20raita.jpg?updatedAt=1759147133651' },
+
+    // ROASTED
+    { id: 1101, name: 'Roasted Papad', price: 40, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PAPAD%20-%20DHAMATA.jpg' },
+    { id: 1102, name: 'Pienat Chat', price: 180, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KABULI%20CHANA%20CHAAT.jpeg?updatedAt=1759147343617' },
+    { id: 1103, name: 'Masala Papad', price: 80, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala-papad-1000x1000.webp?updatedAt=1759147518990' },
+    { id: 1104, name: 'Plain Khichiya', price: 80, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Microwaved%20crispy%20poppadums.jpg' },
+    { id: 1105, name: 'Cheese Masala Khichiya', price: 120, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/khichiya%20papad.webp?updatedAt=1759147343478' },
+    { id: 1106, name: 'Fry Papad', price: 50, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Papad_.jpg' },
+    { id: 1107, name: 'Fry Masala Papad', price: 80, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala-papad-1000x1000.webp?updatedAt=1759147518990' },
+    { id: 1108, name: 'Masala Khichiya', price: 100, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/khichiya%20papad.webp?updatedAt=1759147343478' },
+
+    // BEVERAGES
+    { id: 1201, name: 'Water Bottle', price: 20, category: 'Beverages', imageUrl: 'https://images.unsplash.com/photo-1560023907-5f339617ea30?auto=format&fit=crop&q=80&w=400' },
+    { id: 1202, name: 'Cold Drink Can', price: 60, category: 'Beverages', imageUrl: 'https://images.unsplash.com/photo-1622708741826-6a9b695646f9?auto=format&fit=crop&q=80&w=400' },
+    { id: 1203, name: 'Butter Milk', price: 30, category: 'Beverages', imageUrl: 'https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&q=80&w=400' },
+    { id: 1204, name: 'Masala Chhach', price: 40, category: 'Beverages', imageUrl: 'https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&q=80&w=400' },
 ];

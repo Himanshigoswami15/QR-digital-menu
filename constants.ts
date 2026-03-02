@@ -141,7 +141,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1103, name: 'Masala Papad', price: 80, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala-papad-1000x1000.webp?updatedAt=1759147518990' },
     { id: 1104, name: 'Plain Khichiya', price: 80, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Microwaved%20crispy%20poppadums.jpg' },
     { id: 1105, name: 'Cheese Masala Khichiya', price: 120, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/khichiya%20papad.webp?updatedAt=1759147343478' },
-    { id: 1106, name: 'Fry Papad', price: 50, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Papad_.jpg' },
+    { id: 1106, name: 'Fry Papad', price: 50, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/%E0%AA%B5%E0%AA%BE%E0%AA%A8%E0%AA%B5%E0%AA%BE%20%E0%AA%95%E0%AA%B9%E0%AB%8B%20%E0%AA%95%E0%AB%87%20%E0%AA%AB%E0%AA%BE%E0%AA%AB%E0%AA%A1%E0%AA%BE%20-%20%E0%AA%A4%E0%AB%87%E0%AA%A8%E0%AB%80%20%E0%AA%93%E0%AA%B0%E0%AB%80%E0%AA%9C%E0%AB%80%E0%AA%A8%E0%AA%B2%20%E0%AA%B0%E0%AB%80%E0%AA%A4%E0%AA%A5%E0%AB%80%20_%20%E0%A4%B5%E0%A4%BE%E0%A4%A8%E0%A4%B5%E0%A4%BE%20%E0%A4%B0%E0%A5%87%E0%A4%B8%E0%A4%BF%E0%A4%AA%E0%A5%80%20_%20Vanva%20Recipe%20(1).jpg' },
     { id: 1107, name: 'Fry Masala Papad', price: 80, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala-papad-1000x1000.webp?updatedAt=1759147518990' },
     { id: 1108, name: 'Masala Khichiya', price: 100, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/khichiya%20papad.webp?updatedAt=1759147343478' },
 

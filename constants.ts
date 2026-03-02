@@ -146,8 +146,28 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1108, name: 'Masala Khichiya', price: 100, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/khichiya%20papad.webp?updatedAt=1759147343478' },
 
     // BEVERAGES
-    { id: 1201, name: 'Water Bottle', price: 20, category: 'Beverages', imageUrl: 'https://images.unsplash.com/photo-1560023907-5f339617ea30?auto=format&fit=crop&q=80&w=400' },
-    { id: 1202, name: 'Cold Drink Can', price: 60, category: 'Beverages', imageUrl: 'https://images.unsplash.com/photo-1622708741826-6a9b695646f9?auto=format&fit=crop&q=80&w=400' },
-    { id: 1203, name: 'Butter Milk', price: 30, category: 'Beverages', imageUrl: 'https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&q=80&w=400' },
-    { id: 1204, name: 'Masala Chhach', price: 40, category: 'Beverages', imageUrl: 'https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&q=80&w=400' },
+    { id: 1201, name: 'Water Bottle', price: 20, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Water%20bottles%20stock%20photo_%20Image%20of%20healthy,%20bottles%20-%2012522340.jpg' },
+    { id: 1202, name: 'Cold Drink Can', price: 60, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Soda.jpg' },
+    { id: 1203, name: 'Butter Milk', price: 30, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/How%20To%20Make%20Buttermilk%20From%20Curd_%20Follow%20This%20Step-By-Step%20Guide.jpg' },
+    { id: 1204, name: 'Masala Chhach', price: 40, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(10).jpg' },
+
+    // EGG DISHES
+    { id: 1301, name: 'Omelette (2 Egg)', price: 120, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Omelette%20aux%20fines%20herbes%20au%20Airfryer%20_%20l%C3%A9g%C3%A8re%20et%20pr%C3%AAte%20en%2010%20min,%20un%20classique%20revisit%C3%A9%20pour%20l_automne%202026%20__.jpg' },
+    { id: 1302, name: 'Cheese Omelette (2 Egg)', price: 180, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/cheese%20omelte.jpg?updatedAt=1759592084778' },
+    { id: 1303, name: 'Egg Bhuji (2 Egg)', price: 120, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Bhurji%20(Indian%20Scrambled%20Eggs).jpg' },
+    { id: 1304, name: 'Egg 65', price: 300, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%2065%20_%20Tasty%20&%20Spicy%20Egg%2065,%20Simple%20&%20Delicious%20Egg%2065.jpg' },
+    { id: 1305, name: 'Masala Omelette (2 pc)', price: 80, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala%20omlete.jpg?updatedAt=1759592085064' },
+    { id: 1306, name: 'Boil Egg (2 by 4)', price: 60, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/boiled%202%20egg.jpg?updatedAt=1759592084805' },
+
+    // NON-VEG STARTERS
+    { id: 1401, name: 'Chicken Pakoda (8pc)', price: 261, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Pakoda.jpg' },
+    { id: 1402, name: 'Chicken Pakoda Boneless (10pc)', price: 294, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Crispy%20Homemade%20Chicken%20Pakora%20(Air%20Fryer%20Option).jpg' },
+    { id: 1403, name: 'Chicken Lollipop Dry (6pc)', price: 331, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Easy%20Chicken%20Lollipop%20at%20Home%20_%20Crispy%20Skin%20_%20Full%20of%20Flavor.jpg' },
+    { id: 1404, name: 'Chicken Lollipop Gravy (6pc)', price: 350, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Lollipop%20Recipe%20_%20Chicken%20Lollipops%20_food%20%20_chickenlollipop%20_chickenlollipoprecipe%20_chefaman.jpg' },
+    { id: 1405, name: 'Chicken Chilly Boneless (8pc)', price: 240, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chilli%20Chicken.jpg?updatedAt=1759604147362' },
+    { id: 1406, name: 'Chicken 65 (8pc)', price: 240, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Crispy%20&%20Spicy%20Chicken%2065%20at%20Home%20(Dry%20Version).jpg' },
+    { id: 1407, name: 'Garlic Chicken (8pc)', price: 410, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Garlic%20Chicken.jpg?updatedAt=1759592085164' },
+    { id: 1408, name: 'Ginger Chicken (8pc)', price: 410, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Ginger%20Stir-Fry.jpg' },
+    { id: 1409, name: 'Kargil Spe. Green Chicken (8pc)', price: 380, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Green%20Chicken%20Recipe.jpg' },
+    { id: 1410, name: 'K.F.C. Chicken Boneless (6pc)', price: 450, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KFC%20Chicken%20Tenders%20Recipe.jpg' },
 ];

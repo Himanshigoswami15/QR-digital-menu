@@ -19,7 +19,9 @@ const Menu: React.FC = () => {
         'Salad',
         'Raita',
         'Roasted',
-        'Beverages'
+        'Beverages',
+        'Egg Dishes',
+        'Non-Veg Starters'
     ];
 
     const [activeCategory, setActiveCategory] = useState<string>(categories[0]);

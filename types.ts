@@ -3,7 +3,7 @@ export interface Dish {
     id: number;
     name: string;
     price: number;
-    category: 'On The Run' | 'Chaat House' | 'Tandoori Starters' | 'Chinese' | 'Shahi Sweet Vegetable' | 'Paneer Main Course' | 'Veg Main Course' | 'Dal' | 'Basmati Rice' | 'Indian Bread' | 'Salad' | 'Raita' | 'Roasted' | 'Beverages';
+    category: 'On The Run' | 'Chaat House' | 'Tandoori Starters' | 'Chinese' | 'Shahi Sweet Vegetable' | 'Paneer Main Course' | 'Veg Main Course' | 'Dal' | 'Basmati Rice' | 'Indian Bread' | 'Salad' | 'Raita' | 'Roasted' | 'Beverages' | 'Egg Dishes' | 'Non-Veg Starters';
     imageUrl: string;
 }
 

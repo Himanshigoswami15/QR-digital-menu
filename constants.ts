@@ -173,7 +173,7 @@ export const MENU_ITEMS: Dish[] = [
 
     // NON-VEG TANDOOR
     { id: 1501, name: 'Tandoori Chicken (Half)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TANDOORI%20CHICKEN%20(HALF).jpg?updatedAt=1763564676390' },
-    { id: 1502, name: 'Tandoori Chicken (Full)', price: 630, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TANDOORI%20CHICKEN%20(HALF).jpg?updatedAt=1763564676390' },
+    { id: 1502, name: 'Tandoori Chicken (Full)', price: 630, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TANDOORI%20CHICKEN%20FULL.jpg?updatedAt=1763564683566' },
     { id: 1503, name: 'Afgani Chicken (Half)', price: 483, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Afgani%20Chicken%20%20Half.jpg' },
     { id: 1504, name: 'Afgani Chicken (Full)', price: 693, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Afghani%20Chicken%20_.jpg' },
     { id: 1505, name: 'Chicken Tikka (6pc)', price: 284, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/ACHARI%20CHICKEN%20TIKKA.jpg?updatedAt=1763565446614' },

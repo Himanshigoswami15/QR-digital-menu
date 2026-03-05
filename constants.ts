@@ -379,7 +379,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1806, name: 'Chicken Dum Biryani', price: 360, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Spicy%20dum%20biryani.jpg' },
     { id: 1807, name: 'Kargil Spe. Biryani', price: 430, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mutton%20Biryani.jpg?updatedAt=1759595893464' },
     { id: 1808, name: 'Egg Schezwan Rice', price: 190, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Szechwan%20Fried%20Rice.jpg' },
-    { id: 1809, name: 'Chicken Schezwan Rice', price: 280, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Szechwan%20Fried%20Rice.jpg' },
+    { id: 1809, name: 'Chicken Schezwan Rice', price: 280, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Schezwan%20Chicken%20Fried%20Rice%20Recipe%20In%20English%20at%20Bobbiehibbler.jpg?updatedAt=1772709157381' },
     { id: 1810, name: 'Chicken Pulao', price: 250, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Yakhni%20Pulao%20Recipe.jpg' },
     { id: 1811, name: 'Hydrabadi Biryani', price: 450, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Hyderabadi%20Chicken%20Biryani%20(Kacchi%20Biryani).jpg' },
     { id: 1812, name: 'Fish Fried Rice', price: 390, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Cajun%20Baked%20Cod%20with%20Rice%20Pilaf%20_%20Vibrant%20Cajun%20Flavors%20and%20Fluffy%20Pilaf.jpg' },

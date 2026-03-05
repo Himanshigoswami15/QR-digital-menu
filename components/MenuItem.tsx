@@ -40,11 +40,6 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                         alt={dish.name} 
                         className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" 
                     />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                        <div className="bg-white text-base-100 p-4 rounded-full shadow-2xl transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-75">
-                            <PlusCircleIcon className="w-8 h-8" />
-                        </div>
-                    </div>
                 </div>
 
                 <div className="flex flex-col items-center w-full max-w-[340px] px-4">
@@ -115,7 +110,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ dish }) => {
                             onClick={handleAddToCart}
                             className="w-full bg-white text-base-100 py-6 rounded-2xl font-black text-[12px] tracking-[0.5em] uppercase shadow-2xl hover:bg-white/90 active:scale-[0.98] transition-all"
                         >
-                            Confirm Selection — ₹{dish.price * quantity}
+                            Confirm Selection
                         </button>
                     </div>
                 </div>

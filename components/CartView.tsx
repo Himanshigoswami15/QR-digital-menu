@@ -34,7 +34,7 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
         });
         dispatch({
             type: 'SHOW_NOTIFICATION',
-            payload: `Your order has been received. Thank you!`
+            payload: `Our staff has received your order! We are preparing it with care. Sit back and relax.`
         });
         onBackToMenu();
     };
@@ -98,14 +98,9 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                     </div>
                     
                     <div className="pt-12 border-t border-white/5 space-y-10">
-                        <div className="flex flex-col items-center gap-4">
-                            <span className="text-[11px] tracking-[0.5em] uppercase text-white/30 font-bold">Total Investment</span>
-                            <span className="text-6xl font-serif italic text-white">₹{subtotal}</span>
-                        </div>
-                        
                         <div className="p-8 bg-white/[0.03] rounded-2xl border border-white/5 text-center max-w-md mx-auto">
                             <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 leading-relaxed italic">
-                                All prices exclude GST. Our culinary team prepares each selection with focused attention.
+                                Our culinary team prepares each selection with focused attention.
                             </p>
                         </div>
 

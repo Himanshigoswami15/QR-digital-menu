@@ -34,7 +34,6 @@ export const MENU_ITEMS: Dish[] = [
     { id: 303, name: 'Mushroom Chilly', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(5).jpg' },
     { id: 403, name: 'Chilli Paneer Gravy', price: 400, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sometimes%20all%20you%20need%20is%20Chilli%20Paneer%20_%20_%20.%20.%20.%20.%20%20%20_countrykitchen%20_chillipaneer%20_foodiesays?updatedAt=1771913129595' },
     { id: 401, name: 'Paneer 65 (8pcs)', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/5%20Desi%20Office%20Potluck%20Recipes.jpg?updatedAt=1771913297489' },
-    { id: 404, name: 'Paneer Tikka', price: 360, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20SUFIYANA%20TIKKA.jpg?updatedAt=1763551271712' },
     { id: 402, name: 'Manchurian Dry', price: 280, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/manchurian.jpg?updatedAt=1758211139469' },
     { id: 405, name: 'Manchurian Gravy', price: 260, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Indian%20Khana_%20Vegetable%20Manchurian%20Gravy%20Recipe%20_%20Veg%20Manchurian%20_%20Indo-Chinese%20Recipes.jpg?updatedAt=1771913487864' },
     { id: 407, name: 'Chilli Paneer (8pcs)', price: 280, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/chilli%20panner.jpeg?updatedAt=1758292957291' },
@@ -45,13 +44,12 @@ export const MENU_ITEMS: Dish[] = [
     { id: 501, name: 'Shahi Paneer', price: 260, category: 'Shahi Sweet Vegetable', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Butter%20Masala.webp?updatedAt=1759147634122' },
     { id: 505, name: 'Methi Malai Matar', price: 260, category: 'Shahi Sweet Vegetable', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Methi-Matar-Malai-2-3.jpg?updatedAt=1759150283553' },
     { id: 503, name: 'Kaju Curry', price: 350, category: 'Shahi Sweet Vegetable', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Quick%20and%20Easy%20Kaju%20Curry%20Recipe-%20Perfect%20for%20Any%20Occasion.jpg' },
-    { id: 506, name: 'Mushroom Kofta', price: 280, category: 'Shahi Sweet Vegetable', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mushroom%20Meatballs%20in%20a%20Creamy%20Red%20Pepper%20Sauce.jpg' },
+    { id: 506, name: 'Mushroom Masala', price: 280, category: 'Shahi Sweet Vegetable', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mushroom%20Meatballs%20in%20a%20Creamy%20Red%20Pepper%20Sauce.jpg' },
 
     // PANNER MAIN COURSE
     { id: 601, name: 'Paneer Lababdar', price: 280, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/_%E2%9C%A8%20Paneer%20Lababdar%20_%20Creamy,%20Spiced%20&%20Indulgent!%20%E2%9C%A8___A%20rich%20North%20Indian%20curry,%20Paneer%20Lababdar%20features%20soft%20paneer%20cubes%20simmered%20in%20a%20creamy,%20tomato-based%20gravy%20w.%20Add%20paneer%20cubes%20and%20simmer%20until%20they%20absorb%20t___' },
     { id: 606, name: 'Paneer Pasanda', price: 350, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Best%20Paneer%20Pasanda%20Recipe%20(Restaurant%20Style)%20-%20Cubes%20N%20Juliennes.jpg' },
     { id: 607, name: 'Muglai Paneer', price: 290, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer-Korma-2-3.jpg' },
-    { id: 608, name: 'Paneer Taka Tak', price: 270, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Tak-a-Tak%20_%20Tawa%20Paneer.jpg' },
     { id: 604, name: 'Kargil Special (3 variety)', price: 750, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/unnamed.jpg' },
     { id: 609, name: 'Paneer 2 Pyaza', price: 300, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Do%20Pyaza%20-%20Cooking%20From%20Heart%20(1).jpg' },
     { id: 610, name: 'Khoya Paneer', price: 280, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Khoya%20Paneer.jpg' },
@@ -67,7 +65,6 @@ export const MENU_ITEMS: Dish[] = [
     // VEG MAIN COURSE
     { id: 1001, name: 'Kargil Spe. Soya Chhap', price: 580, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(8).jpg' },
     { id: 1002, name: 'Stuffed Shimla', price: 170, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Stuffed%20Bell%20Pepper%20Rings%20-%20My%20Tried%20Recipes.jpg' },
-    { id: 1003, name: 'Soya Masala Chhap', price: 580, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Soya%20Chaap%20Curry.jpg' },
     { id: 1004, name: 'Butter Masala Chhap', price: 580, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Food%20photography.jpg' },
     { id: 1005, name: 'Aloo Tomato', price: 170, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Aloo%20Tamatar%20ki%20Sabzi%20-%20Bliss%20of%20Cooking.jpg' },
     { id: 1006, name: 'Chhola Masala', price: 180, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Easy%20Channa%20Masala%20Recipes%20to%20Try%20Today%20_%20Delectable%20Meal.jpg' },
@@ -153,8 +150,8 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1406, name: 'Chicken 65 (8pc)', price: 240, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Crispy%20&%20Spicy%20Chicken%2065%20at%20Home%20(Dry%20Version).jpg' },
     { id: 1407, name: 'Garlic Chicken (8pc)', price: 410, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Garlic%20Chicken.jpg?updatedAt=1759592085164' },
     { id: 1408, name: 'Ginger Chicken (8pc)', price: 410, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Ginger%20Stir-Fry.jpg' },
-    { id: 1409, name: 'Kargil Spe. Green Chicken (8pc)', price: 380, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Green%20Chicken%20Recipe.jpg' },
-    { id: 1410, name: 'K.F.C. Chicken Boneless (6pc)', price: 450, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KFC%20Chicken%20Tenders%20Recipe.jpg' },
+    { id: 1409, name: 'Kargil Spe. Green Chicken (8pc)', price: 380, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Goan%20Chicken%20Curry%20_%20Chicken%20Cafreal%20_%20Savory%20Tales.jpg' },
+    { id: 1410, name: 'K.F.C. Chicken Boneless (6pc)', price: 450, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Flavorful%20Feast.jpg' },
     { 
         id: 1411, 
         name: 'Bhuna Chicken', 
@@ -329,7 +326,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Tawa Chicken', 
         price: 430, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Punjabi%20Chicken%20Tawa.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Download%20premium%20image%20of%20Indian%20food_%20about%20biryani,%20indian%20chicken%20biryani,%20chicken%20biryani,%20biryani%20dish,%20and%20indian%20food%2012576211.jpg',
         portions: [
             { name: 'Quarter', price: 430, description: '3 pieces' },
             { name: 'Half', price: 661, description: '5 pieces + 1 leg' },

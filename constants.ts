@@ -160,7 +160,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Bhuna Chicken', 
         price: 550, 
         category: 'Non-Veg Starters', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Bhuna.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Bhuna%20Masala.jpg',
         portions: [
             { name: 'Half', price: 550 },
             { name: 'Full', price: 890 }
@@ -189,7 +189,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Anda Curry', 
         price: 190, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Curry.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(11).jpg',
         portions: [
             { name: 'Half', price: 190, description: '2 eggs' },
             { name: 'Full', price: 290, description: '4 eggs' }
@@ -200,7 +200,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Chicken Curry', 
         price: 300, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Curry.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Curry.jpg?updatedAt=1759604151523',
         portions: [
             { name: 'Quarter', price: 300, description: '3 pieces' },
             { name: 'Half', price: 500, description: '5 pieces + 1 leg' },
@@ -224,7 +224,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Chicken Masala', 
         price: 410, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Masala.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Masala.jpg?updatedAt=1759604152818',
         portions: [
             { name: 'Quarter', price: 410, description: '3 pieces' },
             { name: 'Half', price: 560, description: '5 pieces + 1 leg' },
@@ -236,7 +236,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Chicken Tikka Masala', 
         price: 550, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Tikka%20Masala.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chef-Approved%20Gordon%20Ramsay%20Chicken%20Tikka%20Masala___.jpg',
         portions: [
             { name: 'Half', price: 550, description: '4 pieces' },
             { name: 'Full', price: 750, description: '8 pieces' }
@@ -259,7 +259,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Kadhai Chicken', 
         price: 650, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Kadai%20Chicken.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Kadhai%20Chicken.jpg?updatedAt=1759596253532',
         portions: [
             { name: 'Half', price: 650, description: '5 pieces' },
             { name: 'Full', price: 880, description: '10 pieces' }
@@ -294,7 +294,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Barmer Special Butter Chicken', 
         price: 430, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken%20_%20Spice%20Kitchen.jpg',
         portions: [
             { name: 'Quarter', price: 430, description: '3 pieces' },
             { name: 'Half', price: 525, description: '5 pieces' },
@@ -306,7 +306,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Butter Chicken Original', 
         price: 430, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Keto%20Butter%20Chicken%20Recipe.jpg',
         portions: [
             { name: 'Quarter', price: 430, description: '3 pieces' },
             { name: 'Half', price: 525, description: '5 pieces' },
@@ -318,7 +318,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Butter Chicken Boneless', 
         price: 650, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Easy%20and%20Creamy%20Butter%20Chicken%20Recipe%20Idea.jpg',
         portions: [
             { name: 'Half', price: 650, description: '' },
             { name: 'Full', price: 900, description: '' }
@@ -329,7 +329,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Tawa Chicken', 
         price: 430, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Curry.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Punjabi%20Chicken%20Tawa.jpg',
         portions: [
             { name: 'Quarter', price: 430, description: '3 pieces' },
             { name: 'Half', price: 661, description: '5 pieces' },
@@ -341,7 +341,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Handi Chicken', 
         price: 661, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Handi%20Chicken.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Handi.jpg?updatedAt=1759604152652',
         portions: [
             { name: 'Half', price: 661, description: '5 pieces' },
             { name: 'Full', price: 880, description: '10 pieces' }
@@ -352,7 +352,7 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Kargil Special Murgh Masala', 
         price: 661, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Musallam.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Murgh%20Masala%20(%20Chicken%20Masala%20).jpg',
         portions: [
             { name: 'Half', price: 661, description: '5 pieces' },
             { name: 'Full', price: 880, description: '10 pieces' }
@@ -363,45 +363,45 @@ export const MENU_ITEMS: Dish[] = [
         name: 'Mutton', 
         price: 880, 
         category: 'Non-Veg Main Course Curry', 
-        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mutton%20Curry.jpg',
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mutton%20masala.jpg?updatedAt=1759606632492',
         portions: [
             { name: 'Half', price: 880, description: '0.5 kg' },
             { name: 'Full', price: 1680, description: '1 kg' }
         ]
     },
     // FISH
-    { id: 1701, name: 'Fish Pakora (6 Pieces)', price: 490, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Fish%20Pakora.jpg' },
-    { id: 1702, name: 'Amritsari Fish Tikka (8 Pieces)', price: 660, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Amritsari%20Fish%20Tikka.jpg' },
-    { id: 1703, name: 'Fish Fingers (8 Pieces)', price: 400, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Fish%20Fingers.jpg' },
+    { id: 1701, name: 'Fish Pakora (6 Pieces)', price: 490, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Amritsari%20Fish%20Fry%20or%20Crispy%20Fish%20Pakora%20_%20Savory%20Tales.jpg' },
+    { id: 1702, name: 'Amritsari Fish Tikka (8 Pieces)', price: 660, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Fish%20Tikka.jpg' },
+    { id: 1703, name: 'Fish Fingers (8 Pieces)', price: 400, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/fish%20fingers.jpg?updatedAt=1759605023488' },
     // RICE & BIRYANI
     { id: 1801, name: 'Egg Rice', price: 190, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Fried%20Rice.jpg' },
-    { id: 1802, name: 'Egg Pulao', price: 230, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Pulao.jpg' },
-    { id: 1803, name: 'Egg Biryani', price: 235, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Biryani.jpg' },
-    { id: 1804, name: 'Chicken Rice', price: 265, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Fried%20Rice.jpg' },
-    { id: 1805, name: 'Chicken Biryani', price: 260, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Biryani.jpg' },
-    { id: 1806, name: 'Chicken Dum Biryani', price: 360, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Dum%20Biryani.jpg' },
-    { id: 1807, name: 'Kargil Spe. Biryani', price: 430, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Special%20Biryani.jpg' },
-    { id: 1808, name: 'Egg Schezwan Rice', price: 190, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Schezwan%20Rice.jpg' },
-    { id: 1809, name: 'Chicken Schezwan Rice', price: 280, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Schezwan%20Rice.jpg' },
-    { id: 1810, name: 'Chicken Pulao', price: 250, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Pulao.jpg' },
-    { id: 1811, name: 'Heydarabadi Biryani', price: 450, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Hyderabadi%20Biryani.jpg' },
-    { id: 1812, name: 'Fish Fried Rice', price: 390, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Fish%20Fried%20Rice.jpg' },
+    { id: 1802, name: 'Egg Pulao', price: 230, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(12).jpg' },
+    { id: 1803, name: 'Egg Biryani', price: 235, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Rich%20&%20Royal_%20Mughlai%20Egg%20Biryani%20with%20Crispy___.jpg' },
+    { id: 1804, name: 'Chicken Rice', price: 265, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/High%20Protein%20Crispy%20Garlic%20Chicken%20Fried%20Rice%20Recipe%20for%20Quick%20Lunch%20&%20Dinner%20(1).jpg' },
+    { id: 1805, name: 'Chicken Biryani', price: 260, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/biryani.jpg?updatedAt=1759592084508' },
+    { id: 1806, name: 'Chicken Dum Biryani', price: 360, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Spicy%20dum%20biryani.jpg' },
+    { id: 1807, name: 'Kargil Spe. Biryani', price: 430, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mutton%20Biryani.jpg?updatedAt=1759595893464' },
+    { id: 1808, name: 'Egg Schezwan Rice', price: 190, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Szechwan%20Fried%20Rice.jpg' },
+    { id: 1809, name: 'Chicken Schezwan Rice', price: 280, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Szechwan%20Fried%20Rice.jpg' },
+    { id: 1810, name: 'Chicken Pulao', price: 250, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Yakhni%20Pulao%20Recipe.jpg' },
+    { id: 1811, name: 'Hydrabadi Biryani', price: 450, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Hyderabadi%20Chicken%20Biryani%20(Kacchi%20Biryani).jpg' },
+    { id: 1812, name: 'Fish Fried Rice', price: 390, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Cajun%20Baked%20Cod%20with%20Rice%20Pilaf%20_%20Vibrant%20Cajun%20Flavors%20and%20Fluffy%20Pilaf.jpg' },
     // ROLL
-    { id: 1901, name: 'Chicken Roll', price: 300, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Roll.jpg' },
-    { id: 1902, name: 'Egg Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Roll.jpg' },
-    { id: 1903, name: 'Veg Roll', price: 250, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Roll.jpg' },
-    { id: 1904, name: 'Paneer Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Roll.jpg' },
+    { id: 1901, name: 'Chicken Roll', price: 300, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Kathi%20Roll.jpg?updatedAt=1759604151903' },
+    { id: 1902, name: 'Egg Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Kathi%20Roll.jpg?updatedAt=1759604148687' },
+    { id: 1903, name: 'Veg Roll', price: 250, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20KATHI%20ROLL.webp?updatedAt=1758294362003' },
+    { id: 1904, name: 'Paneer Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Kathi%20Roll.jpg' },
 
     // SOUPS
-    { id: 251, name: 'Veg Manchow Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Manchow%20Soup.jpg' },
-    { id: 252, name: 'Chicken Hot/Sour Soup', price: 260, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Hot%20and%20Sour%20Soup.jpg' },
-    { id: 253, name: 'Chicken Manchow Soup', price: 280, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Manchow%20Soup.jpg' },
-    { id: 254, name: 'Tomato Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tomato%20Soup.jpg' },
-    { id: 255, name: 'Sweet Corn Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sweet%20Corn%20Soup.jpg' },
-    { id: 256, name: 'Veg Hot/Sour Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Hot%20and%20Sour%20Soup.jpg' },
-    { id: 257, name: 'Chicken Clear Soup', price: 260, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Clear%20Soup.jpg' },
-    { id: 258, name: 'Veg Clear Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Clear%20Soup.jpg' },
-    { id: 259, name: 'Tomato/Dhaniya Shorba Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tomato%20Dhaniya%20Shorba.jpg' },
+    { id: 251, name: 'Veg Manchow Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20MANCHOW%20SOUP.jpg?updatedAt=1759148818177' },
+    { id: 252, name: 'Chicken Hot/Sour Soup', price: 260, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Hot%20&%20Sour%20Soup.jpg?updatedAt=1759606287140' },
+    { id: 253, name: 'Chicken Manchow Soup', price: 280, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Homemade%20Chicken%20Manchow%20Soup.jpg' },
+    { id: 254, name: 'Tomato Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TOMATO%20SOUP.webp?updatedAt=1759147889844' },
+    { id: 255, name: 'Sweet Corn Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20SWEET%20CORN%20SOUP.jpg?updatedAt=1759147890053' },
+    { id: 256, name: 'Veg Hot/Sour Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20HOT%20&%20SOUR%20SOUP.jpg?updatedAt=1759147889598' },
+    { id: 257, name: 'Chicken Clear Soup', price: 260, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/This%20clear%20chicken%20soup%20is%20a%20light%20and%20comforting%20meal_%20It%20is%20a%20homemade%20flavorful%20clear%20broth%20with%20tender%20chicken.%20A%20family%20favorite%20and%20so%20easy%20to%20make_' },
+    { id: 258, name: 'Veg Clear Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20CLEAR%20SOUP.jpg' },
+    { id: 259, name: 'Tomato/Dhaniya Shorba Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Warm-up%20your%20evenings%20with%20Tamatar%20ka%20shorba%20-%20Spiced%20Indian%20Tomato%20soup_%20Toss%20everything%20in%20your%20Instant%20Pot,%20and%20a%20bowl%20of%20healthy%20soup%20wi.%20_tomatosoup%20_shorba%20_tomatoshorba%20_vegetableshorba%20_veagnsoup%20_instantpotsoup' },
     { id: 260, name: 'Malai Dar Chicken / Mushroom Soup', price: 280, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Creamy%20Chicken%20Mushroom%20Soup.jpg' },
 ];
                                                                                 

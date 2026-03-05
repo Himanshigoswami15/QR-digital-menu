@@ -1,4 +1,5 @@
 import React, { createContext, useReducer, useContext, ReactNode } from 'react';
+// Application context for state management
 import type { CartItem, Order } from '../types';
 import { OrderStatus } from '../types';
 

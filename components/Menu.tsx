@@ -8,6 +8,7 @@ const Menu: React.FC = () => {
     const categories: Dish['category'][] = [
         'On The Run', 
         'Chaat House', 
+        'Soups',
         'Tandoori Starters', 
         'Chinese', 
         'Shahi Sweet Vegetable', 
@@ -23,7 +24,10 @@ const Menu: React.FC = () => {
         'Egg Dishes',
         'Non-Veg Starters',
         'Non-Veg Tandoor',
-        'Non-Veg Main Course Curry'
+        'Non-Veg Main Course Curry',
+        'Fish',
+        'Rice & Biryani',
+        'Roll'
     ];
 
     const [activeCategory, setActiveCategory] = useState<string>(categories[0]);

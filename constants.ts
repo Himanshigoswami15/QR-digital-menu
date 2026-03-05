@@ -9,8 +9,6 @@ export const MENU_ITEMS: Dish[] = [
     { id: 103, name: 'Garlic French Fries', price: 190, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Crispy%20Garlic%20Herb%20French%20Fries%20with%20Aioli.jpg' },
     { id: 104, name: 'Honey Chilli Potato', price: 180, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/honey%20chilli%20potato.webp?updatedAt=1758211139092' },
     { id: 108, name: 'Baby Corn Chilli', price: 350, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/_Savoring%20the%20flavors%20of%20Asia!%20__.jpg' },
-    { id: 109, name: 'Crispy Baby Corn Chilli', price: 360, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/_Crispy%20Chilli%20Baby%20Corn%20Fingers%20_%20Fiery,%20Tangy%20&%20Finger-Licking!%20%E2%9C%A8___Baby%20corn%20coated%20in%20a%20spiced%20batter,%20fried%20(or%20air-fried)%20until%20crisp,%20then%20tossed%20in%20a%20glossy%20chilli-garlic%20s.__%20Sauce%20Toss_%20In%20a%20pan,%20saut%C3%A9%20g___' },
-    { id: 110, name: 'Baby Corn Salt Pepper', price: 350, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Air%20Fryer%20Baby%20Corn%20-%20Through%20The%20Fibro%20Fog.jpg' },
     { id: 105, name: 'Crispy Corn', price: 350, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CRISPY%20CORN.webp?updatedAt=1758292974618' },
     { id: 111, name: 'Malai Chap (6pcs)', price: 280, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Soya%20Chaap.jpg' },
     { id: 112, name: 'Paneer Pakoda (10pcs)', price: 180, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20PAKORA.webp?updatedAt=1758292956189' },
@@ -26,6 +24,18 @@ export const MENU_ITEMS: Dish[] = [
     { id: 204, name: 'Chana Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KABULI%20CHANA%20CHAAT.jpeg?updatedAt=1759147343617' },
     { id: 205, name: 'Chana Chaat Garlic', price: 140, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/9%20Indian%20snacks%20that%20do%20not%20increase%20cholesterol%20levels.jpg' },
     { id: 202, name: 'Veg Aloo Tikki (2pcs)', price: 80, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Street-Style%20Aloo%20Tikki%20with%20Spiced%20Chana_%20The%20Ultimate%20Indian%20Comfort%20Food.jpg' },
+
+    // SOUPS
+    { id: 251, name: 'Veg Manchow Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Manchow%20Soup.jpg' },
+    { id: 252, name: 'Chicken Hot/Sour Soup', price: 260, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Hot%20and%20Sour%20Soup.jpg' },
+    { id: 253, name: 'Chicken Manchow Soup', price: 280, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Manchow%20Soup.jpg' },
+    { id: 254, name: 'Tomato Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tomato%20Soup.jpg' },
+    { id: 255, name: 'Sweet Corn Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sweet%20Corn%20Soup.jpg' },
+    { id: 256, name: 'Veg Hot/Sour Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Hot%20and%20Sour%20Soup.jpg' },
+    { id: 257, name: 'Chicken Clear Soup', price: 260, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Clear%20Soup.jpg' },
+    { id: 258, name: 'Veg Clear Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Clear%20Soup.jpg' },
+    { id: 259, name: 'Tomato/Dhaniya Sourba Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tomato%20Dhaniya%20Shorba.jpg' },
+    { id: 260, name: 'Malai Dar Chicken / Mushroom Soup', price: 280, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Creamy%20Chicken%20Mushroom%20Soup.jpg' },
 
     // TANDOORI STARTERS
     { id: 301, name: 'Paneer Tikka (6pcs)', price: 280, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20TIKKA%20SHASHLIK.webp?updatedAt=1759148980181' },
@@ -373,5 +383,27 @@ export const MENU_ITEMS: Dish[] = [
             { name: 'Full', price: 1680, description: '1 kg' }
         ]
     },
+    // FISH
+    { id: 1701, name: 'Fish Pakora (6 Pieces)', price: 490, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Fish%20Pakora.jpg' },
+    { id: 1702, name: 'Amritsari Fish Tikka (8 Pieces)', price: 660, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Amritsari%20Fish%20Tikka.jpg' },
+    { id: 1703, name: 'Fish Fingers (8 Pieces)', price: 400, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Fish%20Fingers.jpg' },
+    // RICE & BIRYANI
+    { id: 1801, name: 'Egg Rice', price: 190, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Fried%20Rice.jpg' },
+    { id: 1802, name: 'Egg Pulao', price: 230, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Pulao.jpg' },
+    { id: 1803, name: 'Egg Biryani', price: 235, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Biryani.jpg' },
+    { id: 1804, name: 'Chicken Rice', price: 265, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Fried%20Rice.jpg' },
+    { id: 1805, name: 'Chicken Biryani', price: 260, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Biryani.jpg' },
+    { id: 1806, name: 'Chicken Dum Biryani', price: 360, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Dum%20Biryani.jpg' },
+    { id: 1807, name: 'Kargil Spe. Biryani', price: 430, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Special%20Biryani.jpg' },
+    { id: 1808, name: 'Egg Schezwan Rice', price: 190, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Schezwan%20Rice.jpg' },
+    { id: 1809, name: 'Chicken Schezwan Rice', price: 280, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Schezwan%20Rice.jpg' },
+    { id: 1810, name: 'Chicken Pulao', price: 250, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Pulao.jpg' },
+    { id: 1811, name: 'Heydarabadi Biryani', price: 450, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Hyderabadi%20Biryani.jpg' },
+    { id: 1812, name: 'Fish Fried Rice', price: 390, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Fish%20Fried%20Rice.jpg' },
+    // ROLL
+    { id: 1901, name: 'Chicken Roll', price: 300, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Roll.jpg' },
+    { id: 1902, name: 'Egg Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Roll.jpg' },
+    { id: 1903, name: 'Veg Roll', price: 250, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Roll.jpg' },
+    { id: 1904, name: 'Paneer Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Roll.jpg' },
 ];
                                                                                 

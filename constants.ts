@@ -141,7 +141,7 @@ export const MENU_ITEMS: Dish[] = [
     // EGG DISHES
     { id: 1303, name: 'Egg Bhuji (2 Egg)', price: 120, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Bhurji%20(Indian%20Scrambled%20Eggs).jpg' },
     { id: 1304, name: 'Egg 65', price: 300, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%2065%20_%20Tasty%20&%20Spicy%20Egg%2065,%20Simple%20&%20Delicious%20Egg%2065.jpg' },
-    { id: 1305, name: 'Masala Omelette (2 pc)', price: 80, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala%20omlete.jpg?updatedAt=1759592085064' },
+    { id: 1305, name: 'Masala Omelette (2 Egg)', price: 80, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala%20omlete.jpg?updatedAt=1759592085064' },
     { id: 1306, name: 'Boil Egg (2 by 4)', price: 60, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/boiled%202%20egg.jpg?updatedAt=1759592084805' },
 
     // NON-VEG STARTERS
@@ -399,9 +399,6 @@ export const MENU_ITEMS: Dish[] = [
     { id: 254, name: 'Tomato Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TOMATO%20SOUP.webp?updatedAt=1759147889844' },
     { id: 255, name: 'Sweet Corn Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20SWEET%20CORN%20SOUP.jpg?updatedAt=1759147890053' },
     { id: 256, name: 'Veg Hot/Sour Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20HOT%20&%20SOUR%20SOUP.jpg?updatedAt=1759147889598' },
-    { id: 257, name: 'Chicken Clear Soup', price: 260, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/This%20clear%20chicken%20soup%20is%20a%20light%20and%20comforting%20meal_%20It%20is%20a%20homemade%20flavorful%20clear%20broth%20with%20tender%20chicken.%20A%20family%20favorite%20and%20so%20easy%20to%20make_' },
-    { id: 258, name: 'Veg Clear Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20CLEAR%20SOUP.jpg' },
-    { id: 259, name: 'Tomato/Dhaniya Shorba Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Warm-up%20your%20evenings%20with%20Tamatar%20ka%20shorba%20-%20Spiced%20Indian%20Tomato%20soup_%20Toss%20everything%20in%20your%20Instant%20Pot,%20and%20a%20bowl%20of%20healthy%20soup%20wi.%20_tomatosoup%20_shorba%20_tomatoshorba%20_vegetableshorba%20_veagnsoup%20_instantpotsoup' },
-    { id: 260, name: 'Malai Dar Chicken / Mushroom Soup', price: 280, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Creamy%20Chicken%20Mushroom%20Soup.jpg' },
+    { id: 257, name: 'Tomato/Dhaniya Shorba Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Warm-up%20your%20evenings%20with%20Tamatar%20ka%20shorba%20-%20Spiced%20Indian%20Tomato%20soup_%20Toss%20everything%20in%20your%20Instant%20Pot,%20and%20a%20bowl%20of%20healthy%20soup%20wi.%20_tomatosoup%20_shorba%20_tomatoshorba%20_vegetableshorba%20_veagnsoup%20_instantpotsoup' },
 ];
                                                                                 

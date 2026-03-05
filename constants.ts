@@ -68,7 +68,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1004, name: 'Butter Masala Chhap', price: 580, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Food%20photography.jpg' },
     { id: 1005, name: 'Aloo Tomato', price: 170, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Aloo%20Tamatar%20ki%20Sabzi%20-%20Bliss%20of%20Cooking.jpg' },
     { id: 1006, name: 'Chhola Masala', price: 180, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Easy%20Channa%20Masala%20Recipes%20to%20Try%20Today%20_%20Delectable%20Meal.jpg' },
-    { id: 1007, name: 'Veg Handi', price: 200, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Easy%20Channa%20Masala%20Recipes%20to%20Try%20Today%20_%20Delectable%20Meal.jpg' },
+    { id: 1007, name: 'Veg Handi', price: 200, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mixed%20Vegetable%20Handi%20Recipe%20Recipe%20-%20Complete%20Guide.jpg?updatedAt=1772356622484' },
     { id: 1008, name: 'Mushroom Masala', price: 280, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mushroom%20masala.jpg?updatedAt=1759174155100' },
     { id: 1009, name: 'Veg Kolhapuri', price: 240, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Kolhapuri%20Recipe%20_.jpg' },
     { id: 1013, name: 'Chana Masala', price: 180, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/chana%20masala.webp?updatedAt=1759147037380' },

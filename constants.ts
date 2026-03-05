@@ -238,8 +238,8 @@ export const MENU_ITEMS: Dish[] = [
         category: 'Non-Veg Main Course Curry', 
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chef-Approved%20Gordon%20Ramsay%20Chicken%20Tikka%20Masala___.jpg',
         portions: [
-            { name: 'Half', price: 550, description: '4 pieces' },
-            { name: 'Full', price: 750, description: '8 pieces' }
+            { name: 'Half', price: 550, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 750, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -250,8 +250,8 @@ export const MENU_ITEMS: Dish[] = [
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Korma.jpg',
         portions: [
             { name: 'Quarter', price: 350, description: '3 pieces' },
-            { name: 'Half', price: 650, description: '5 pieces' },
-            { name: 'Full', price: 880, description: '10 pieces' }
+            { name: 'Half', price: 650, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -261,8 +261,8 @@ export const MENU_ITEMS: Dish[] = [
         category: 'Non-Veg Main Course Curry', 
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Kadhai%20Chicken.jpg?updatedAt=1759596253532',
         portions: [
-            { name: 'Half', price: 650, description: '5 pieces' },
-            { name: 'Full', price: 880, description: '10 pieces' }
+            { name: 'Half', price: 650, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -273,8 +273,8 @@ export const MENU_ITEMS: Dish[] = [
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mughlai%20Chicken.jpg',
         portions: [
             { name: 'Quarter', price: 350, description: '3 pieces' },
-            { name: 'Half', price: 650, description: '5 pieces' },
-            { name: 'Full', price: 850, description: '10 pieces' }
+            { name: 'Half', price: 650, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 850, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -285,8 +285,8 @@ export const MENU_ITEMS: Dish[] = [
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Tikka%20Masala.jpg',
         portions: [
             { name: 'Quarter', price: 430, description: '3 pieces' },
-            { name: 'Half', price: 600, description: '5 pieces' },
-            { name: 'Full', price: 880, description: '10 pieces' }
+            { name: 'Half', price: 600, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -297,8 +297,8 @@ export const MENU_ITEMS: Dish[] = [
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken%20_%20Spice%20Kitchen.jpg',
         portions: [
             { name: 'Quarter', price: 430, description: '3 pieces' },
-            { name: 'Half', price: 525, description: '5 pieces' },
-            { name: 'Full', price: 880, description: '10 pieces' }
+            { name: 'Half', price: 525, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -309,8 +309,8 @@ export const MENU_ITEMS: Dish[] = [
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Keto%20Butter%20Chicken%20Recipe.jpg',
         portions: [
             { name: 'Quarter', price: 430, description: '3 pieces' },
-            { name: 'Half', price: 525, description: '5 pieces' },
-            { name: 'Full', price: 880, description: '10 pieces' }
+            { name: 'Half', price: 525, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -332,8 +332,8 @@ export const MENU_ITEMS: Dish[] = [
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Punjabi%20Chicken%20Tawa.jpg',
         portions: [
             { name: 'Quarter', price: 430, description: '3 pieces' },
-            { name: 'Half', price: 661, description: '5 pieces' },
-            { name: 'Full', price: 950, description: '10 pieces' }
+            { name: 'Half', price: 661, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 950, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -343,8 +343,8 @@ export const MENU_ITEMS: Dish[] = [
         category: 'Non-Veg Main Course Curry', 
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Handi.jpg?updatedAt=1759604152652',
         portions: [
-            { name: 'Half', price: 661, description: '5 pieces' },
-            { name: 'Full', price: 880, description: '10 pieces' }
+            { name: 'Half', price: 661, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
         ]
     },
     { 
@@ -354,8 +354,8 @@ export const MENU_ITEMS: Dish[] = [
         category: 'Non-Veg Main Course Curry', 
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Murgh%20Masala%20(%20Chicken%20Masala%20).jpg',
         portions: [
-            { name: 'Half', price: 661, description: '5 pieces' },
-            { name: 'Full', price: 880, description: '10 pieces' }
+            { name: 'Half', price: 661, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
         ]
     },
     { 

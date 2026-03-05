@@ -4,7 +4,7 @@ import type { Dish } from './types';
 export const MENU_ITEMS: Dish[] = [
     // ON THE RUN
     { id: 101, name: 'French Fries', price: 180, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/french%20fries.webp?updatedAt=1758211132814' },
-    { id: 107, name: 'Perry Perry French Fries', price: 260, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Peri%20Peri%20Fries__.jpg?updatedAt=1771257841371' },
+    { id: 107, name: 'Peri Peri French Fries', price: 260, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Peri%20Peri%20Fries__.jpg?updatedAt=1771257841371' },
     { id: 103, name: 'Garlic French Fries', price: 190, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Crispy%20Garlic%20Herb%20French%20Fries%20with%20Aioli.jpg' },
     { id: 104, name: 'Honey Chilli Potato', price: 180, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/honey%20chilli%20potato.webp?updatedAt=1758211139092' },
     { id: 108, name: 'Baby Corn Chilli', price: 350, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/_Savoring%20the%20flavors%20of%20Asia!%20__.jpg' },
@@ -32,7 +32,7 @@ export const MENU_ITEMS: Dish[] = [
 
     // CHINESE
     { id: 303, name: 'Mushroom Chilly', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(5).jpg' },
-    { id: 403, name: 'Chilli Panner Gravy', price: 400, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sometimes%20all%20you%20need%20is%20Chilli%20Paneer%20_%20_%20.%20.%20.%20.%20%20%20_countrykitchen%20_chillipaneer%20_foodiesays?updatedAt=1771913129595' },
+    { id: 403, name: 'Chilli Paneer Gravy', price: 400, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sometimes%20all%20you%20need%20is%20Chilli%20Paneer%20_%20_%20.%20.%20.%20.%20%20%20_countrykitchen%20_chillipaneer%20_foodiesays?updatedAt=1771913129595' },
     { id: 401, name: 'Paneer 65 (8pcs)', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/5%20Desi%20Office%20Potluck%20Recipes.jpg?updatedAt=1771913297489' },
     { id: 404, name: 'Paneer Tikka', price: 360, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20SUFIYANA%20TIKKA.jpg?updatedAt=1763551271712' },
     { id: 402, name: 'Manchurian Dry', price: 280, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/manchurian.jpg?updatedAt=1758211139469' },
@@ -84,7 +84,7 @@ export const MENU_ITEMS: Dish[] = [
 
     // RICE
     { id: 706, name: 'Steam Rice', price: 140, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/stemmed%20rice.webp?updatedAt=1759147891225' },
-    { id: 702, name: 'Zeera Rice', price: 180, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/jeera-rice-recipe-step-by-step-instructions.webp?updatedAt=1759147269290' },
+    { id: 702, name: 'jeera Rice', price: 180, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/jeera-rice-recipe-step-by-step-instructions.webp?updatedAt=1759147269290' },
     { id: 707, name: 'Butter Rice', price: 190, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Garlic%20Butter%20Rice.jpg' },
     { id: 708, name: 'Veg Fried Rice', price: 240, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Vegetable%20Fried%20Rice%20(Stovetop%20&%20Instant%20Pot).jpg' },
     { id: 703, name: 'Paneer Pulao', price: 260, category: 'Basmati Rice', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Dahi%20Pulao.jpg?updatedAt=1772360078309' },
@@ -108,16 +108,16 @@ export const MENU_ITEMS: Dish[] = [
     { id: 816, name: 'Rumali Roti Butter (2 pc)', price: 120, category: 'Indian Bread', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Rumali%20Roti%20_%20Homemade%20Roomali%20Roti%20Recipe%20-%20Cooking%20From%20Heart.jpg' },
 
     // SALAD
-    { id: 903, name: 'Tomato Salaad', price: 50, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/My%20favourite%20Tomato%20Salad%20(1).jpg' },
-    { id: 904, name: 'Onion Sallad', price: 30, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sumac%20Onions%20(Turkish%20Onion%20Salad).jpg' },
-    { id: 905, name: 'Green Salaad', price: 80, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/FRESH%20GARDEN%20GREEN%20SALAD.webp?updatedAt=1759147133616' },
-    { id: 902, name: 'Cacumber Salaad', price: 60, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Cucumber%20Salad%20with%20Herb%20Garlic%20Vinaigrette.jpg' },
-    { id: 907, name: 'Kachumber Salaad', price: 50, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Kachumber%20Salad.jpg' },
+    { id: 903, name: 'Tomato Salad', price: 50, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/My%20favourite%20Tomato%20Salad%20(1).jpg' },
+    { id: 904, name: 'Onion Salad', price: 30, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sumac%20Onions%20(Turkish%20Onion%20Salad).jpg' },
+    { id: 905, name: 'Green Salad', price: 80, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/FRESH%20GARDEN%20GREEN%20SALAD.webp?updatedAt=1759147133616' },
+    { id: 902, name: 'Cucumber Salad', price: 60, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Cucumber%20Salad%20with%20Herb%20Garlic%20Vinaigrette.jpg' },
+    { id: 907, name: 'Kachumber Salad', price: 50, category: 'Salad', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Kachumber%20Salad.jpg' },
 
     // RAITA
     { id: 901, name: 'Mix Veg Raita', price: 160, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mix%20raita.jpg?updatedAt=1759147518458' },
     { id: 908, name: 'Boondi Raita', price: 150, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/boondi%20raita.webp?updatedAt=1759151509908' },
-    { id: 909, name: 'Cacumber Raita', price: 170, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/cucumber%20raita.webp?updatedAt=1759147133020' },
+    { id: 909, name: 'Cucumber Raita', price: 170, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/cucumber%20raita.webp?updatedAt=1759147133020' },
     { id: 910, name: 'Onion Raita', price: 140, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/onion%20raita.webp?updatedAt=1759147517559' },
     { id: 911, name: 'Deshi Raita', price: 150, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mooli%20Raita%20(Radish%20Raita).jpg' },
     { id: 912, name: 'Fry Raita', price: 180, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/fried%20raita.jpg?updatedAt=1759147133651' },
@@ -177,7 +177,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1507, name: 'Malai Tikka (6pc)', price: 386, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20MALAI%20TIKKA%201.jpg?updatedAt=1763565446545' },
     { id: 1508, name: 'Pahadi Tikka (6pc)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20PAHADI%20TIKKA.jpg?updatedAt=1763564682037' },
     { id: 1509, name: 'Chicken Seek Kabab (6pc)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20GILAFI%20SEEK%20KEBAB.jpg?updatedAt=1763564686722' },
-    { id: 1510, name: 'Kitchen Kasturi Kabab (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Most-liked%20video%20_%20838K%20views%20_%2016K%20reactions%20_%20Malai%20Chicken%20Kebab_%20Ingredients_%20%20_%20500%20g%20boneless%20chicken%20(pre.%20_malaichickenkebab%20_chicken%20_chickenkebab%20_chickenskewers%20_malaichicken%20_%20Flavours%20by%20Mounika%20_%20Facebook' },
+    { id: 1510, name: 'Chicken Kasturi Kabab (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Most-liked%20video%20_%20838K%20views%20_%2016K%20reactions%20_%20Malai%20Chicken%20Kebab_%20Ingredients_%20%20_%20500%20g%20boneless%20chicken%20(pre.%20_malaichickenkebab%20_chicken%20_chickenkebab%20_chickenskewers%20_malaichicken%20_%20Flavours%20by%20Mounika%20_%20Facebook' },
     { id: 1511, name: 'Chicken Sharabi Tikka (6pc)', price: 465, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Plating%20aesthetics.jpg' },
     { id: 1512, name: 'Murg Malai Tikka (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Murg%20Malai%20Tikka.jpg' },
     { id: 1513, name: 'Shikari Murgal Tikka (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Chicken%20Tikka%20Skewers%20with%20a%20Twist.jpg' },

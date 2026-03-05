@@ -8,18 +8,20 @@ interface AppState {
     orders: Order[];
     currentOrderId: string | null;
     notification: string | null;
+    view: 'menu' | 'cart';
 }
 
 type Action =
     | { type: 'SET_TABLE'; payload: number }
     | { type: 'ADD_TO_CART'; payload: CartItem }
-    | { type: 'UPDATE_CART_ITEM'; payload: { dishId: number; quantity: number; instructions: string } }
-    | { type: 'REMOVE_FROM_CART'; payload: number }
+    | { type: 'UPDATE_CART_ITEM'; payload: { dishId: number; portionName?: string; quantity: number; instructions: string } }
+    | { type: 'REMOVE_FROM_CART'; payload: { dishId: number; portionName?: string } }
     | { type: 'CLEAR_CART' }
     | { type: 'PLACE_ORDER'; payload: Omit<Order, 'id' | 'status' | 'timestamp'> }
     | { type: 'UPDATE_ORDER_STATUS_BY_ID'; payload: { orderId: string, status: OrderStatus } }
     | { type: 'SHOW_NOTIFICATION', payload: string }
-    | { type: 'HIDE_NOTIFICATION' };
+    | { type: 'HIDE_NOTIFICATION' }
+    | { type: 'SET_VIEW'; payload: 'menu' | 'cart' };
 
 const initialState: AppState = {
     tableNumber: null,
@@ -27,6 +29,7 @@ const initialState: AppState = {
     orders: [],
     currentOrderId: null,
     notification: null,
+    view: 'menu',
 };
 
 const AppContext = createContext<{ state: AppState; dispatch: React.Dispatch<Action> } | undefined>(undefined);
@@ -36,7 +39,10 @@ const appReducer = (state: AppState, action: Action): AppState => {
         case 'SET_TABLE':
             return { ...state, tableNumber: action.payload };
         case 'ADD_TO_CART':
-            const existingItemIndex = state.cart.findIndex(item => item.dish.id === action.payload.dish.id);
+            const existingItemIndex = state.cart.findIndex(item => 
+                item.dish.id === action.payload.dish.id && 
+                item.selectedPortion?.name === action.payload.selectedPortion?.name
+            );
             if (existingItemIndex > -1) {
                 const updatedCart = [...state.cart];
                 updatedCart[existingItemIndex].quantity += action.payload.quantity;
@@ -47,13 +53,13 @@ const appReducer = (state: AppState, action: Action): AppState => {
             return {
                 ...state,
                 cart: state.cart.map(item =>
-                    item.dish.id === action.payload.dishId
+                    item.dish.id === action.payload.dishId && item.selectedPortion?.name === action.payload.portionName
                         ? { ...item, quantity: action.payload.quantity, instructions: action.payload.instructions }
                         : item
                 ),
             };
         case 'REMOVE_FROM_CART':
-            return { ...state, cart: state.cart.filter(item => item.dish.id !== action.payload) };
+            return { ...state, cart: state.cart.filter(item => !(item.dish.id === action.payload.dishId && item.selectedPortion?.name === action.payload.portionName)) };
         case 'CLEAR_CART':
             return { ...state, cart: [] };
         case 'PLACE_ORDER':
@@ -84,6 +90,8 @@ const appReducer = (state: AppState, action: Action): AppState => {
             return { ...state, notification: action.payload };
         case 'HIDE_NOTIFICATION':
             return { ...state, notification: null };
+        case 'SET_VIEW':
+            return { ...state, view: action.payload };
         default:
             return state;
     }

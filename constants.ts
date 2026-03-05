@@ -188,35 +188,190 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1514, name: 'Tandoori Chicken Platter (12pc)', price: 840, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Chicken%20Thighs%20_%20Authentic%20Indian%20Grilled%20Chicken%20Recipe.jpg' },
 
     // NON-VEG MAIN COURSE CURRY
-    { id: 1601, name: 'Chicken Rogan Josh (Half)', price: 400, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Rogan%20Josh.jpg' },
-    { id: 1602, name: 'Chicken Rogan Josh (Full)', price: 600, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Rogan%20Josh.jpg' },
-    { id: 1603, name: 'Chicken Tikka Murg Makhani (Half)', price: 550, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Tikka%20Masala.jpg' },
-    { id: 1604, name: 'Chicken Tikka Murg Makhani (Full)', price: 830, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Tikka%20Masala.jpg' },
-    { id: 1605, name: 'Mughlai Chicken (Old) (Half)', price: 370, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mughlai%20Chicken.jpg' },
-    { id: 1606, name: 'Mughlai Chicken (Old) (Full)', price: 600, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mughlai%20Chicken.jpg' },
-    { id: 1607, name: 'Mughlai Chicken (New) (Half)', price: 400, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mughlai%20Chicken.jpg' },
-    { id: 1608, name: 'Mughlai Chicken (New) (Full)', price: 600, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mughlai%20Chicken.jpg' },
-    { id: 1609, name: 'Egg Kari (Full)', price: 260, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Curry.jpg' },
-    { id: 1610, name: 'Egg Bhuji Kari (Full)', price: 315, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Bhurji.jpg' },
-    { id: 1611, name: 'Desi Egg Kari (Full)', price: 360, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Curry.jpg' },
-    { id: 1612, name: 'Chicken Kari (Half)', price: 300, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Curry.jpg' },
-    { id: 1613, name: 'Chicken Kari (Full)', price: 470, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Curry.jpg' },
-    { id: 1614, name: 'Chicken Masala (Half)', price: 430, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Masala.jpg' },
-    { id: 1615, name: 'Chicken Masala (Full)', price: 600, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Masala.jpg' },
-    { id: 1616, name: 'Chicken Tikka Masala (Full)', price: 550, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Tikka%20Masala.jpg' },
-    { id: 1617, name: 'Chicken Corma (Half)', price: 350, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Korma.jpg' },
-    { id: 1618, name: 'Chicken Corma (Full)', price: 650, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Korma.jpg' },
-    { id: 1619, name: 'Kadai Chicken (Full)', price: 600, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Kadai%20Chicken.jpg' },
-    { id: 1620, name: 'Barmer Spe. Butter Chicken (Half)', price: 500, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg' },
-    { id: 1621, name: 'Barmer Spe. Butter Chicken (Full)', price: 830, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg' },
-    { id: 1622, name: 'Butter Chicken Original (Half)', price: 500, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg' },
-    { id: 1623, name: 'Butter Chicken Original (Full)', price: 830, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg' },
-    { id: 1624, name: 'Butter Chicken Boneless (Full)', price: 800, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg' },
-    { id: 1625, name: 'Handi Chicken (Half)', price: 600, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Handi%20Chicken.jpg' },
-    { id: 1626, name: 'Handi Chicken (Full)', price: 830, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Handi%20Chicken.jpg' },
-    { id: 1627, name: 'Kargil Spe. Murg Musallam (Half)', price: 600, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Musallam.jpg' },
-    { id: 1628, name: 'Kargil Spe. Murg Musallam (Full)', price: 830, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Musallam.jpg' },
-    { id: 1629, name: 'Mutton (Half)', price: 880, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mutton%20Curry.jpg' },
-    { id: 1630, name: 'Mutton (Full)', price: 1680, category: 'Non-Veg Main Course Curry', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mutton%20Curry.jpg' },
+    { 
+        id: 1601, 
+        name: 'Anda Curry', 
+        price: 190, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Curry.jpg',
+        portions: [
+            { name: 'Half', price: 190, description: '2 eggs' },
+            { name: 'Full', price: 290, description: '4 eggs' }
+        ]
+    },
+    { 
+        id: 1602, 
+        name: 'Chicken Curry', 
+        price: 300, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Curry.jpg',
+        portions: [
+            { name: 'Quarter', price: 300, description: '3 pieces' },
+            { name: 'Half', price: 500, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 830, description: '10 pieces + 2 legs' }
+        ]
+    },
+    { 
+        id: 1603, 
+        name: 'Chicken Rogan Josh', 
+        price: 350, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Rogan%20Josh.jpg',
+        portions: [
+            { name: 'Quarter', price: 350, description: '3 pieces' },
+            { name: 'Half', price: 550, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
+        ]
+    },
+    { 
+        id: 1604, 
+        name: 'Chicken Masala', 
+        price: 410, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Masala.jpg',
+        portions: [
+            { name: 'Quarter', price: 410, description: '3 pieces' },
+            { name: 'Half', price: 560, description: '5 pieces + 1 leg' },
+            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
+        ]
+    },
+    { 
+        id: 1605, 
+        name: 'Chicken Tikka Masala', 
+        price: 550, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Tikka%20Masala.jpg',
+        portions: [
+            { name: 'Half', price: 550, description: '4 pieces' },
+            { name: 'Full', price: 750, description: '8 pieces' }
+        ]
+    },
+    { 
+        id: 1606, 
+        name: 'Chicken Korma', 
+        price: 350, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Korma.jpg',
+        portions: [
+            { name: 'Quarter', price: 350, description: '3 pieces' },
+            { name: 'Half', price: 650, description: '5 pieces' },
+            { name: 'Full', price: 880, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1607, 
+        name: 'Kadhai Chicken', 
+        price: 650, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Kadai%20Chicken.jpg',
+        portions: [
+            { name: 'Half', price: 650, description: '5 pieces' },
+            { name: 'Full', price: 880, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1608, 
+        name: 'Mughlai Chicken', 
+        price: 350, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mughlai%20Chicken.jpg',
+        portions: [
+            { name: 'Quarter', price: 350, description: '3 pieces' },
+            { name: 'Half', price: 650, description: '5 pieces' },
+            { name: 'Full', price: 850, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1609, 
+        name: 'Chicken Tikka Murgh Makhani', 
+        price: 430, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Tikka%20Masala.jpg',
+        portions: [
+            { name: 'Quarter', price: 430, description: '3 pieces' },
+            { name: 'Half', price: 600, description: '5 pieces' },
+            { name: 'Full', price: 880, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1610, 
+        name: 'Barmer Special Butter Chicken', 
+        price: 430, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg',
+        portions: [
+            { name: 'Quarter', price: 430, description: '3 pieces' },
+            { name: 'Half', price: 525, description: '5 pieces' },
+            { name: 'Full', price: 880, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1611, 
+        name: 'Butter Chicken Original', 
+        price: 430, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg',
+        portions: [
+            { name: 'Quarter', price: 430, description: '3 pieces' },
+            { name: 'Half', price: 525, description: '5 pieces' },
+            { name: 'Full', price: 880, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1612, 
+        name: 'Butter Chicken Boneless', 
+        price: 650, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Butter%20Chicken.jpg',
+        portions: [
+            { name: 'Half', price: 650, description: '' },
+            { name: 'Full', price: 900, description: '' }
+        ]
+    },
+    { 
+        id: 1613, 
+        name: 'Tawa Chicken', 
+        price: 430, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Curry.jpg',
+        portions: [
+            { name: 'Quarter', price: 430, description: '3 pieces' },
+            { name: 'Half', price: 661, description: '5 pieces' },
+            { name: 'Full', price: 950, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1614, 
+        name: 'Handi Chicken', 
+        price: 661, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Handi%20Chicken.jpg',
+        portions: [
+            { name: 'Half', price: 661, description: '5 pieces' },
+            { name: 'Full', price: 880, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1615, 
+        name: 'Kargil Special Murgh Masala', 
+        price: 661, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Musallam.jpg',
+        portions: [
+            { name: 'Half', price: 661, description: '5 pieces' },
+            { name: 'Full', price: 880, description: '10 pieces' }
+        ]
+    },
+    { 
+        id: 1616, 
+        name: 'Mutton', 
+        price: 880, 
+        category: 'Non-Veg Main Course Curry', 
+        imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mutton%20Curry.jpg',
+        portions: [
+            { name: 'Half', price: 880, description: '0.5 kg' },
+            { name: 'Full', price: 1680, description: '1 kg' }
+        ]
+    },
 ];
                                                                                 

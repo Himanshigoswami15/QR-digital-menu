@@ -11,15 +11,15 @@ interface CartViewProps {
 const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
     const { state, dispatch } = useAppContext();
 
-    const handleRemove = (dishId: number) => {
-        dispatch({ type: 'REMOVE_FROM_CART', payload: dishId });
+    const handleRemove = (dishId: number, portionName?: string) => {
+        dispatch({ type: 'REMOVE_FROM_CART', payload: { dishId, portionName } });
     };
 
-    const handleQuantityChange = (dishId: number, newQuantity: number) => {
+    const handleQuantityChange = (dishId: number, portionName: string | undefined, newQuantity: number) => {
         if (newQuantity < 1) return;
-        const item = state.cart.find(i => i.dish.id === dishId);
+        const item = state.cart.find(i => i.dish.id === dishId && i.selectedPortion?.name === portionName);
         if(item) {
-             dispatch({ type: 'UPDATE_CART_ITEM', payload: { dishId, quantity: newQuantity, instructions: item.instructions } });
+             dispatch({ type: 'UPDATE_CART_ITEM', payload: { dishId, portionName, quantity: newQuantity, instructions: item.instructions } });
         }
     };
     
@@ -39,7 +39,10 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
         onBackToMenu();
     };
 
-    const subtotal = state.cart.reduce((sum, item) => sum + item.dish.price * item.quantity, 0);
+    const subtotal = state.cart.reduce((sum, item) => {
+        const price = item.selectedPortion ? item.selectedPortion.price : item.dish.price;
+        return sum + price * item.quantity;
+    }, 0);
 
     return (
         <div className="max-w-3xl mx-auto py-8 px-4">
@@ -63,44 +66,54 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
             ) : (
                 <div className="space-y-12">
                     <div className="space-y-6">
-                        {state.cart.map((item: CartItem) => (
-                            <div key={item.dish.id} className="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 border border-white/5 bg-white/[0.02] rounded-2xl hover:bg-white/[0.04] transition-all">
-                                <div className="flex gap-6 items-center">
-                                   <div className="w-24 h-24 rounded-lg overflow-hidden border border-white/10 shrink-0">
-                                       <img src={item.dish.imageUrl} alt={item.dish.name} className="w-full h-full object-cover" />
-                                   </div>
-                                    <div>
-                                        <h3 className="font-serif italic text-xl text-white mb-1">{item.dish.name}</h3>
-                                        <p className="text-[10px] text-white/40 tracking-widest uppercase mb-2">₹{item.dish.price} each</p>
-                                        {item.instructions && (
-                                            <p className="text-[10px] text-white/60 bg-white/5 px-3 py-1.5 rounded-sm italic max-w-xs">
-                                                “{item.instructions}”
-                                            </p>
-                                        )}
+                        {state.cart.map((item: CartItem) => {
+                            const itemPrice = item.selectedPortion ? item.selectedPortion.price : item.dish.price;
+                            return (
+                                <div key={`${item.dish.id}-${item.selectedPortion?.name || 'default'}`} className="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 border border-white/5 bg-white/[0.02] rounded-2xl hover:bg-white/[0.04] transition-all">
+                                    <div className="flex gap-6 items-center">
+                                       <div className="w-24 h-24 rounded-lg overflow-hidden border border-white/10 shrink-0">
+                                           <img src={item.dish.imageUrl} alt={item.dish.name} className="w-full h-full object-cover" />
+                                       </div>
+                                        <div>
+                                            <h3 className="font-serif italic text-xl text-white mb-1">
+                                                {item.dish.name}
+                                                {item.selectedPortion && (
+                                                    <span className="text-sm text-white/50 ml-3">({item.selectedPortion.name})</span>
+                                                )}
+                                            </h3>
+                                            <p className="text-[10px] text-white/40 tracking-widest uppercase mb-2">₹{itemPrice} each</p>
+                                            {item.instructions && (
+                                                <p className="text-[10px] text-white/60 bg-white/5 px-3 py-1.5 rounded-sm italic max-w-xs">
+                                                    “{item.instructions}”
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center justify-between md:justify-end gap-10">
+                                        <div className="flex items-center gap-4">
+                                            <button onClick={() => handleQuantityChange(item.dish.id, item.selectedPortion?.name, item.quantity - 1)} className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">−</button>
+                                            <span className="text-lg font-serif italic text-white w-4 text-center">{item.quantity}</span>
+                                            <button onClick={() => handleQuantityChange(item.dish.id, item.selectedPortion?.name, item.quantity + 1)} className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">+</button>
+                                        </div>
+                                        <div className="flex flex-col items-end gap-2">
+                                            <button onClick={() => handleRemove(item.dish.id, item.selectedPortion?.name)} className="text-[9px] tracking-widest uppercase text-white/30 hover:text-error transition-colors flex items-center gap-2 group">
+                                                <TrashIcon className="w-3 h-3 group-hover:scale-110"/>
+                                                Remove
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="flex items-center justify-between md:justify-end gap-10">
-                                    <div className="flex items-center gap-4">
-                                        <button onClick={() => handleQuantityChange(item.dish.id, item.quantity - 1)} className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">−</button>
-                                        <span className="text-lg font-serif italic text-white w-4 text-center">{item.quantity}</span>
-                                        <button onClick={() => handleQuantityChange(item.dish.id, item.quantity + 1)} className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">+</button>
-                                    </div>
-                                    <div className="flex flex-col items-end gap-2">
-                                        <span className="font-serif italic text-xl text-white">₹{item.dish.price * item.quantity}</span>
-                                        <button onClick={() => handleRemove(item.dish.id)} className="text-[9px] tracking-widest uppercase text-white/30 hover:text-error transition-colors flex items-center gap-2 group">
-                                            <TrashIcon className="w-3 h-3 group-hover:scale-110"/>
-                                            Remove
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                     
                     <div className="pt-12 border-t border-white/5 space-y-10">
                         <div className="p-8 bg-white/[0.03] rounded-2xl border border-white/5 text-center max-w-md mx-auto">
-                            <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 leading-relaxed italic">
+                            <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 leading-relaxed italic mb-4">
                                 Our culinary team prepares each selection with focused attention.
+                            </p>
+                            <p className="text-[11px] tracking-[0.3em] uppercase text-white font-black italic">
+                                Your satisfaction is our priority.
                             </p>
                         </div>
 

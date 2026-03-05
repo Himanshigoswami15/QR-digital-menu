@@ -45,15 +45,15 @@ const Notification: React.FC = () => {
     );
 };
 
-const CornerCart: React.FC<{ setView: (v: 'menu' | 'cart') => void, currentView: string }> = ({ setView, currentView }) => {
-    const { state } = useAppContext();
+const CornerCart: React.FC = () => {
+    const { state, dispatch } = useAppContext();
     const cartItemCount = state.cart.reduce((total, item) => total + item.quantity, 0);
 
-    if (currentView === 'cart') return null;
+    if (state.view === 'cart') return null;
 
     return (
         <button 
-            onClick={() => setView('cart')}
+            onClick={() => dispatch({ type: 'SET_VIEW', payload: 'cart' })}
             className="fixed bottom-6 right-6 z-[100] flex items-center justify-center bg-white text-base-100 h-16 w-16 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.6)] active:scale-90 hover:scale-105 transition-all duration-300"
             title="View Cart"
         >
@@ -69,7 +69,6 @@ const CornerCart: React.FC<{ setView: (v: 'menu' | 'cart') => void, currentView:
 
 const AppContainer: React.FC = () => {
     const { state, dispatch } = useAppContext();
-    const [view, setView] = useState<'menu' | 'cart'>('menu');
 
     useEffect(() => {
         dispatch({ type: 'SET_TABLE', payload: 12 });
@@ -93,9 +92,9 @@ const AppContainer: React.FC = () => {
     }
 
     const renderContent = () => {
-        switch(view) {
+        switch(state.view) {
             case 'menu': return <Menu />;
-            case 'cart': return <CartView onBackToMenu={() => setView('menu')} />;
+            case 'cart': return <CartView onBackToMenu={() => dispatch({ type: 'SET_VIEW', payload: 'menu' })} />;
             default: return <Menu />;
         }
     }
@@ -103,10 +102,10 @@ const AppContainer: React.FC = () => {
     return (
         <div className="min-h-screen bg-base-100 relative selection:bg-white selection:text-base-100">
             <Notification />
-            {view === 'menu' && <Header />}
-            <CornerCart setView={setView} currentView={view} />
+            {state.view === 'menu' && <Header />}
+            <CornerCart />
             
-            <main className={`transition-all duration-700 ease-in-out ${view === 'menu' ? 'pt-0' : 'pt-24'}`}>
+            <main className={`transition-all duration-700 ease-in-out ${state.view === 'menu' ? 'pt-0' : 'pt-24'}`}>
                 <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                     {renderContent()}
                 </div>

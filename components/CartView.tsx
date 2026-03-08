@@ -23,27 +23,6 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
         }
     };
     
-    const handlePlaceOrder = () => {
-        dispatch({
-            type: 'PLACE_ORDER',
-            payload: {
-                items: state.cart,
-                total: subtotal,
-                tableNumber: state.tableNumber!
-            }
-        });
-        dispatch({
-            type: 'SHOW_NOTIFICATION',
-            payload: `Our staff has received your order! We are preparing it with care. Sit back and relax.`
-        });
-        onBackToMenu();
-    };
-
-    const subtotal = state.cart.reduce((sum, item) => {
-        const price = item.selectedPortion ? item.selectedPortion.price : item.dish.price;
-        return sum + price * item.quantity;
-    }, 0);
-
     return (
         <div className="max-w-3xl mx-auto py-8 px-4">
             <div className="flex flex-col items-center mb-16 text-center">
@@ -116,13 +95,6 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                                 Your satisfaction is our priority.
                             </p>
                         </div>
-
-                        <button
-                           onClick={handlePlaceOrder}
-                           className="w-full max-w-md mx-auto block bg-white text-base-100 py-6 rounded-sm font-black text-xs tracking-[0.5em] uppercase hover:bg-white/90 transition-transform active:scale-[0.98] shadow-2xl"
-                        >
-                            Finalize Order
-                        </button>
                     </div>
                 </div>
             )}

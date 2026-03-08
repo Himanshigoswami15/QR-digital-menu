@@ -111,10 +111,19 @@ const AppContainer: React.FC = () => {
                 </div>
             </main>
             
-            <footer className="py-20 flex flex-col items-center justify-center opacity-20 gap-4 pointer-events-none">
+            <footer className="py-20 flex flex-col items-center justify-center opacity-30 gap-4">
                 <div className="w-12 h-[1px] bg-white"></div>
                 <p className="text-[10px] tracking-[0.6em] uppercase font-bold">Kargil Kitchen</p>
-                <p className="text-[8px] tracking-[0.3em] uppercase">Est. 2024</p>
+                <div className="flex flex-col items-center gap-2">
+                    <a 
+                        href="https://www.instagram.com/qreativemenus" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-[9px] tracking-[0.4em] uppercase font-medium hover:text-primary transition-colors cursor-pointer"
+                    >
+                        Design by qreativemenus
+                    </a>
+                </div>
             </footer>
         </div>
     );

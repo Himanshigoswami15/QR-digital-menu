@@ -22,6 +22,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 204, name: 'Chana Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KABULI%20CHANA%20CHAAT.jpeg?updatedAt=1759147343617' },
     { id: 205, name: 'Chana Chaat Garlic', price: 140, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/9%20Indian%20snacks%20that%20do%20not%20increase%20cholesterol%20levels.jpg' },
     { id: 202, name: 'Veg Aloo Tikki (2pcs)', price: 80, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Street-Style%20Aloo%20Tikki%20with%20Spiced%20Chana_%20The%20Ultimate%20Indian%20Comfort%20Food.jpg' },
+    { id: 1102, name: 'Peanut Chaat', price: 145, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PEANUT%20MASALA.webp?updatedAt=1759149345439' },
 
     // TANDOORI STARTERS
     { id: 301, name: 'Paneer Tikka (6pcs)', price: 280, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20TIKKA%20SHASHLIK.webp?updatedAt=1759148980181' },
@@ -71,8 +72,8 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1007, name: 'Veg Handi', price: 200, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Mixed%20Vegetable%20Handi%20Recipe%20Recipe%20-%20Complete%20Guide.jpg?updatedAt=1772356622484' },
     { id: 1008, name: 'Mushroom Masala', price: 280, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mushroom%20masala.jpg?updatedAt=1759174155100' },
     { id: 1009, name: 'Veg Kolhapuri', price: 240, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Veg%20Kolhapuri%20Recipe%20_.jpg' },
-    { id: 1013, name: 'Chana Masala', price: 180, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/chana%20masala.webp?updatedAt=1759147037380' },
-    { id: 1014, name: 'Mix Veg', price: 200, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mix%20veg.webp?updatedAt=1759147517677' },
+    { id: 1013, name: 'Chana Masala', price: 180, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/chana%20masala.webp?updatedAt=1759147037380' },
+    { id: 1014, name: 'Mix Veg', price: 200, category: 'Veg Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/mix%20veg.webp?updatedAt=1759147517677' },
 
     // DAL
     { id: 704, name: 'Dal Fry', price: 180, category: 'Dal', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Dal%20Fry.jpeg?updatedAt=1759147133157' },
@@ -121,7 +122,6 @@ export const MENU_ITEMS: Dish[] = [
 
     // ROASTED
     { id: 1101, name: 'Roasted Papad', price: 40, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PAPAD%20-%20DHAMATA.jpg' },
-    { id: 1102, name: 'Peanut Chaat', price: 145, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KABULI%20CHANA%20CHAAT.jpeg?updatedAt=1759147343617' },
     { id: 1103, name: 'Masala Papad', price: 80, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala-papad-1000x1000.webp?updatedAt=1759147518990' },
     { id: 1104, name: 'Plain Khichiya', price: 80, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Microwaved%20crispy%20poppadums.jpg' },
     { id: 1105, name: 'Cheese Masala Khichiya', price: 120, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/khichiya%20papad.webp?updatedAt=1759147343478' },
@@ -390,12 +390,12 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1904, name: 'Paneer Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Kathi%20Roll.jpg' },
 
     // SOUPS
-    { id: 251, name: 'Veg Manchow Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20MANCHOW%20SOUP.jpg?updatedAt=1759148818177' },
-    { id: 252, name: 'Chicken Hot/Sour Soup', price: 260, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Hot%20&%20Sour%20Soup.jpg?updatedAt=1759606287140' },
-    { id: 253, name: 'Chicken Manchow Soup', price: 280, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Homemade%20Chicken%20Manchow%20Soup.jpg' },
-    { id: 254, name: 'Tomato Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TOMATO%20SOUP.webp?updatedAt=1759147889844' },
-    { id: 255, name: 'Sweet Corn Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20SWEET%20CORN%20SOUP.jpg?updatedAt=1759147890053' },
-    { id: 256, name: 'Veg Hot/Sour Soup', price: 240, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20HOT%20&%20SOUR%20SOUP.jpg?updatedAt=1759147889598' },
-    { id: 257, name: 'Tomato/Dhaniya Shorba Soup', price: 250, category: 'Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Warm-up%20your%20evenings%20with%20Tamatar%20ka%20shorba%20-%20Spiced%20Indian%20Tomato%20soup_%20Toss%20everything%20in%20your%20Instant%20Pot,%20and%20a%20bowl%20of%20healthy%20soup%20wi.%20_tomatosoup%20_shorba%20_tomatoshorba%20_vegetableshorba%20_veagnsoup%20_instantpotsoup' },
+    { id: 251, name: 'Veg Manchow Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20MANCHOW%20SOUP.jpg?updatedAt=1759148818177' },
+    { id: 252, name: 'Chicken Hot/Sour Soup', price: 260, category: 'Non-Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Hot%20&%20Sour%20Soup.jpg?updatedAt=1759606287140' },
+    { id: 253, name: 'Chicken Manchow Soup', price: 280, category: 'Non-Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Homemade%20Chicken%20Manchow%20Soup.jpg' },
+    { id: 254, name: 'Tomato Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TOMATO%20SOUP.webp?updatedAt=1759147889844' },
+    { id: 255, name: 'Sweet Corn Soup', price: 250, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20SWEET%20CORN%20SOUP.jpg?updatedAt=1759147890053' },
+    { id: 256, name: 'Veg Hot/Sour Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20HOT%20&%20SOUR%20SOUP.jpg?updatedAt=1759147889598' },
+    { id: 257, name: 'Tomato/Dhaniya Shorba Soup', price: 250, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Warm-up%20your%20evenings%20with%20Tamatar%20ka%20shorba%20-%20Spiced%20Indian%20Tomato%20soup_%20Toss%20everything%20in%20your%20Instant%20Pot,%20and%20a%20bowl%20of%20healthy%20soup%20wi.%20_tomatosoup%20_shorba%20_tomatoshorba%20_vegetableshorba%20_veagnsoup%20_instantpotsoup' },
 ];
                                                                                 

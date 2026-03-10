@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useAppContext } from '../context/AppContext';
 import { OrderStatus } from '../types';
-import { CheckCircleIcon, CreditCardIcon, ClockIcon, KitchenDisplayIcon } from './icons/Icons';
+import { CheckCircleIcon, CreditCardIcon, ClockIcon, KitchenDisplayIcon, ArrowLeftIcon } from './icons/Icons';
 
 const statusMap = {
     [OrderStatus.Pending]: { text: 'Received', description: 'Your selection is being reviewed by the chef.', index: 0 },
@@ -12,7 +12,7 @@ const statusMap = {
 };
 
 const OrderStatusView: React.FC = () => {
-    const { state } = useAppContext();
+    const { state, dispatch } = useAppContext();
     const [paymentMethod, setPaymentMethod] = useState<'later' | 'online' | null>(null);
     
     const order = state.orders.find(o => o.id === state.currentOrderId);
@@ -20,6 +20,13 @@ const OrderStatusView: React.FC = () => {
     if (!order) {
         return (
             <div className="flex flex-col items-center justify-center py-20 text-white/30 uppercase tracking-[0.2em] text-xs">
+                <button 
+                    onClick={() => dispatch({ type: 'SET_VIEW', payload: 'menu' })} 
+                    className="mb-8 flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-white/40 hover:text-white transition-all group"
+                >
+                    <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform"/>
+                    Back to Menu
+                </button>
                 <p>No active order found.</p>
             </div>
         );
@@ -30,7 +37,14 @@ const OrderStatusView: React.FC = () => {
 
     return (
         <div className="max-w-2xl mx-auto py-10">
-            <div className="text-center mb-12">
+            <div className="flex flex-col items-center mb-12 text-center">
+                 <button 
+                    onClick={() => dispatch({ type: 'SET_VIEW', payload: 'menu' })} 
+                    className="mb-8 flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-white/40 hover:text-white transition-all group"
+                >
+                    <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform"/>
+                    Back to Menu
+                </button>
                 <h2 className="text-2xl font-light tracking-[0.4em] uppercase text-white mb-2">Order Tracking</h2>
                 <p className="text-[10px] tracking-[0.3em] text-white/40 uppercase">Ref No: {order.id}</p>
             </div>

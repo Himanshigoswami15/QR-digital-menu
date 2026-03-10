@@ -9,7 +9,7 @@ interface AppState {
     orders: Order[];
     currentOrderId: string | null;
     notification: string | null;
-    view: 'menu' | 'cart';
+    view: 'menu' | 'cart' | 'order-status' | 'kitchen';
 }
 
 type Action =
@@ -22,7 +22,7 @@ type Action =
     | { type: 'UPDATE_ORDER_STATUS_BY_ID'; payload: { orderId: string, status: OrderStatus } }
     | { type: 'SHOW_NOTIFICATION', payload: string }
     | { type: 'HIDE_NOTIFICATION' }
-    | { type: 'SET_VIEW'; payload: 'menu' | 'cart' };
+    | { type: 'SET_VIEW'; payload: 'menu' | 'cart' | 'order-status' | 'kitchen' };
 
 const initialState: AppState = {
     tableNumber: null,

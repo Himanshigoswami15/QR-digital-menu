@@ -4,6 +4,8 @@ import { AppProvider, useAppContext } from './context/AppContext';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import CartView from './components/CartView';
+import OrderStatusView from './components/OrderStatusView';
+import KitchenDashboard from './components/KitchenDashboard';
 import { InformationCircleIcon, XIcon, ShoppingCartIcon } from './components/icons/Icons';
 
 const Notification: React.FC = () => {
@@ -49,7 +51,7 @@ const CornerCart: React.FC = () => {
     const { state, dispatch } = useAppContext();
     const cartItemCount = state.cart.reduce((total, item) => total + item.quantity, 0);
 
-    if (state.view === 'cart') return null;
+    if (state.view === 'cart' || state.view === 'order-status' || state.view === 'kitchen') return null;
 
     return (
         <button 
@@ -95,6 +97,8 @@ const AppContainer: React.FC = () => {
         switch(state.view) {
             case 'menu': return <Menu />;
             case 'cart': return <CartView onBackToMenu={() => dispatch({ type: 'SET_VIEW', payload: 'menu' })} />;
+            case 'order-status': return <OrderStatusView />;
+            case 'kitchen': return <KitchenDashboard />;
             default: return <Menu />;
         }
     }
@@ -113,7 +117,17 @@ const AppContainer: React.FC = () => {
             
             <footer className="py-20 flex flex-col items-center justify-center opacity-30 gap-4">
                 <div className="w-12 h-[1px] bg-white"></div>
-                <p className="text-[10px] tracking-[0.6em] uppercase font-bold">Kargil Kitchen</p>
+                <p 
+                    className="text-[10px] tracking-[0.6em] uppercase font-bold cursor-pointer hover:opacity-100 transition-opacity"
+                    onClick={() => {
+                        const pass = prompt('Enter Kitchen Access Code:');
+                        if (pass === '1234') {
+                            dispatch({ type: 'SET_VIEW', payload: 'kitchen' });
+                        }
+                    }}
+                >
+                    Kargil Kitchen
+                </p>
                 <div className="flex flex-col items-center gap-2">
                     <a 
                         href="https://www.instagram.com/qreativemenus" 

@@ -2,6 +2,7 @@
 import React from 'react';
 import { useAppContext } from '../context/AppContext';
 import { Order, OrderStatus } from '../types';
+import { ArrowLeftIcon } from './icons/Icons';
 
 const statusStyles = {
     [OrderStatus.Pending]: 'bg-white/10 text-white border-white/40',
@@ -58,7 +59,7 @@ const OrderCard: React.FC<{ order: Order }> = ({ order }) => {
             <div className="flex flex-col gap-4">
                 <div className="flex justify-between items-end">
                     <span className="text-[9px] tracking-widest uppercase opacity-60">Total Value</span>
-                    <span className="text-lg font-black tracking-widest">${order.total.toFixed(2)}</span>
+                    <span className="text-lg font-black tracking-widest">₹{order.total.toFixed(2)}</span>
                 </div>
                 {order.status !== OrderStatus.Served && (
                     <button 
@@ -78,7 +79,7 @@ const OrderCard: React.FC<{ order: Order }> = ({ order }) => {
 };
 
 const KitchenDashboard: React.FC = () => {
-    const { state } = useAppContext();
+    const { state, dispatch } = useAppContext();
 
     const activeOrders = state.orders.filter(o => o.status !== OrderStatus.Served);
     const completedOrders = state.orders.filter(o => o.status === OrderStatus.Served);
@@ -86,7 +87,16 @@ const KitchenDashboard: React.FC = () => {
     return (
         <div className="pb-20">
             <div className="flex items-end justify-between mb-12">
-                <h2 className="text-4xl font-light tracking-[0.3em] uppercase text-white">Kitchen Dashboard</h2>
+                <div className="flex flex-col items-start gap-4">
+                    <button 
+                        onClick={() => dispatch({ type: 'SET_VIEW', payload: 'menu' })} 
+                        className="flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-white/40 hover:text-white transition-all group"
+                    >
+                        <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform"/>
+                        Exit Dashboard
+                    </button>
+                    <h2 className="text-4xl font-light tracking-[0.3em] uppercase text-white">Kitchen Dashboard</h2>
+                </div>
                 <div className="text-[10px] tracking-widest text-white/40 uppercase">System Active</div>
             </div>
             

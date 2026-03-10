@@ -2,6 +2,13 @@
 import type { Dish } from './types';
 
 export const MENU_ITEMS: Dish[] = [
+    // VEG SOUPS
+    { id: 51, name: 'Veg Manchow Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20MANCHOW%20SOUP.jpg?updatedAt=1759148818177' },
+    { id: 54, name: 'Tomato Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TOMATO%20SOUP.webp?updatedAt=1759147889844' },
+    { id: 55, name: 'Sweet Corn Soup', price: 250, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20SWEET%20CORN%20SOUP.jpg?updatedAt=1759147890053' },
+    { id: 56, name: 'Veg Hot/Sour Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20HOT%20&%20SOUR%20SOUP.jpg?updatedAt=1759147889598' },
+    { id: 57, name: 'Tomato/Dhaniya Shorba Soup', price: 250, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Warm-up%20your%20evenings%20with%20Tamatar%20ka%20shorba%20-%20Spiced%20Indian%20Tomato%20soup_%20Toss%20everything%20in%20your%20Instant%20Pot,%20and%20a%20bowl%20of%20healthy%20soup%20wi.%20_tomatosoup%20_shorba%20_tomatoshorba%20_vegetableshorba%20_veagnsoup%20_instantpotsoup' },
+
     // ON THE RUN
     { id: 101, name: 'French Fries', price: 180, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/french%20fries.webp?updatedAt=1758211132814' },
     { id: 107, name: 'Peri Peri French Fries', price: 260, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Peri%20Peri%20Fries__.jpg?updatedAt=1771257841371' },
@@ -22,7 +29,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 204, name: 'Chana Chaat', price: 120, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/KABULI%20CHANA%20CHAAT.jpeg?updatedAt=1759147343617' },
     { id: 205, name: 'Chana Chaat Garlic', price: 140, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/9%20Indian%20snacks%20that%20do%20not%20increase%20cholesterol%20levels.jpg' },
     { id: 202, name: 'Veg Aloo Tikki (2pcs)', price: 80, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Street-Style%20Aloo%20Tikki%20with%20Spiced%20Chana_%20The%20Ultimate%20Indian%20Comfort%20Food.jpg' },
-    { id: 1102, name: 'Peanut Chaat', price: 145, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PEANUT%20MASALA.webp?updatedAt=1759149345439' },
+    { id: 206, name: 'Peanut Chaat', price: 145, category: 'Chaat House', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PEANUT%20MASALA.webp?updatedAt=1759149345439' },
 
     // TANDOORI STARTERS
     { id: 301, name: 'Paneer Tikka (6pcs)', price: 280, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20TIKKA%20SHASHLIK.webp?updatedAt=1759148980181' },
@@ -32,7 +39,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 308, name: 'Paneer Multani Tikka (8 pcs)', price: 310, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(7).jpg' },
 
     // CHINESE
-    { id: 303, name: 'Mushroom Chilly', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(5).jpg' },
+    { id: 404, name: 'Mushroom Chilly', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(5).jpg' },
     { id: 403, name: 'Chilli Paneer Gravy', price: 400, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sometimes%20all%20you%20need%20is%20Chilli%20Paneer%20_%20_%20.%20.%20.%20.%20%20%20_countrykitchen%20_chillipaneer%20_foodiesays?updatedAt=1771913129595' },
     { id: 401, name: 'Paneer 65 (8pcs)', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/5%20Desi%20Office%20Potluck%20Recipes.jpg?updatedAt=1771913297489' },
     { id: 402, name: 'Manchurian Dry', price: 280, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/manchurian.jpg?updatedAt=1758211139469' },
@@ -135,11 +142,23 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1203, name: 'Butter Milk', price: 30, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/How%20To%20Make%20Buttermilk%20From%20Curd_%20Follow%20This%20Step-By-Step%20Guide.jpg' },
     { id: 1204, name: 'Masala Chhach', price: 40, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(10).jpg' },
 
+    //VEG ROLL
+    { id: 1903, name: 'Veg Roll', price: 250, category: 'Veg Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20KATHI%20ROLL.webp?updatedAt=1758294362003' },
+    { id: 1904, name: 'Paneer Roll', price: 280, category: 'Veg Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Kathi%20Roll.jpg' },
+
+    // NON-VEG SOUPS
+    { id: 52, name: 'Chicken Hot/Sour Soup', price: 260, category: 'Non-veg soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Hot%20&%20Sour%20Soup.jpg?updatedAt=1759606287140' },
+    { id: 53, name: 'Chicken Manchow Soup', price: 280, category: 'Non-veg soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Homemade%20Chicken%20Manchow%20Soup.jpg' },
+    
     // EGG DISHES
     { id: 1303, name: 'Egg Bhuji (2 Egg)', price: 120, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Bhurji%20(Indian%20Scrambled%20Eggs).jpg' },
     { id: 1304, name: 'Egg 65', price: 300, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%2065%20_%20Tasty%20&%20Spicy%20Egg%2065,%20Simple%20&%20Delicious%20Egg%2065.jpg' },
     { id: 1305, name: 'Masala Omelette (2 Egg)', price: 80, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala%20omlete.jpg?updatedAt=1759592085064' },
     { id: 1306, name: 'Boil Egg (2 by 4)', price: 60, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/boiled%202%20egg.jpg?updatedAt=1759592084805' },
+
+    //NON-VEG ROLL
+    { id: 1901, name:  'Chicken Roll', price: 300, category: 'Non-Veg Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Kathi%20Roll.jpg?updatedAt=1759604151903' },
+    { id: 1902, name: 'Egg Roll', price: 280, category: 'Non-Veg Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Kathi%20Roll.jpg?updatedAt=1759604148687' },
 
     // NON-VEG STARTERS
     { id: 1401, name: 'Chicken Pakoda (8pc)', price: 261, category: 'Non-Veg Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Pakoda.jpg' },
@@ -235,8 +254,8 @@ export const MENU_ITEMS: Dish[] = [
         category: 'Non-Veg Main Course Curry', 
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chef-Approved%20Gordon%20Ramsay%20Chicken%20Tikka%20Masala___.jpg',
         portions: [
-            { name: 'Half', price: 550, description: '5 pieces + 1 leg' },
-            { name: 'Full', price: 750, description: '10 pieces + 2 legs' }
+            { name: 'Half', price: 550, description: '5 pieces' },
+            { name: 'Full', price: 750, description: '8 pieces' }
         ]
     },
     { 
@@ -281,9 +300,8 @@ export const MENU_ITEMS: Dish[] = [
         category: 'Non-Veg Main Course Curry', 
         imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Tikka%20Masala.jpg',
         portions: [
-            { name: 'Quarter', price: 430, description: '3 pieces' },
-            { name: 'Half', price: 600, description: '5 pieces + 1 leg' },
-            { name: 'Full', price: 880, description: '10 pieces + 2 legs' }
+            { name: 'Half', price: 600, description: '5 pieces' },
+            { name: 'Full', price: 880, description: '8 pieces' }
         ]
     },
     { 
@@ -383,19 +401,6 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1810, name: 'Chicken Pulao', price: 250, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Yakhni%20Pulao%20Recipe.jpg' },
     { id: 1811, name: 'Hydrabadi Biryani', price: 450, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Hyderabadi%20Chicken%20Biryani%20(Kacchi%20Biryani).jpg' },
     { id: 1812, name: 'Fish Fried Rice', price: 390, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Cajun%20Baked%20Cod%20with%20Rice%20Pilaf%20_%20Vibrant%20Cajun%20Flavors%20and%20Fluffy%20Pilaf.jpg' },
-    // ROLL
-    { id: 1901, name: 'Chicken Roll', price: 300, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Kathi%20Roll.jpg?updatedAt=1759604151903' },
-    { id: 1902, name: 'Egg Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Kathi%20Roll.jpg?updatedAt=1759604148687' },
-    { id: 1903, name: 'Veg Roll', price: 250, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20KATHI%20ROLL.webp?updatedAt=1758294362003' },
-    { id: 1904, name: 'Paneer Roll', price: 280, category: 'Roll', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Kathi%20Roll.jpg' },
-
-    // SOUPS
-    { id: 251, name: 'Veg Manchow Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20MANCHOW%20SOUP.jpg?updatedAt=1759148818177' },
-    { id: 252, name: 'Chicken Hot/Sour Soup', price: 260, category: 'Non-Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Hot%20&%20Sour%20Soup.jpg?updatedAt=1759606287140' },
-    { id: 253, name: 'Chicken Manchow Soup', price: 280, category: 'Non-Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Homemade%20Chicken%20Manchow%20Soup.jpg' },
-    { id: 254, name: 'Tomato Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TOMATO%20SOUP.webp?updatedAt=1759147889844' },
-    { id: 255, name: 'Sweet Corn Soup', price: 250, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20SWEET%20CORN%20SOUP.jpg?updatedAt=1759147890053' },
-    { id: 256, name: 'Veg Hot/Sour Soup', price: 240, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/VEG%20HOT%20&%20SOUR%20SOUP.jpg?updatedAt=1759147889598' },
-    { id: 257, name: 'Tomato/Dhaniya Shorba Soup', price: 250, category: 'Veg Soups', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Warm-up%20your%20evenings%20with%20Tamatar%20ka%20shorba%20-%20Spiced%20Indian%20Tomato%20soup_%20Toss%20everything%20in%20your%20Instant%20Pot,%20and%20a%20bowl%20of%20healthy%20soup%20wi.%20_tomatosoup%20_shorba%20_tomatoshorba%20_vegetableshorba%20_veagnsoup%20_instantpotsoup' },
+   
 ];
-                                                                                
+

@@ -4,34 +4,35 @@ import { MENU_ITEMS } from '../constants';
 import MenuItem from './MenuItem';
 import type { Dish } from '../types';
 
-const Menu: React.FC = () => {
-    const categories: Dish['category'][] = [
-        'On The Run', 
-        'Chaat House', 
-        'Tandoori Starters', 
-        'Chinese', 
-        'Shahi Sweet Vegetable', 
-        'Paneer Main Course',
-        'Veg Main Course', 
-        'Dal',
-        'Basmati Rice', 
-        'Indian Bread', 
-        'Salad',
-        'Raita',
-        'Roasted',
-        'Beverages',
-        'Egg Dishes',
-        'Non-Veg Starters',
-        'Non-Veg Tandoor',
-        'Non-Veg Main Course Curry',
-        'Fish',
-        'Rice & Biryani',
-        'Roll',
-        'Veg Soups',
-        'Non-Veg Soups'
-    ];
+const CATEGORIES: Dish['category'][] = [
+    'Veg Soups',
+    'On The Run', 
+    'Chaat House', 
+    'Tandoori Starters', 
+    'Chinese', 
+    'Shahi Sweet Vegetable', 
+    'Paneer Main Course',
+    'Veg Main Course', 
+    'Dal',
+    'Basmati Rice', 
+    'Indian Bread', 
+    'Salad',
+    'Raita',
+    'Roasted',
+    'Beverages',
+    'Veg Roll',
+    'Non-veg soups',
+    'Egg Dishes',
+    'Non-Veg Roll',
+    'Non-Veg Starters',
+    'Non-Veg Tandoor',
+    'Non-Veg Main Course Curry',
+    'Fish',
+    'Rice & Biryani',
+];
 
-    const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
+const Menu: React.FC = () => {
+    const [activeCategory, setActiveCategory] = useState<string>(CATEGORIES[0]);
     const navRef = useRef<HTMLDivElement>(null);
     const observer = useRef<IntersectionObserver | null>(null);
 
@@ -58,7 +59,7 @@ const Menu: React.FC = () => {
             threshold: 0
         });
 
-        categories.forEach(category => {
+        CATEGORIES.forEach(category => {
             const sectionId = category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
             const el = document.getElementById(sectionId);
             if (el) observer.current?.observe(el);
@@ -90,7 +91,7 @@ const Menu: React.FC = () => {
                     ref={navRef}
                     className="bg-white/[0.08] backdrop-blur-3xl border border-white/10 p-2 rounded-full flex items-center gap-1 overflow-x-auto no-scrollbar shadow-[0_20px_50px_rgba(0,0,0,0.4)] scroll-smooth"
                 >
-                    {categories.map(category => {
+                    {CATEGORIES.map(category => {
                         const isActive = activeCategory === category;
                         return (
                             <button
@@ -109,7 +110,7 @@ const Menu: React.FC = () => {
             </nav>
 
             <div className="space-y-32 pb-32">
-                {categories.map((category, index) => {
+                {CATEGORIES.map((category, index) => {
                     const items = MENU_ITEMS.filter(item => item.category === category);
                     if (items.length === 0) return null;
                     const sectionId = category.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
@@ -133,7 +134,7 @@ const Menu: React.FC = () => {
                             
                             {/* Responsive Grid for all devices */}
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
-                                {items.map((dish: Dish) => (
+                                {items.map((dish) => (
                                     <MenuItem key={dish.id} dish={dish} />
                                 ))}
                             </div>
@@ -142,7 +143,7 @@ const Menu: React.FC = () => {
                 })}
             </div>
             
-            <style>{`
+            <style dangerouslySetInnerHTML={{ __html: `
                 .no-scrollbar::-webkit-scrollbar {
                     display: none;
                 }
@@ -150,7 +151,7 @@ const Menu: React.FC = () => {
                     -ms-overflow-style: none;
                     scrollbar-width: none;
                 }
-            `}</style>
+            `}} />
         </div>
     );
 };

@@ -87,26 +87,6 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                     </div>
                     
                     <div className="pt-12 border-t border-white/5 space-y-10">
-                        <div className="flex flex-col md:flex-row justify-end items-center gap-8">
-                            <button 
-                                onClick={() => {
-                                    const total = state.cart.reduce((sum, item) => sum + (item.selectedPortion ? item.selectedPortion.price : item.dish.price) * item.quantity, 0);
-                                    dispatch({ 
-                                        type: 'PLACE_ORDER', 
-                                        payload: { 
-                                            items: state.cart, 
-                                            total 
-                                        } 
-                                    });
-                                    dispatch({ type: 'SET_VIEW', payload: 'order-status' });
-                                    dispatch({ type: 'SHOW_NOTIFICATION', payload: 'Order placed successfully. Preparing your selection.' });
-                                }}
-                                className="w-full md:w-auto px-16 py-5 bg-white text-base-100 rounded-full text-[11px] font-black tracking-[0.4em] uppercase hover:scale-105 active:scale-95 transition-all shadow-[0_20px_40px_rgba(255,255,255,0.15)]"
-                            >
-                                Place Order
-                            </button>
-                        </div>
-
                         <div className="p-8 bg-white/[0.03] rounded-2xl border border-white/5 text-center max-w-md mx-auto">
                             <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 leading-relaxed italic mb-4">
                                 Our culinary team prepares each selection with focused attention.

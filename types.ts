@@ -8,7 +8,7 @@ export interface Dish {
     id: number;
     name: string;
     price: number;
-    category: 'Veg Soups' | 'On The Run' | 'Chaat House' | 'Tandoori Starters' | 'Chinese' | 'Shahi Sweet Vegetable' | 'Paneer Main Course' | 'Veg Main Course' | 'Dal' | 'Basmati Rice' | 'Indian Bread' | 'Salad' | 'Raita' | 'Roasted' | 'Beverages' | 'Veg Roll' | 'Non-veg soups' | 'Egg Dishes' | 'Non-Veg Roll' | 'Non-Veg Starters' | 'Non-Veg Tandoor' | 'Non-Veg Main Course Curry' | 'Fish' | 'Rice & Biryani';
+    category: 'Veg Soups' | 'On The Run' | 'Chaat House' | 'Tandoori Starters' | 'Chinese' | 'Shahi Sweet Vegetable' | 'Paneer Main Course' | 'Veg Main Course' | 'Dal' | 'Rice' | 'Indian Bread' | 'Salad' | 'Raita' | 'Roasted' | 'Beverages' | 'Veg Roll' | 'Non-Veg Soups' | 'Egg Dishes' | 'Non-Veg Roll' | 'Fish' | 'Non-Veg Starters' | 'Non-Veg Tandoor' | 'Non-Veg Main Course Curry' | 'Rice & Biryani';
     imageUrl: string;
     portions?: Portion[];
 }

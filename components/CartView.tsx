@@ -87,11 +87,7 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                     </div>
                     
                     <div className="pt-12 border-t border-white/5 space-y-10">
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-                            <div className="text-center md:text-left">
-                                <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-2">Total Amount</p>
-                                <p className="text-5xl font-serif italic text-white tracking-tight">₹{state.cart.reduce((total, item) => total + (item.selectedPortion ? item.selectedPortion.price : item.dish.price) * item.quantity, 0)}</p>
-                            </div>
+                        <div className="flex flex-col md:flex-row justify-end items-center gap-8">
                             <button 
                                 onClick={() => {
                                     const total = state.cart.reduce((sum, item) => sum + (item.selectedPortion ? item.selectedPortion.price : item.dish.price) * item.quantity, 0);

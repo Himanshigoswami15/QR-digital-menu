@@ -57,10 +57,6 @@ const OrderCard: React.FC<{ order: Order }> = ({ order }) => {
             <div className="h-[1px] bg-current opacity-20 mt-6 mb-4"></div>
             
             <div className="flex flex-col gap-4">
-                <div className="flex justify-between items-end">
-                    <span className="text-[9px] tracking-widest uppercase opacity-60">Total Value</span>
-                    <span className="text-lg font-black tracking-widest">₹{order.total.toFixed(2)}</span>
-                </div>
                 {order.status !== OrderStatus.Served && (
                     <button 
                         onClick={handleNextStatus}

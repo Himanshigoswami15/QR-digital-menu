@@ -87,6 +87,13 @@ const CartView: React.FC<CartViewProps> = ({ onBackToMenu }) => {
                     </div>
                     
                     <div className="pt-12 border-t border-white/5 space-y-10">
+                        <div className="flex justify-between items-center px-6">
+                            <span className="text-[10px] tracking-[0.4em] uppercase text-white/40 font-bold">Total Selection Value</span>
+                            <span className="text-3xl font-serif italic text-white">
+                                ₹{state.cart.reduce((sum, item) => sum + (item.selectedPortion ? item.selectedPortion.price : item.dish.price) * item.quantity, 0)}
+                            </span>
+                        </div>
+
                         <div className="p-8 bg-white/[0.03] rounded-2xl border border-white/5 text-center max-w-md mx-auto">
                             <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 leading-relaxed italic mb-4">
                                 Our culinary team prepares each selection with focused attention.

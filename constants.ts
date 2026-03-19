@@ -10,7 +10,7 @@ export const MENU_ITEMS: Dish[] = [
 
     // ON THE RUN
     { id: 101, name: 'French Fries', price: 165, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/french%20fries.webp?updatedAt=1758211132814' },
-    { id: 107, name: 'Perry Perry French Fries', price: 190, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Peri%20Peri%20Fries__.jpg?updatedAt=1771257841371' },
+    { id: 107, name: 'Peri Peri French Fries', price: 190, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Peri%20Peri%20Fries__.jpg?updatedAt=1771257841371' },
     { id: 103, name: 'Garlic French Fries', price: 190, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Crispy%20Garlic%20Herb%20French%20Fries%20with%20Aioli.jpg' },
     { id: 104, name: 'Honey Chilli Potato', price: 280, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/honey%20chilli%20potato.webp?updatedAt=1758211139092' },
     { id: 105, name: 'Crispy Corn', price: 300, category: 'On The Run', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CRISPY%20CORN.webp?updatedAt=1758292974618' },
@@ -53,7 +53,7 @@ export const MENU_ITEMS: Dish[] = [
     // PANNER MAIN COURSE
     { id: 601, name: 'Paneer Lababdar', price: 195, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/_%E2%9C%A8%20Paneer%20Lababdar%20_%20Creamy,%20Spiced%20&%20Indulgent!%20%E2%9C%A8___A%20rich%20North%20Indian%20curry,%20Paneer%20Lababdar%20features%20soft%20paneer%20cubes%20simmered%20in%20a%20creamy,%20tomato-based%20gravy%20w.%20Add%20paneer%20cubes%20and%20simmer%20until%20they%20absorb%20t___' },
     { id: 606, name: 'Paneer Pasanda', price: 230, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Best%20Paneer%20Pasanda%20Recipe%20(Restaurant%20Style)%20-%20Cubes%20N%20Juliennes.jpg' },
-    { id: 607, name: 'Muglai Paneer', price: 290, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer-Korma-2-3.jpg' },
+    { id: 607, name: 'Mughlai Paneer', price: 290, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer-Korma-2-3.jpg' },
     { id: 604, name: 'Kargil Special (3 variety)', price: 750, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/unnamed.jpg' },
     { id: 609, name: 'Paneer 2 Pyaza', price: 190, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Paneer%20Do%20Pyaza%20-%20Cooking%20From%20Heart%20(1).jpg' },
     { id: 611, name: 'Paneer Angara', price: 350, category: 'Paneer Main Course', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Gemini_Generated_Image_uso91auso91auso9.png' },
@@ -139,7 +139,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 912, name: 'Fry Raita', price: 180, category: 'Raita', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/fried%20raita.jpg?updatedAt=1759147133651' },
 
     // ROASTED
-    { id: 1101, name: 'Roasted Papd', price: 30, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PAPAD%20-%20DHAMATA.jpg' },
+    { id: 1101, name: 'Roasted Papad', price: 30, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PAPAD%20-%20DHAMATA.jpg' },
     { id: 1103, name: 'Masala Papad', price: 60, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala-papad-1000x1000.webp?updatedAt=1759147518990' },
     { id: 1104, name: 'Plain Khichiya', price: 60, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Microwaved%20crispy%20poppadums.jpg' },
     { id: 1105, name: 'Cheese Masala Khichiya', price: 100, category: 'Roasted', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/khichiya%20papad.webp?updatedAt=1759147343478' },
@@ -167,11 +167,11 @@ export const MENU_ITEMS: Dish[] = [
     
     // EGG DISHES
     { id: 1306, name: 'Boil Egg (2 by 4)', price: 60, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/boiled%202%20egg.jpg?updatedAt=1759592084805' },
-    { id: 1307, name: 'Plain Omlette', price: 60, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Breakfast%20Omelette%20on%20a%20Plate%20Top%20View,%20Isolated%20on%20Transparent%20Background.jpg?updatedAt=1773845860999' },
+    { id: 1307, name: 'Plain Omelette', price: 60, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Breakfast%20Omelette%20on%20a%20Plate%20Top%20View,%20Isolated%20on%20Transparent%20Background.jpg?updatedAt=1773845860999' },
     { id: 1305, name: 'Masala Omelette (2 Egg)', price: 80, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/masala%20omlete.jpg?updatedAt=1759592085064' },
-    { id: 1308, name: 'Masala Omeltte', price: 80, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/This%20easy%20masala%20omelette%20is%20made%20with%20red%20onion,%20peppers,%20green%20chillies,%20and%20spices,%20and%20makes%20a%20delicious%20desi-style%20breakfast%20with%20chai_%20(1).jpg' },
-    { id: 1309, name: 'Cheese Omlette', price: 100, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Ham%20and%20Cheese%20Omelette%20with%20Foolproof%20Pan%20Release%20-%20Nailed%20It%20Recipes.jpg' },
-    { id: 1303, name: 'Egg Bhuji (2 Egg)', price: 120, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Bhurji%20(Indian%20Scrambled%20Eggs).jpg' },
+    { id: 1308, name: 'Masala Omelette', price: 80, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/This%20easy%20masala%20omelette%20is%20made%20with%20red%20onion,%20peppers,%20green%20chillies,%20and%20spices,%20and%20makes%20a%20delicious%20desi-style%20breakfast%20with%20chai_%20(1).jpg' },
+    { id: 1309, name: 'Cheese Omelette', price: 100, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Ham%20and%20Cheese%20Omelette%20with%20Foolproof%20Pan%20Release%20-%20Nailed%20It%20Recipes.jpg' },
+    { id: 1303, name: 'Egg Bhurji (2 Egg)', price: 120, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Bhurji%20(Indian%20Scrambled%20Eggs).jpg' },
     { id: 1304, name: 'Egg 65', price: 300, category: 'Egg Dishes', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%2065%20_%20Tasty%20&%20Spicy%20Egg%2065,%20Simple%20&%20Delicious%20Egg%2065.jpg' },
 
     //NON-VEG ROLL
@@ -204,17 +204,17 @@ export const MENU_ITEMS: Dish[] = [
     // NON-VEG TANDOOR
     { id: 1501, name: 'Tandoori Chicken (Half)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TANDOORI%20CHICKEN%20(HALF).jpg?updatedAt=1763564676390' },
     { id: 1502, name: 'Tandoori Chicken (Full)', price: 630, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/TANDOORI%20CHICKEN%20FULL.jpg?updatedAt=1763564683566' },
-    { id: 1503, name: 'Afgani Chicken (Half)', price: 483, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Afgani%20Chicken%20%20Half.jpg' },
-    { id: 1504, name: 'Afgani Chicken (Full)', price: 693, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Afghani%20Chicken%20_.jpg' },
+    { id: 1503, name: 'Afghani Chicken (Half)', price: 483, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Afgani%20Chicken%20%20Half.jpg' },
+    { id: 1504, name: 'Afghani Chicken (Full)', price: 693, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Afghani%20Chicken%20_.jpg' },
     { id: 1505, name: 'Chicken Tikka (6pc)', price: 284, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/ACHARI%20CHICKEN%20TIKKA.jpg?updatedAt=1763565446614' },
     { id: 1506, name: 'Lasaniya Kabab (6pc)', price: 386, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Indian%20Lamb%20Seekh%20Kebab%20(Pan-fried%20Spicy%20Lamb%20Skewers).jpg' },
     { id: 1507, name: 'Malai Tikka (6pc)', price: 386, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20MALAI%20TIKKA%201.jpg?updatedAt=1763565446545' },
     { id: 1508, name: 'Pahadi Tikka (6pc)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20PAHADI%20TIKKA.jpg?updatedAt=1763564682037' },
-    { id: 1509, name: 'Chicken Seek Kabab (6pc)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20GILAFI%20SEEK%20KEBAB.jpg?updatedAt=1763564686722' },
+    { id: 1509, name: 'Chicken Seekh Kabab (6pc)', price: 410, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/CHICKEN%20GILAFI%20SEEK%20KEBAB.jpg?updatedAt=1763564686722' },
     { id: 1510, name: 'Chicken Kasturi Kabab (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Most-liked%20video%20_%20838K%20views%20_%2016K%20reactions%20_%20Malai%20Chicken%20Kebab_%20Ingredients_%20%20_%20500%20g%20boneless%20chicken%20(pre.%20_malaichickenkebab%20_chicken%20_chickenkebab%20_chickenskewers%20_malaichicken%20_%20Flavours%20by%20Mounika%20_%20Facebook' },
     { id: 1511, name: 'Chicken Sharabi Tikka (6pc)', price: 465, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Plating%20aesthetics.jpg' },
     { id: 1512, name: 'Murg Malai Tikka (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Murg%20Malai%20Tikka.jpg' },
-    { id: 1513, name: 'Shikari Murgal Tikka (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Chicken%20Tikka%20Skewers%20with%20a%20Twist.jpg' },
+    { id: 1513, name: 'Shikari Murgh Tikka (6pc)', price: 473, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Chicken%20Tikka%20Skewers%20with%20a%20Twist.jpg' },
     { id: 1514, name: 'Tandoori Chicken Platter (12pc)', price: 840, category: 'Non-Veg Tandoor', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Tandoori%20Chicken%20Thighs%20_%20Authentic%20Indian%20Grilled%20Chicken%20Recipe.jpg' },
 
     // NON-VEG MAIN COURSE CURRY
@@ -419,7 +419,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1808, name: 'Egg Schezwan Rice', price: 190, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Szechwan%20Fried%20Rice.jpg' },
     { id: 1809, name: 'Chicken Schezwan Rice', price: 280, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Schezwan%20Chicken%20Fried%20Rice%20Recipe%20In%20English%20at%20Bobbiehibbler.jpg?updatedAt=1772709157381' },
     { id: 1810, name: 'Chicken Pulao', price: 250, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Chicken%20Yakhni%20Pulao%20Recipe.jpg' },
-    { id: 1811, name: 'Hydrabadi Biryani', price: 450, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Hyderabadi%20Chicken%20Biryani%20(Kacchi%20Biryani).jpg' },
+    { id: 1811, name: 'Hyderabadi Biryani', price: 450, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Hyderabadi%20Chicken%20Biryani%20(Kacchi%20Biryani).jpg' },
     { id: 1812, name: 'Fish Fried Rice', price: 390, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Cajun%20Baked%20Cod%20with%20Rice%20Pilaf%20_%20Vibrant%20Cajun%20Flavors%20and%20Fluffy%20Pilaf.jpg' },
    
 ];

@@ -410,7 +410,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1705, name: 'Amritsari Fish Tikka (8 Pc)', price: 660, category: 'Fish', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Amritsari%20Fried%20Fish.jpg' },
     // RICE & BIRYANI
     { id: 1801, name: 'Egg Rice', price: 190, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Fried%20Rice.jpg' },
-    { id: 1802, name: 'Egg Pulao', price: 230, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(12).jpg' },
+    { id: 1802, name: 'Egg Pulao', price: 230, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Egg%20Pulao%20-%20Recipes%20for%20the%20regular%20homecook.jpg' },
     { id: 1803, name: 'Egg Biryani', price: 235, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Rich%20&%20Royal_%20Mughlai%20Egg%20Biryani%20with%20Crispy___.jpg' },
     { id: 1804, name: 'Chicken Rice', price: 265, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/High%20Protein%20Crispy%20Garlic%20Chicken%20Fried%20Rice%20Recipe%20for%20Quick%20Lunch%20&%20Dinner%20(1).jpg' },
     { id: 1805, name: 'Chicken Biryani', price: 260, category: 'Rice & Biryani', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/biryani.jpg?updatedAt=1759592084508' },

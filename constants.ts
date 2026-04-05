@@ -34,7 +34,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 304, name: 'Paneer Punjabi Tikka (6pcs)', price: 300, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PERI%20PERI%20PANEER%20TIKKA.jpg?updatedAt=1763549692015' },
     { id: 305, name: 'Paneer Hariyali Tikka', price: 360, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/PANEER%20PUDINA%20TIKKA.jpg?updatedAt=1763551267850' },
     { id: 302, name: 'Dahi Kebab', price: 400, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Dahi%20Ke%20Kebab%20Recipe%20_%20Dahi%20Kebab%20_%20Greek%20Yogurt%20Kebabs%20Recipe%20-%20Complete%20Guide.jpg' },
-    { id: 308, name: 'Paneer Multani Tikka (8 pcs)', price: 310, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(7).jpg' },
+    { id: 308, name: 'Paneer Multani Tikka (8 pcs)', price: 310, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Restaurant%20Style%20Achari%20Paneer%20Tikka%20Recipe%20_%20Tangy%20&%20Spicy.jpg' },
 
     // CHINESE
     { id: 404, name: 'Mushroom Chilly', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(5).jpg' },

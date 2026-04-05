@@ -37,7 +37,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 308, name: 'Paneer Multani Tikka (8 pcs)', price: 310, category: 'Tandoori Starters', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Restaurant%20Style%20Achari%20Paneer%20Tikka%20Recipe%20_%20Tangy%20&%20Spicy.jpg' },
 
     // CHINESE
-    { id: 404, name: 'Mushroom Chilly', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(5).jpg' },
+    { id: 404, name: 'Mushroom Chilly', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/chilli%20mushroom.JPG?updatedAt=1758211134404' },
     { id: 403, name: 'Chilli Paneer Gravy', price: 350, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Sometimes%20all%20you%20need%20is%20Chilli%20Paneer%20_%20_%20.%20.%20.%20.%20%20%20_countrykitchen%20_chillipaneer%20_foodiesays?updatedAt=1771913129595' },
     { id: 401, name: 'Paneer 65 (8pcs)', price: 280, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/5%20Desi%20Office%20Potluck%20Recipes.jpg?updatedAt=1771913297489' },
     { id: 402, name: 'Manchurian Dry', price: 180, category: 'Chinese', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/manchurian.jpg?updatedAt=1758211139469' },

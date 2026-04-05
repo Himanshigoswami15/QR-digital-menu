@@ -151,7 +151,7 @@ export const MENU_ITEMS: Dish[] = [
     { id: 1201, name: 'Water Bottle', price: 30, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Water%20bottles%20stock%20photo_%20Image%20of%20healthy,%20bottles%20-%2012522340.jpg' },
     { id: 1202, name: 'Cold Drink', price: 60, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Soda.jpg' },
     { id: 1203, name: 'Butter Milk', price: 30, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/How%20To%20Make%20Buttermilk%20From%20Curd_%20Follow%20This%20Step-By-Step%20Guide.jpg' },
-    { id: 1204, name: 'Masala Chhach', price: 40, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/download%20(10).jpg' },
+    { id: 1204, name: 'Masala Chhach', price: 40, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Buttermilk%20or%20Chaas,%20Indian%20Drink%20Stock%20Photo%20-%20Image%20of%20india,%20masala_%20143036046.jpg?updatedAt=1775210445288' },
     { id: 1205, name: 'Ice Cube Bucket', price: 60, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/ice%20bucket.jpg?updatedAt=1759174012972' },
     { id: 1206, name: 'Lemon Salty Soda', price: 70, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/Ginger%20Scented%20Lemon%20Soda%20(Nimbu%20Pani)%20Rimmed%20With%20Chaat%20Masala%20and%20Rock%20Salt.jpg?updatedAt=1773845860517' },
     { id: 1207, name: 'Energy Drink Hell', price: 110, category: 'Beverages', imageUrl: 'https://ik.imagekit.io/j1fgksdwx/hell%20energy%20social%20media%20post%20design.jpg?updatedAt=1773845860836' },
